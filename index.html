@@ -986,98 +986,1062 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     </div>
   </div>
 </section>
-<!-- ======================================================================= -->
-<!-- FIN NUEVA SECCIÓN SEO -->
-<!-- ======================================================================= -->
 
-
-<!-- MOVIDO AQUÍ: SECCIÓN DE RESEÑAS (Antes estaba casi al final) -->
-
-
-<!-- ======================================================================= -->
-<!-- SECCION: SISTEMA DE ALERTA TEMPRANA REVISION TECNICA -->
-<!-- ======================================================================= -->
-<section id="alerta-revision" style="position:relative; padding:70px 0; overflow:hidden; background: linear-gradient(180deg, #fff8f0 0%, #fff 30%, #f8f9fa 100%);">
-  <!-- Subtle aura decorativa dual -->
-  
-  
-  <style>
-    @keyframes auraPulse {
-      0%, 100% { opacity:0.5; transform:scale(1); }
-      50% { opacity:1; transform:scale(1.08); }
-    }
-    .alerta-card {
-      position:relative; z-index:2; background:#fff; border:2px solid rgba(168,0,0,0.12);
-      border-radius:24px; padding:35px 28px;
-      box-shadow: 0 8px 40px rgba(168,0,0,0.10), 0 2px 10px rgba(0,0,0,0.06);
-      animation: cardGlow 3s ease-in-out infinite alternate;
-      height: 100%;
-    }
-    @keyframes cardGlow {
-      0% { box-shadow: 0 8px 40px rgba(168,0,0,0.08), 0 2px 10px rgba(0,0,0,0.04); }
-      100% { box-shadow: 0 12px 50px rgba(168,0,0,0.16), 0 4px 15px rgba(0,0,0,0.06); }
-    }
-    @keyframes cardGlowOrange {
-      0% { box-shadow: 0 8px 40px rgba(255,107,0,0.08), 0 2px 10px rgba(0,0,0,0.04); }
-      100% { box-shadow: 0 12px 50px rgba(255,107,0,0.16), 0 4px 15px rgba(0,0,0,0.06); }
-    }
-    .alerta-icon-ring {
-      width:100px; height:100px; border-radius:50%; display:flex; align-items:center; justify-content:center;
-      background: linear-gradient(135deg, #a80000, #ff6b00); margin:0 auto 24px;
-      box-shadow: 0 6px 30px rgba(168,0,0,0.35), 0 0 60px rgba(255,107,0,0.15);
-      animation: iconRing 2.5s ease-in-out infinite;
-    }
-    @keyframes iconRing {
-      0%, 100% { box-shadow: 0 6px 30px rgba(168,0,0,0.35), 0 0 60px rgba(255,107,0,0.15); }
-      50% { box-shadow: 0 8px 40px rgba(168,0,0,0.5), 0 0 80px rgba(255,107,0,0.25); }
-    }
-    @keyframes iconRingOrange {
-      0%, 100% { box-shadow: 0 6px 30px rgba(255,107,0,0.35), 0 0 60px rgba(255,140,51,0.15); }
-      50% { box-shadow: 0 8px 40px rgba(255,107,0,0.5), 0 0 80px rgba(255,140,51,0.25); }
-    }
-    .alerta-input {
-      width:100%; padding:16px 16px 16px 46px; border:2px solid #e5e7eb; border-radius:14px;
-      font-size:1.1rem; outline:none; background:#f9fafb; color:#111;
-      font-family:inherit; transition: all 0.3s;
-    }
-    .alerta-input::placeholder { color:#9ca3af; }
-    .alerta-input:focus { border-color:#a80000; box-shadow:0 0 0 4px rgba(168,0,0,0.1); background:#fff; }
-    .alerta-btn {
-      width:100%; padding:18px; border:none; border-radius:14px; font-size:1.3rem; font-weight:800;
-      cursor:pointer; display:flex; align-items:center; justify-content:center; gap:12px;
-      background: linear-gradient(135deg, #a80000, #d32f2f); color:#fff;
-      box-shadow: 0 6px 24px rgba(168,0,0,0.35); transition: all 0.3s; text-transform:uppercase; letter-spacing:0.06em;
-    }
-    .alerta-btn:hover { transform:translateY(-3px); box-shadow: 0 10px 35px rgba(168,0,0,0.45); }
-    .alerta-btn:active { transform:translateY(0); }
-    .alerta-baja-btn {
-      width:100%; padding:14px; border:2px solid #e5e7eb; border-radius:14px;
-      background:#fff; color:#6b7280; font-size:1rem; font-weight:600;
-      cursor:pointer; display:flex; align-items:center; justify-content:center; gap:8px; transition:all 0.3s;
-    }
-    .alerta-baja-btn:hover { border-color:#dc3545; color:#dc3545; background:#fff5f5; }
-    .alerta-radio-label {
-      flex:1; display:flex; align-items:center; justify-content:center; gap:6px; padding:14px;
-      border:2px solid #e5e7eb; border-radius:12px; cursor:pointer; font-size:1rem;
-      font-weight:600; text-align:center; transition:all 0.2s; color:#4b5563;
-    }
-    .alerta-radio-label:hover { border-color:#a80000; color:#a80000; }
-    .alerta-radio-label input:checked + span { color:#a80000; }
-    .alerta-benefit {
-      display:flex; align-items:center; gap:16px; padding:14px 0; border-bottom:1px solid #f3f4f6;
-    }
-    .alerta-benefit:last-child { border-bottom:none; }
-    .alerta-benefit-icon {
-      width:48px; height:48px; border-radius:14px; display:flex; align-items:center; justify-content:center;
-      background:rgba(168,0,0,0.08); color:#a80000; font-size:1.2rem; flex-shrink:0;
-    }
-  </style>
-
+<!-- SERVICIOS PRINCIPALES -->
+<section class="py-5" style="background:#f0f4f8;" id="servicios">
   <div class="container">
-    <div class="row g-4 justify-content-center">
+    <div class="text-center mb-5">
+      <span class="badge mb-2" style="background:#0d7377;color:#fff;padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Servicios</span>
+      <h2 class="display-5 fw-bold text-dark">Electromecánico a Domicilio en Santiago</h2>
+      <p class="text-muted mx-auto" style="max-width:600px;">Atención expedita, transparente y puntual con equipamiento de última tecnología. Cobertura en toda la Región Metropolitana.</p>
+    </div>
+    <div class="row g-4">
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-bateria">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-car-battery"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Batería</h3>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico, recarga y cambio de batería en Santiago con servicio a domicilio. Revisamos alternador,...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-cambio-de-aceite">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-oil-can"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Cambio de aceite</h3>
+                        <p class="text-muted small lh-base">🔹 Cambio de aceite y filtro de motor en Santiago con servicio a domicilio. Utilizamos lubricantes y fi...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-cambio-de-filtros-de-aa">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-wind"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Cambio de filtros de A/A</h3>
+                        <p class="text-muted small lh-base">🔹 Reemplazo de filtro de polen y sanitización del aire en Santiago con servicio a domicilio. Eliminamo...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-diagnostico-de-automoviles">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-laptop-code"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Diagnóstico de automóviles</h3>
+                        <p class="text-muted small lh-base">🔹 Scanner computarizado profesional en Santiago con servicio a domicilio. Lectura y borrado de códigos...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-electricidad">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-bolt"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Electricidad</h3>
+                        <p class="text-muted small lh-base">🔹 Reparación de sistemas eléctricos automotrices en Santiago con servicio a domicilio: alternadores, m...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-frenos">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-stop-circle"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Frenos</h3>
+                        <p class="text-muted small lh-base">🔹 Inspección y cambio de pastillas, balatas y discos en Santiago con servicio a domicilio. Purgado de ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-direccion-y-suspension">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-cogs"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Dirección y suspensión</h3>
+                        <p class="text-muted small lh-base">🔹 Cambio y mantención de amortiguadores, bandejas, rótulas y terminales en Santiago con servicio a dom...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-aire-acondicionado">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-snowflake"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Aire acondicionado</h3>
+                        <p class="text-muted small lh-base">🔹 Reparación, prueba de vacío y recarga de gas para aire acondicionado en Santiago con servicio a domi...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-autos-automaticos">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-car"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Autos automáticos</h3>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico electromecánico para cajas automáticas en Santiago con servicio a domicilio. Escaneo de ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-mecanica-diesel">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-truck"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Mecánica diésel</h3>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico y mantenimiento para motores diésel en Santiago con servicio a domicilio: inyección elec...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-mecanico-de-autos">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-wrench"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Mecánico de autos</h3>
+                        <p class="text-muted small lh-base">🔹 Servicio integral de mecánica y electromecánica en Santiago con servicio a domicilio. Mantenciones p...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-transmision">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-cog"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Transmisión</h3>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico de cajas manuales y automáticas en Santiago con servicio a domicilio: cambio de embrague...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-servicios-de-aa">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-fan"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Servicios de A/A</h3>
+                        <p class="text-muted small lh-base">🔹 Mantención integral de climatización en Santiago con servicio a domicilio: revisión de compresores, ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 col-lg-4 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-top:4px solid #0d7377!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-servicio-y-reparacion-de-frenos">
+                    <div class="card-body p-4">
+                        <div style="font-size:2.5rem;color:#0d7377;" class="mb-3"><i class="fas fa-plug"></i></div>
+                        <h3 class="h5 fw-bold mb-2 text-dark">Servicio y reparación de frenos</h3>
+                        <p class="text-muted small lh-base">🔹 Mantenimiento completo de frenos en Santiago con servicio a domicilio: cambio de pastillas, ajuste d...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#0d7377;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </div>
+</section>
 
-      <!-- ======================================================================= -->
-<!-- FOOTER INFERIOR FIJO (STICKY BOTTOM BAR) - NUEVO DISEÑO MASIVO -->
+<!-- SERVICIOS ESPECIALIZADOS -->
+<section class="py-5 bg-white">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-2" style="background:#14a098;color:#fff;padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:700;text-transform:uppercase;letter-spacing:1px;">Especializados 🟢</span>
+      <h2 class="display-5 fw-bold text-dark">Servicios Electromecánicos Especializados</h2>
+      <p class="text-muted mx-auto" style="max-width:600px;">Diagnóstico electromecánico avanzado con servicio a domicilio en Santiago.</p>
+    </div>
+    <div class="row g-4">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-trabajos-de-electricidad">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Trabajos de electricidad</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Reparación de alzavidrios, cierre centralizado, alarmas, GPS y cableado en Santiago con servicio a d...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-scanner-y-diagnostico-electronico">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Scanner y diagnóstico electrónico</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico computarizado avanzado en Santiago con servicio a domicilio. Lectura y borrado de código...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-reparacion-de-alternadores">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Reparación de alternadores y motores de arranque</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Solución a fallas de arranque y carga eléctrica en Santiago con servicio a domicilio. Reparación y c...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-deteccion-de-fugas-de-corriente">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Detección de fugas de corriente y cortocircuitos</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Revisión técnica de consumos que descargan la batería en Santiago con servicio a domicilio. Detecció...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-mantencion-de-inyeccion-electronica">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Mantención del sistema de inyección electrónica</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico electromecánico de inyectores, cuerpo de aceleración, bomba de bencina y sensores MAF/MA...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-reparacion-de-alzavidrios">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Reparación de alzavidrios y cierre centralizado</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Solución rápida para botoneras rotas, motores elevavidrios trabados y fallas de cierre centralizado ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-diagnostico-y-reparacion-de-luces">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Diagnóstico y reparación de luces automotrices</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Reparación de focos principales, neblineros, luces de freno y cableados en Santiago con servicio a d...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-diagnostico-de-sensores-abs-esp">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Diagnóstico de sensores ABS y ESP</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Inspección técnica de cableados y sensores de velocidad de rueda para frenos ABS en Santiago con ser...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-revision-de-electroventiladores">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Revisión de electroventiladores y sistema térmico</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Diagnóstico de relay de ventilador, bulbos de temperatura y resistencias en Santiago con servicio a ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-6 mb-4">
+                <div class="card h-100 shadow-sm border-0" style="border-left:4px solid #14a098!important;border-radius:14px!important;cursor:pointer;" data-bs-toggle="modal" data-bs-target="#modal-instalacion-de-camaras-de-retroceso">
+                    <div class="card-body p-4">
+                        <div class="d-flex align-items-center gap-2 mb-2">
+                            <span style="color:#14a098;font-size:1.5rem;">🟢</span>
+                            <h3 class="h6 fw-bold text-dark mb-0">Instalación de cámaras de retroceso y accesorios</h3>
+                        </div>
+                        <p class="text-muted small lh-base">🔹 Montaje limpio y profesional de radios touch, cámaras de retroceso y sensores de estacionamiento en ...</p>
+                        <span class="text-decoration-underline fw-bold" style="color:#14a098;font-size:0.85rem;">Ver detalles →</span>
+                    </div>
+                </div>
+            </div>
+    </div>
+  </div>
+</section>
+
+<!-- COMUNAS -->
+<section class="py-5" style="background:#f0f4f8;" id="comunas">
+  <div class="container">
+    <div class="text-center mb-5">
+      <span class="badge mb-2" style="background:#0d7377;color:#fff;padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:700;text-transform:uppercase;">Cobertura</span>
+      <h2 class="display-5 fw-bold text-dark">Comunas que Atendemos en Santiago</h2>
+      <p class="text-muted mx-auto" style="max-width:600px;">Servicio a domicilio en toda la Región Metropolitana.</p>
+    </div>
+    <div class="text-center">
+<a href="/comunas/providencia" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Providencia</a>
+<a href="/comunas/las-condes" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Las Condes</a>
+<a href="/comunas/nunoa" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Ñuñoa</a>
+<a href="/comunas/vitacura" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Vitacura</a>
+<a href="/comunas/la-reina" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">La Reina</a>
+<a href="/comunas/lo-barnechea" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Lo Barnechea</a>
+<a href="/comunas/santiago-centro" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Santiago Centro</a>
+<a href="/comunas/recoleta" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Recoleta</a>
+<a href="/comunas/independencia" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Independencia</a>
+<a href="/comunas/estacion-central" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Estación Central</a>
+<a href="/comunas/macul" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Macul</a>
+<a href="/comunas/penalolen" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Peñalolén</a>
+<a href="/comunas/la-florida" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">La Florida</a>
+<a href="/comunas/puente-alto" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Puente Alto</a>
+<a href="/comunas/maipu" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Maipú</a>
+<a href="/comunas/pudahuel" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Pudahuel</a>
+<a href="/comunas/quilicura" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Quilicura</a>
+<a href="/comunas/huechuraba" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Huechuraba</a>
+<a href="/comunas/conchali" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Conchalí</a>
+<a href="/comunas/renca" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Renca</a>
+<a href="/comunas/cerro-navia" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Cerro Navia</a>
+<a href="/comunas/lo-prado" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Lo Prado</a>
+<a href="/comunas/cerrillos" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Cerrillos</a>
+<a href="/comunas/lo-espejo" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Lo Espejo</a>
+<a href="/comunas/san-miguel" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Miguel</a>
+<a href="/comunas/san-joaquin" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Joaquín</a>
+<a href="/comunas/la-cisterna" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">La Cisterna</a>
+<a href="/comunas/la-granja" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">La Granja</a>
+<a href="/comunas/san-ramon" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Ramón</a>
+<a href="/comunas/el-bosque" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">El Bosque</a>
+<a href="/comunas/san-bernardo" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Bernardo</a>
+<a href="/comunas/colina" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Colina</a>
+<a href="/comunas/buin" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Buin</a>
+<a href="/comunas/paine" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Paine</a>
+<a href="/comunas/lampa" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Lampa</a>
+<a href="/comunas/til-til" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Til Til</a>
+<a href="/comunas/melipilla" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Melipilla</a>
+<a href="/comunas/curacavi" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Curacaví</a>
+<a href="/comunas/maria-pinto" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">María Pinto</a>
+<a href="/comunas/talagante" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Talagante</a>
+<a href="/comunas/penaflor" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Peñaflor</a>
+<a href="/comunas/isla-de-maipo" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Isla de Maipo</a>
+<a href="/comunas/el-monte" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">El Monte</a>
+<a href="/comunas/padre-hurtado" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Padre Hurtado</a>
+<a href="/comunas/san-pedro" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Pedro</a>
+<a href="/comunas/alhue" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Alhué</a>
+<a href="/comunas/san-jose-de-maipo" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San José de Maipo</a>
+<a href="/comunas/pirque" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Pirque</a>
+<a href="/comunas/calera-de-tango" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Calera de Tango</a>
+<a href="/comunas/quinta-normal" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Quinta Normal</a>
+<a href="/comunas/pedro-aguirre-cerda" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Pedro Aguirre Cerda</a>
+<a href="/comunas/lo-espejo" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">Lo Espejo</a>
+<a href="/comunas/san-ramon" class="btn btn-sm m-1" style="background:#f0f4f8;color:#0d7377;border:1px solid #d0e0e8;border-radius:20px;padding:6px 16px;font-size:0.85rem;text-decoration:none;">San Ramón</a>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="py-5 bg-white" id="faq">
+  <div class="container" style="max-width:800px;">
+    <div class="text-center mb-5">
+      <span class="badge mb-2" style="background:#14a098;color:#fff;padding:6px 16px;border-radius:20px;font-size:0.8rem;font-weight:700;text-transform:uppercase;">FAQ</span>
+      <h2 class="display-5 fw-bold text-dark">Preguntas Frecuentes</h2>
+      <p class="text-muted">Resolvemos tus dudas sobre electromecánico a domicilio en Santiago.</p>
+    </div>
+    <div class="accordion" id="faqAccordion">
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-6204">¿Hacen servicio a domicilio en Santiago?</button>
+          </h2>
+          <div id="faq-6204" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Sí. Vamos directamente a tu domicilio en toda la Región Metropolitana de Santiago. No necesitas mover tu vehículo.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-1210">¿Cuánto cuesta el servicio electromecánico a domicilio?</button>
+          </h2>
+          <div id="faq-1210" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">El precio varía según el tipo de servicio y vehículo. Cotiza gratis por WhatsApp al +56 9 7362 2291.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-402">¿Qué servicios ofrecen?</button>
+          </h2>
+          <div id="faq-402" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Baterías, cambio de aceite, frenos, electricidad, diagnóstico con scanner, aire acondicionado, suspensión, transmisión, mecánica diésel y más.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-5247">¿Tienen garantía?</button>
+          </h2>
+          <div id="faq-5247" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Sí, todas nuestras instalaciones y reparaciones tienen garantía de 90 días sobre la mano de obra.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-3213">¿En qué comunas atienden?</button>
+          </h2>
+          <div id="faq-3213" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Atendemos en toda la Región Metropolitana: Providencia, Las Condes, Ñuñoa, Maipú, Puente Alto y más de 50 comunas.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-8173">¿Cómo agendo una visita?</button>
+          </h2>
+          <div id="faq-8173" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Por WhatsApp al +56 9 7362 2291. Coordinamos día y horario según tu preferencia.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-9430">¿Atienden emergencias en la vía?</button>
+          </h2>
+          <div id="faq-9430" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Sí, atendemos emergencias electromecánicas en la vía pública dentro de la Región Metropolitana.</div>
+          </div>
+        </div>
+        <div class="accordion-item mb-2" style="border:1px solid #e0e0e0;border-radius:12px!important;overflow:hidden;">
+          <h2 class="accordion-header">
+            <button class="accordion-button collapsed fw-bold" style="background:#f8f9fa;font-size:0.95rem;" data-bs-toggle="collapse" data-bs-target="#faq-8436">¿Qué marcas de autos atienden?</button>
+          </h2>
+          <div id="faq-8436" class="accordion-collapse collapse">
+            <div class="accordion-body text-muted" style="font-size:0.9rem;">Atendemos todas las marcas: Toyota, Chevrolet, Hyundai, Kia, Mazda, Suzuki, Volkswagen, Ford, BMW, Mercedes, Audi y más.</div>
+          </div>
+        </div>
+    </div>
+  </div>
+</section>
+
+<!-- CONTACTO -->
+<section class="py-5" style="background:#0d7377;" id="contacto">
+  <div class="container text-center text-white">
+    <h2 class="display-5 fw-bold mb-3">¿Necesitas un Electromecánico a Domicilio?</h2>
+    <p class="lead text-white-50 mx-auto mb-4" style="max-width:600px;">Cotiza gratis por WhatsApp. Respondemos en minutos. Atención de lunes a sábado con horarios flexibles.</p>
+    <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20electromecanico%20a%20domicilio" target="_blank" class="btn btn-lg fw-bold" style="background:#14a098;color:#fff;border:none;border-radius:12px;padding:16px 40px;font-size:1.2rem;">
+      <i class="fab fa-whatsapp me-2"></i> WhatsApp: +56 9 7362 2291
+    </a>
+  </div>
+</section>
+
+<!-- MODALES DE SERVICIOS -->
+<div class="modal fade" id="modal-bateria" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-car-battery me-2"></i>Batería</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico, recarga y cambio de batería en Santiago con servicio a domicilio. Revisamos alternador, fugas de corriente y bornes para garantizar arranque rápido y óptimo voltaje.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Batería" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-cambio-de-aceite" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-oil-can me-2"></i>Cambio de aceite</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Cambio de aceite y filtro de motor en Santiago con servicio a domicilio. Utilizamos lubricantes y filtros según pauta del fabricante para alargar la vida útil de tu motor.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Cambio%20de%20aceite" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-cambio-de-filtros-de-aa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-wind me-2"></i>Cambio de filtros de A/A</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Reemplazo de filtro de polen y sanitización del aire en Santiago con servicio a domicilio. Eliminamos malos olores, polvo y bacterias para un flujo de aire limpio en la cabina.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Cambio%20de%20filtros%20de%20A/A" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-diagnostico-de-automoviles" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-laptop-code me-2"></i>Diagnóstico de automóviles</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Scanner computarizado profesional en Santiago con servicio a domicilio. Lectura y borrado de códigos Check Engine, análisis de sensores en vivo y diagnóstico certero en terreno.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Diagnóstico%20de%20automóviles" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-electricidad" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-bolt me-2"></i>Electricidad</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Reparación de sistemas eléctricos automotrices en Santiago con servicio a domicilio: alternadores, motores de partida, fusibles, cableados y solución de cortocircuitos.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Electricidad" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-frenos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-stop-circle me-2"></i>Frenos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Inspección y cambio de pastillas, balatas y discos en Santiago con servicio a domicilio. Purgado de líquido de frenos para asegurar máxima respuesta, agarre y seguridad al frenar.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Frenos" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-direccion-y-suspension" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-cogs me-2"></i>Dirección y suspensión</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Cambio y mantención de amortiguadores, bandejas, rótulas y terminales en Santiago con servicio a domicilio. Elimina ruidos molestos y mejora la estabilidad de tu auto.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Dirección%20y%20suspensión" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-aire-acondicionado" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-snowflake me-2"></i>Aire acondicionado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Reparación, prueba de vacío y recarga de gas para aire acondicionado en Santiago con servicio a domicilio. Dejamos el sistema de climatización enfriando al 100%.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Aire%20acondicionado" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-autos-automaticos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-car me-2"></i>Autos automáticos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico electromecánico para cajas automáticas en Santiago con servicio a domicilio. Escaneo de transmisión, revisión de solenoides, fugas de fluido y mantención preventiva.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Autos%20automáticos" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-mecanica-diesel" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-truck me-2"></i>Mecánica diésel</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico y mantenimiento para motores diésel en Santiago con servicio a domicilio: inyección electrónica, calentadores, filtros de combustible y sensores de motor.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Mecánica%20diésel" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-mecanico-de-autos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-wrench me-2"></i>Mecánico de autos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Servicio integral de mecánica y electromecánica en Santiago con servicio a domicilio. Mantenciones por kilometraje, revisiones preventivas y reparaciones multimarca garantizadas.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Mecánico%20de%20autos" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-transmision" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-cog me-2"></i>Transmisión</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico de cajas manuales y automáticas en Santiago con servicio a domicilio: cambio de embrague, homocinéticas, fuelles y fluido para cambios suaves y seguros.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Transmisión" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-servicios-de-aa" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-fan me-2"></i>Servicios de A/A</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Mantención integral de climatización en Santiago con servicio a domicilio: revisión de compresores, condensadores, presostatos y carga de gas con control de presión.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Servicios%20de%20A/A" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-servicio-y-reparacion-de-frenos" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title"><i class="fas fa-plug me-2"></i>Servicio y reparación de frenos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Mantenimiento completo de frenos en Santiago con servicio a domicilio: cambio de pastillas, ajuste de freno de mano y diagnóstico electrónico para sensores ABS y ESP.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Trabajo profesional y prolijo</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Servicio%20y%20reparación%20de%20frenos" target="_blank" class="btn text-white fw-bold" style="background:#14a098;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-trabajos-de-electricidad" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Trabajos de electricidad</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Reparación de alzavidrios, cierre centralizado, alarmas, GPS y cableado en Santiago con servicio a domicilio. Atención técnica profesional directa en la puerta de tu hogar.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Trabajos%20de%20electricidad" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-scanner-y-diagnostico-electronico" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Scanner y diagnóstico electrónico</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico computarizado avanzado en Santiago con servicio a domicilio. Lectura y borrado de códigos Check Engine, ABS y Airbag, monitoreo de sensores en vivo y reseteo de fallas.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Scanner%20y%20diagnóstico%20electrónico" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-reparacion-de-alternadores" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Reparación de alternadores y motores de arranque</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Solución a fallas de arranque y carga eléctrica en Santiago con servicio a domicilio. Reparación y cambio de carbones, placas rectificadoras, bendix, relays y solenoides en terreno.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Reparación%20de%20alternadores%20y%20motores%20de%20arranque" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-deteccion-de-fugas-de-corriente" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Detección de fugas de corriente y cortocircuitos</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Revisión técnica de consumos que descargan la batería en Santiago con servicio a domicilio. Detección de cortocircuitos, reparación de ramales de cableado y cajas de fusibles.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Detección%20de%20fugas%20de%20corriente%20y%20cortocircuitos" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-mantencion-de-inyeccion-electronica" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Mantención del sistema de inyección electrónica</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico electromecánico de inyectores, cuerpo de aceleración, bomba de bencina y sensores MAF/MAP en Santiago con servicio a domicilio para optimizar consumo y potencia.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Mantención%20del%20sistema%20de%20inyección%20electrónica" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-reparacion-de-alzavidrios" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Reparación de alzavidrios y cierre centralizado</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Solución rápida para botoneras rotas, motores elevavidrios trabados y fallas de cierre centralizado en Santiago con servicio a domicilio directo en tu casa o lugar de trabajo.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Reparación%20de%20alzavidrios%20y%20cierre%20centralizado" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-diagnostico-y-reparacion-de-luces" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Diagnóstico y reparación de luces automotrices</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Reparación de focos principales, neblineros, luces de freno y cableados en Santiago con servicio a domicilio. Instalación y adaptación de sistemas LED con relays de protección.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Diagnóstico%20y%20reparación%20de%20luces%20automotrices" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-diagnostico-de-sensores-abs-esp" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Diagnóstico de sensores ABS y ESP</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Inspección técnica de cableados y sensores de velocidad de rueda para frenos ABS en Santiago con servicio a domicilio, garantizando frenado seguro y borrado de testigos en tablero.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Diagnóstico%20de%20sensores%20ABS%20y%20ESP" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-revision-de-electroventiladores" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Revisión de electroventiladores y sistema térmico</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Diagnóstico de relay de ventilador, bulbos de temperatura y resistencias en Santiago con servicio a domicilio para prevenir sobrecalentamientos y proteger la vida de tu motor.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Revisión%20de%20electroventiladores%20y%20sistema%20térmico" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="modal-instalacion-de-camaras-de-retroceso" tabindex="-1" aria-hidden="true">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+        <div class="modal-content" style="border-radius:16px;border:none;">
+            <div class="modal-header" style="background:#14a098;color:#fff;border-radius:16px 16px 0 0;">
+                <h5 class="modal-title">🟢 Instalación de cámaras de retroceso y accesorios</h5>
+                <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+            </div>
+            <div class="modal-body p-4">
+                <p class="text-muted">🔹 Montaje limpio y profesional de radios touch, cámaras de retroceso y sensores de estacionamiento en Santiago con servicio a domicilio, integrados al cableado original.</p>
+                <hr><h6 class="fw-bold text-dark mb-3">¿Qué incluye este servicio?</h6>
+                <ul class="list-unstyled">
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Visita a domicilio en toda la Región Metropolitana</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Diagnóstico y cotización sin costo</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Materiales de primera calidad</li>
+                    <li class="mb-2"><i class="fas fa-check text-success me-2"></i>Garantía de 90 días</li>
+                </ul>
+            </div>
+            <div class="modal-footer" style="border:none;">
+                <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Instalación%20de%20cámaras%20de%20retroceso%20y%20accesorios" target="_blank" class="btn text-white fw-bold" style="background:#0d7377;border:none;border-radius:8px;padding:10px 28px;">
+                    <i class="fab fa-whatsapp me-1"></i> Cotizar por WhatsApp
+                </a>
+            </div>
+        </div>
+    </div>
+</div><!-- FOOTER INFERIOR FIJO (STICKY BOTTOM BAR) - NUEVO DISEÑO MASIVO -->
 <!-- ======================================================================= -->
 <div class="sticky-bottom-bar">
   <div class="big-buttons-container" style="gap: 15px;">
