@@ -1,0 +1,34 @@
+# OS
+.DS_Store
+Thumbs.db
+
+# Editors
+.vscode/
+.idea/
+*.swp
+*~
+
+# Node
+node_modules/
+npm-debug.log*
+yarn-error.log*
+
+# Wrangler
+.wrangler/
+.wrangler/cache/
+
+# Local env (secrets ya están en GitHub Actions, no en archivos locales)
+.env
+.env.local
+.env.*.local
+
+# Cloudflare
+.dev.vars
+
+# Build outputs (no aplica porque es sitio estático, pero por si acaso)
+dist/
+build/
+out/
+
+# Logs
+*.log
