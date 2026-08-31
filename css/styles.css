@@ -1,10 +1,10 @@
 /* --- Variables y Estilos Globales --- */
 :root {
-    --primary-color: #0d6efd; /* Azul Bootstrap */
-    --secondary-color: #6c757d; /* Gris Bootstrap */
-    --accent-color: #ffc107;   /* Amarillo para resaltar */
-    --dark-color: #212529;
-    --light-color: #f8f9fa;
+    --primary-color: #0d7377; /* Azul Bootstrap */
+    --secondary-color: #14a098; /* Gris Bootstrap */
+    --accent-color: #ff6b35;   /* Amarillo para resaltar */
+    --dark-color: #1a1a2e;
+    --light-color: #f0f4f8;
     --font-family: 'Poppins', sans-serif;
 }
 
@@ -78,8 +78,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .whatsapp-btn {
-    background-color: #25d366;
-    border-color: #25d366;
+    background-color: #14a098;
+    border-color: #14a098;
     color: white;
     font-weight: 500;
     padding: 8px 20px;
@@ -87,8 +87,8 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .whatsapp-btn:hover {
-    background-color: #128c7e;
-    border-color: #128c7e;
+    background-color: #0d7377;
+    border-color: #0d7377;
     color: white;
 }
 
@@ -244,14 +244,14 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .contact-form .btn-primary {
-    background-color: #25d366;
-    border-color: #25d366;
+    background-color: #14a098;
+    border-color: #14a098;
     font-weight: 600;
 }
 
 .contact-form .btn-primary:hover {
-    background-color: #128c7e;
-    border-color: #128c7e;
+    background-color: #0d7377;
+    border-color: #0d7377;
 }
 
 .contact-info .fas {
@@ -265,7 +265,7 @@ h1, h2, h3, h4, h5, h6 {
     height: 60px;
     bottom: 40px;
     right: 40px;
-    background-color: #25d366;
+    background-color: #14a098;
     color: #FFF;
     border-radius: 50px;
     text-align: center;

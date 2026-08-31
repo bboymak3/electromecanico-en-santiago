@@ -1,108 +1,27 @@
-# ===================================================
-# robots.txt - GlobalPro Automotriz
+# robots.txt - Electromecánico en Santiago
 # https://electromecanico-en-santiago.pages.dev
-# ===================================================
 
-# Sitemaps
-Sitemap: https://electromecanico-en-santiago.pages.dev/sitemap.xml
+User-agent: Google-Extended
+Allow: /
 
-# ===================================================
-# REGLAS PARA TODOS LOS CRAWLERS (incluido Googlebot)
-# Permitir solo las rutas válidas del sitio
-# Bloquear prefijos inexistentes que generaron URLs basura
-# ===================================================
+User-agent: GPTBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
 User-agent: *
-Allow: /$
-Allow: /comunas/
-Allow: /vehiculos/
-Allow: /servicios/
-Allow: /blog/
-Allow: /marcas_automotrices/
-Allow: /contacto
-Allow: /faq
-Allow: /quienes-somos
-Allow: /politica-privacidad
-Allow: /inspeccion-mecanica
-Allow: /en/
-Allow: /en/comunas/
-Allow: /en/vehiculos/
-Allow: /en/servicios/
-Allow: /en/marcas_automotrices/
-Allow: /en/contacto
-Allow: /en/faq
-Allow: /en/about-us
-Allow: /en/privacy-policy
-Allow: /en/mechanical-inspection
-Allow: /en/services-at-home
-Allow: /en/404
-Allow: /servicios-domicilio
-Allow: /sitemap.xml
-Allow: /robots.txt
+Allow: /
+Disallow: /cdn-cgi/
 
-# Archivos y carpetas que NO se deben rastrear
-# NOTA: Se permite acceso a /css/, /js/ e /images/ para que Google
-# pueda renderizar correctamente la página e indexar imágenes.
-Disallow: /assets/
-Disallow: /images/imagen/
-
-# Bloquear URLs con extension .html (ya redirigen 301 a URLs limpias)
-# Esto acelera la desindexacion de las URLs antiguas con .html
-Disallow: /*.html
-
-# ===================================================
-# URLS FANTASMA - prefijos inexistentes que Google indexó
-# por enlaces relativos. Bloquear para que se desindexen.
-# IMPORTANTE: Estas reglas aplican a TODOS los crawlers
-# incluyendo Googlebot
-# ===================================================
-Disallow: /taxis/
-Disallow: /aire-acondicionado/
-Disallow: /frenos/
-Disallow: /marcas/
-Disallow: /diagnostico/
-Disallow: /emergencias/
-Disallow: /mecanica/
-Disallow: /aceite/
-Disallow: /electricidad/
-Disallow: /scanner/
-Disallow: /mecanico/
-Disallow: /servicio/
-Disallow: /autos/
-Disallow: /reparacion/
-Disallow: /auxilio/
-Disallow: /24horas/
-Disallow: /urgencia/
-
-# Patrones adicionales de URLs basura (combinaciones)
-Disallow: /comunas/comunas/
-Disallow: /vehiculos/comunas/
-Disallow: /vehiculos/vehiculos/
-Disallow: /comunas/vehiculos/
-Disallow: /servicios/comunas/
-Disallow: /servicios/vehiculos/
-Disallow: /blog/comunas/
-Disallow: /blog/vehiculos/
-Disallow: /marcas/vehiculos/
-Disallow: /marcas_automotrices/marcas_automotrices/
-
-# Bloquear bots maliciosos o innecesarios
-User-agent: AhrefsBot
-Crawl-delay: 10
-
-User-agent: SemrushBot
-Crawl-delay: 10
-
-User-agent: MJ12bot
-Disallow: /
-
-User-agent: DotBot
-Disallow: /
-
-User-agent: Baiduspider
-Disallow: /
-
-User-agent: Sogou
-Disallow: /
-
-User-agent: YandexBot
-Crawl-delay: 10
+Sitemap: https://electromecanico-en-santiago.pages.dev/sitemap.xml
+Host: https://electromecanico-en-santiago.pages.dev
