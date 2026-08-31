@@ -94,7 +94,7 @@ h1, h2, h3, h4, h5, h6 {
 
 /* --- Hero Section --- */
 .hero-section {
-    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/image1.jpg') no-repeat center center/cover;
+    background: linear-gradient(rgba(13, 115, 119, 0.85), rgba(20, 160, 152, 0.75)), url('/images/electromecanico-a-domicilio-en-santiago-banner.jpg') no-repeat center center/cover;
     min-height: 90vh;
     display: flex;
     align-items: center;
