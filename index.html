@@ -21,42 +21,6 @@
     z-index: 10001;
     align-items: center;
   }
-
-  .float-top-btn {
-    width: 52px;
-    height: 52px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-size: 1.35rem;
-    text-decoration: none;
-    color: white;
-    border: 2px solid #fff;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.3);
-    transition: transform 0.3s ease, background-color 0.3s ease;
-    cursor: pointer;
-  }
-
-  .float-top-btn:hover {
-    transform: scale(1.12);
-  }
-
-  .float-btn-ia {
-    background: linear-gradient(135deg, #FFC107 0%, #ff9800 100%);
-    color: #000;
-    animation: pulse-yellow 2s infinite;
-  }
-
-  .float-btn-bell {
-    background: linear-gradient(135deg, #a80000 0%, #d32f2f 100%);
-    animation: pulseBell-float 2s infinite;
-  }
-  .float-btn-agenda {
-    background: linear-gradient(135deg, #ff6b00 0%, #ff8c33 100%);
-    color: #fff;
-    animation: pulse-agenda 2s infinite;
-  }
   @keyframes pulse-agenda {
     0% { box-shadow: 0 0 0 0 rgba(255, 107, 0, 0.6); }
     70% { box-shadow: 0 0 0 10px rgba(255, 107, 0, 0); }
@@ -221,11 +185,6 @@
     #floating-top-buttons {
       top: 90px;
       right: 10px;
-    }
-    .float-top-btn {
-      width: 44px;
-      height: 44px;
-      font-size: 1.1rem;
     }
   }
 </style>
@@ -987,7 +946,6 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
 
         <div class="btn-group mt-4">
-          <a href="#" class="btn btn-primary me-2" onclick="abrirModalGP('modal-agenda-visita'); return false;">
             <i class="fas fa-calendar-check me-2"></i> Agenda tu Visita Tecnica
           </a>
           <a href="#servicios" class="btn btn-outline-light">
@@ -4008,44 +3966,7 @@ function showRecResult(type, html) {
 <!-- ======================================================================= -->
 <!-- MODAL AGENDA TU VISITA TECNICA -->
 <!-- ======================================================================= -->
-<div id="modal-agenda-visita" style="display:none; position:fixed; top:0; left:0; right:0; bottom:0; background:rgba(0,0,0,0.75); z-index:10000; align-items:center; justify-content:center; padding:15px;">
-  <div style="background:#fff; border-radius:20px; max-width:500px; width:100%; max-height:92vh; overflow-y:auto; position:relative; animation: modalSlideIn 0.3s ease-out; box-shadow:0 25px 60px rgba(0,0,0,0.4);">
 
-    <!-- Header naranja estilo express -->
-    <div style="background:linear-gradient(135deg, #ff6b00 0%, #ff8c33 50%, #ffaa55 100%); padding:28px 25px 18px; text-align:center; border-radius:20px 20px 0 0; position:relative;">
-      <button onclick="cerrarModalGP('modal-agenda-visita')" style="position:absolute; top:12px; right:16px; background:none; border:none; font-size:1.6rem; cursor:pointer; color:rgba(255,255,255,0.9); z-index:10;">&times;</button>
-      <div style="width:65px; height:65px; background:rgba(255,255,255,0.2); border-radius:50%; display:inline-flex; align-items:center; justify-content:center; margin-bottom:10px; backdrop-filter:blur(10px); border:2px solid rgba(255,255,255,0.3);">
-        <i class="fas fa-bolt" style="font-size:1.7rem; color:#fff;"></i>
-      </div>
-      <h2 style="color:#fff; font-weight:900; font-size:1.35rem; margin-bottom:4px; letter-spacing:0.02em;">Agenda tu Visita Tecnica</h2>
-      <p style="color:rgba(255,255,255,0.85); font-size:0.85rem; margin-bottom:0;">Electromecánico en Santiago Automotriz &bull; Servicio Express</p>
-    </div>
-
-    <!-- Body formulario -->
-    <div style="padding:22px 24px 10px;">
-      <div id="agenda-error" style="display:none; background:#f8d7da; color:#721c24; border:1px solid #f5c6cb; border-radius:10px; padding:10px 14px; font-size:0.84rem; font-weight:500; margin-bottom:14px; align-items:center; gap:8px;">
-        <i class="fas fa-exclamation-circle"></i>
-        <span id="agenda-error-text"></span>
-      </div>
-
-      <form id="form-agenda-visita" onsubmit="enviarVisitaTecnica(event)">
-        <!-- Patente -->
-        <div style="margin-bottom:14px;">
-          <label style="display:block; font-weight:700; font-size:0.84rem; color:#333; margin-bottom:5px;"><i class="fas fa-car" style="color:#ff6b00; margin-right:5px;"></i>Patente / Placa</label>
-          <input type="text" id="agenda-patente" class="form-control" placeholder="ABCD12" maxlength="8" required autocomplete="off" autocapitalize="characters" style="font-size:1.5rem; font-weight:800; text-align:center; text-transform:uppercase; letter-spacing:4px; border:3px solid #ff6b00; border-radius:12px; padding:13px; background:#fffbf5;">
-        </div>
-
-        <!-- Marca y Modelo -->
-        <div style="display:flex; gap:10px; margin-bottom:14px;">
-          <div style="flex:1;">
-            <label style="display:block; font-weight:700; font-size:0.84rem; color:#333; margin-bottom:5px;"><i class="fas fa-industry" style="color:#ff6b00; margin-right:5px;"></i>Marca</label>
-            <input type="text" id="agenda-marca" class="form-control" placeholder="Toyota, Ford..." style="border:2px solid #ddd; border-radius:10px; padding:11px 13px; font-size:0.93rem;">
-          </div>
-          <div style="flex:1;">
-            <label style="display:block; font-weight:700; font-size:0.84rem; color:#333; margin-bottom:5px;"><i class="fas fa-car-side" style="color:#ff6b00; margin-right:5px;"></i>Modelo</label>
-            <input type="text" id="agenda-modelo" class="form-control" placeholder="Corolla, Focus..." style="border:2px solid #ddd; border-radius:10px; padding:11px 13px; font-size:0.93rem;">
-          </div>
-        </div>
 
         <!-- Nombre -->
         <div style="margin-bottom:14px;">
@@ -4139,8 +4060,6 @@ function showRecResult(type, html) {
   to { opacity: 1; transform: translateY(0); }
 }
 @media (max-width: 480px) {
-  #modal-agenda-visita > div:first-child { max-height:95vh; }
-  #modal-agenda-visita input[type="text"].form-control[style*="text-align:center"] { font-size:1.3rem !important; letter-spacing:3px !important; }
   #agenda-mapa-container { height: 260px; width: 100%; }
 }
 @media (max-width: 480px) {
@@ -4159,14 +4078,12 @@ if (agendaPatenteInput) {
 }
 
 // Cerrar modal con click fuera
-document.getElementById('modal-agenda-visita').addEventListener('click', function(e) {
-  if (e.target === this) cerrarModalGP('modal-agenda-visita');
+
 });
 
 // ============================================
 // SISTEMA DE MODALES CON HISTORY API (boton Atras)
 // ============================================
-function abrirModalGP(id) {
   document.getElementById(id).style.display = 'flex';
   history.pushState({ modalGP: id }, '');
 }
@@ -4182,13 +4099,13 @@ function cerrarModalGP(id) {
 // Boton Atras del navegador: cerrar modal en vez de salir de la web
 window.addEventListener('popstate', function(e) {
   // 1) Cerrar modales primero (prioridad alta)
-  var modales = ['modal-agenda-visita', 'modal-chat-ia', 'modal-recordatorio', 'imageModal'];
+  var modales = ['', 'modal-chat-ia', 'modal-recordatorio', 'imageModal'];
   for (var i = 0; i < modales.length; i++) {
     var el = document.getElementById(modales[i]);
     if (el && el.style.display !== 'none' && el.style.display !== '') {
       el.style.display = 'none';
       // Cerrar mapa agenda si estaba abierto
-      if (modales[i] === 'modal-agenda-visita' && mapaAgendaVisible) {
+      if (modales[i] === '' && mapaAgendaVisible) {
         var wrapper = document.getElementById('agenda-mapa-wrapper');
         var btn = document.getElementById('btn-toggle-mapa-agenda');
         if (wrapper) wrapper.style.display = 'none';
@@ -4488,7 +4405,7 @@ function resetAgendaVisita() {
   document.addEventListener('keydown', function(event) {
     if (event.key === "Escape") {
       // Cerrar cualquier modal abierto
-      var modales = ['imageModal', 'modal-agenda-visita', 'modal-chat-ia', 'modal-recordatorio'];
+      var modales = ['imageModal', '', 'modal-chat-ia', 'modal-recordatorio'];
       for (var i = 0; i < modales.length; i++) {
         var el = document.getElementById(modales[i]);
         if (el && el.style.display !== 'none' && el.style.display !== '') {
