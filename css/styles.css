@@ -92,15 +92,57 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-/* --- Hero Section --- */
+/* --- Hero Section (banner only, 100% visible, no overlay) --- */
 .hero-section {
-    background: linear-gradient(rgba(13, 115, 119, 0.85), rgba(20, 160, 152, 0.75)), url('/images/electromecanico-a-domicilio-en-santiago-banner.jpg') no-repeat center center/cover;
-    min-height: 90vh;
+    background: url('/images/electromecanico-a-domicilio-en-santiago-banner.jpg') no-repeat center center/cover;
+    min-height: 70vh;
     display: flex;
     align-items: center;
     text-align: left;
     color: white;
     margin-top: -46px;
+}
+
+/* --- Hero Text Section (below the banner) --- */
+.hero-text-section {
+    background: #ffffff;
+    padding: 80px 0 60px 0;
+    text-align: center;
+    color: var(--dark-color);
+}
+
+.hero-text-section .hero-title {
+    color: var(--dark-color);
+    margin-top: 20px;
+}
+
+.hero-text-section .hero-subtitle {
+    color: #4a5568;
+    margin: 20px auto;
+    font-size: 1.15rem;
+    max-width: 720px;
+}
+
+.hero-text-section .stat-number {
+    color: var(--primary-color);
+}
+
+.hero-text-section .stat-label {
+    color: var(--dark-color);
+}
+
+.hero-text-section .btn-group .btn-outline-primary {
+    color: var(--primary-color);
+    border-color: var(--primary-color);
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+}
+
+.hero-text-section .btn-group .btn-outline-primary:hover {
+    background: var(--primary-color);
+    color: #fff;
 }
 
 .hero-badge {
