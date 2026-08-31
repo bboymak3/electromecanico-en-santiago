@@ -1,0 +1,89 @@
+# ===================================================
+# _headers - mecanico247.com
+# Bloquea indexación de rutas basura/fantasma
+# Cloudflare Pages sirve estas URLs con 200 porque
+# hace suffix-matching. Este header dice a Google
+# que NO indexe estas páginas.
+# ===================================================
+
+/taxis/*
+  X-Robots-Tag: noindex, nofollow
+
+/aire-acondicionado/*
+  X-Robots-Tag: noindex, nofollow
+
+/frenos/*
+  X-Robots-Tag: noindex, nofollow
+
+/marcas/*
+  X-Robots-Tag: noindex, nofollow
+
+/diagnostico/*
+  X-Robots-Tag: noindex, nofollow
+
+/emergencias/*
+  X-Robots-Tag: noindex, nofollow
+
+/mecanica/*
+  X-Robots-Tag: noindex, nofollow
+
+/aceite/*
+  X-Robots-Tag: noindex, nofollow
+
+/electricidad/*
+  X-Robots-Tag: noindex, nofollow
+
+/scanner/*
+  X-Robots-Tag: noindex, nofollow
+
+/mecanico/*
+  X-Robots-Tag: noindex, nofollow
+
+/servicio/*
+  X-Robots-Tag: noindex, nofollow
+
+/autos/*
+  X-Robots-Tag: noindex, nofollow
+
+/reparacion/*
+  X-Robots-Tag: noindex, nofollow
+
+/auxilio/*
+  X-Robots-Tag: noindex, nofollow
+
+/24horas/*
+  X-Robots-Tag: noindex, nofollow
+
+/urgencia/*
+  X-Robots-Tag: noindex, nofollow
+
+/blog/comunas/*
+  X-Robots-Tag: noindex, nofollow
+
+/comunas/comunas/*
+  X-Robots-Tag: noindex, nofollow
+
+/vehiculos/comunas/*
+  X-Robots-Tag: noindex, nofollow
+
+/vehiculos/vehiculos/*
+  X-Robots-Tag: noindex, nofollow
+
+/comunas/vehiculos/*
+  X-Robots-Tag: noindex, nofollow
+
+/servicios/comunas/*
+  X-Robots-Tag: noindex, nofollow
+
+/servicios/vehiculos/*
+  X-Robots-Tag: noindex, nofollow
+
+/marcas/comunas/*
+  X-Robots-Tag: noindex, nofollow
+
+/marcas/vehiculos/*
+  X-Robots-Tag: noindex, nofollow
+
+/blog/vehiculos/*
+  X-Robots-Tag: noindex, nofollow
+
