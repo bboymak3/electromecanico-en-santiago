@@ -241,9 +241,24 @@
   }
   .whatsapp-btn:hover { background-color: #128c7e; border-color: #128c7e; color: white; }
 
+  /* --- Hero Section (banner unificado, responsive) --- */
   .hero-section {
-    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('../') no-repeat center center/cover;
-    min-height: 90vh; display: flex; align-items: center; text-align: left; color: white;
+    width: 100%;
+    background: url('/images/electromecanico-a-domicilio-en-santiago.jpg') no-repeat center center / contain;
+    background-color: #ffffff;
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+    max-height: 45vh;
+    display: block;
+    margin-top: 80px;
+  }
+  @media (max-width: 768px) {
+    .hero-section {
+      aspect-ratio: 16 / 9;
+      max-height: 35vh;
+      margin-top: 70px;
+      background-size: contain;
+    }
   }
   .hero-badge { background-color: #FFC107; color: #212529; padding: 5px 15px; border-radius: 20px; font-weight: 600; font-size: 0.9rem; }
   .hero-title { font-weight: 700; font-size: 3.5rem; line-height: 1.2; margin-top: 20px; }

@@ -92,10 +92,10 @@ h1, h2, h3, h4, h5, h6 {
     color: white;
 }
 
-/* --- Hero Section (banner completo, responsivo, sin overlay) --- */
+/* --- Hero Section (banner unificado, 100% visible, no overlay, responsive) --- */
 .hero-section {
     width: 100%;
-    background: url('/images/electromecanico-a-domicilio-en-santiago-banner.jpg') no-repeat center center / contain;
+    background: url('/images/electromecanico-a-domicilio-en-santiago.jpg') no-repeat center center / contain;
     background-color: #ffffff;
     aspect-ratio: 16 / 9;
     min-height: auto;

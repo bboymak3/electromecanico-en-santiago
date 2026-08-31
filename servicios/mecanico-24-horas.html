@@ -241,16 +241,66 @@
   }
   .whatsapp-btn:hover { background-color: #128c7e; border-color: #128c7e; color: white; }
 
-  /* --- Hero Section (banner only, 100% visible, no overlay) --- */
+  /* --- Hero Section (banner unificado, 100% visible, no overlay, responsive) --- */
   .hero-section {
-    background: var(--hero-bg, url('/images/electromecanico-a-domicilio-en-santiago-banner.jpg')) no-repeat center center/cover;
-    min-height: 35vh;
-    display: flex;
-    align-items: center;
-    text-align: left;
-    color: white;
+    width: 100%;
+    background: url('/images/electromecanico-a-domicilio-en-santiago.jpg') no-repeat center center / contain;
+    background-color: #ffffff;
+    aspect-ratio: 16 / 9;
+    min-height: auto;
+    max-height: 45vh;
+    display: block;
     margin-top: 80px;
   }
+  /* --- Hero Text Section (below the banner) --- */
+  .hero-text-section {
+    background: #ffffff;
+    padding: 60px 0 50px 0;
+    text-align: center;
+    color: #1a1a2e;
+  }
+  .hero-text-section .hero-title,
+  .hero-text-section .display-4 {
+    color: #1a1a2e;
+    margin-top: 20px;
+  }
+  .hero-text-section .hero-subtitle,
+  .hero-text-section .lead {
+    color: #4a5568;
+    margin: 20px auto;
+    font-size: 1.15rem;
+    max-width: 720px;
+  }
+  .hero-text-section .stat-number {
+    color: #0d7377;
+  }
+  .hero-text-section .stat-label {
+    color: #1a1a2e;
+  }
+  .hero-text-section .btn-group .btn-outline-light,
+  .hero-text-section .btn-outline-light {
+    color: #0d7377;
+    border-color: #0d7377;
+    border-radius: 12px;
+    padding: 16px 32px;
+    font-size: 1.1rem;
+    font-weight: 600;
+  }
+  .hero-text-section .btn-group .btn-outline-light:hover,
+  .hero-text-section .btn-outline-light:hover {
+    background: #0d7377;
+    color: #fff;
+  }
+  @media (max-width: 768px) {
+    .hero-section {
+      aspect-ratio: 16 / 9;
+      max-height: 35vh;
+      margin-top: 70px;
+      background-size: contain;
+    }
+  }
+
+
   /* --- Hero Text Section (below the banner) --- */
   .hero-text-section {
     background: #ffffff;
@@ -526,7 +576,7 @@
 <body>
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-NK35S8FG" height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top"><div class="container nav-container"><a href="/" class="logo d-flex align-items-center text-decoration-none text-white"><div class="logo-img"><i class="fas fa-wrench"></i></div><div><div class="logo-text">ELECTROMECANICO EN SANTIAGO</div><div class="logo-subtext">Taller Mecanico</div></div></a><button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button><div class="collapse navbar-collapse desktop-menu" id="navbarNav"><ul class="navbar-nav ms-auto"><li class="nav-item"><a class="nav-link" href="/#mecanico-domicilio-seo">electromecánico a domicilio</a></li><li class="nav-item"><a class="nav-link" href="/#servicios">Servicios</a></li><li class="nav-item dropdown"><a class="nav-link dropdown-toggle" href="#" id="comunasDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">Comunas</a><ul class="dropdown-menu dropdown-menu-dark" aria-labelledby="comunasDropdown" style="max-height:400px;overflow-y:auto;"><li><a class="dropdown-item" href="/comunas/puente-alto">Puente Alto</a></li><li><a class="dropdown-item" href="/comunas/la-florida">La Florida</a></li><li><a class="dropdown-item" href="/comunas/maipu">Maipu</a></li><li><a class="dropdown-item" href="/comunas/las-condes">Las Condes</a></li><li><a class="dropdown-item" href="/comunas/santiago">Santiago</a></li></ul></li><li class="nav-item"><a class="nav-link" href="/quienes-somos">Quienes Somos</a></li><li class="nav-item"><a class="nav-link" href="/contacto">Contacto</a></li><li class="nav-item"><a class="nav-link" href="/faq">FAQ</a></li><li class="nav-item"><a href="https://wa.me/56973622291" class="whatsapp-btn" target="_blank"><i class="fab fa-whatsapp me-2"></i> WhatsApp</a></li></ul></div></div></nav>
-<section class="hero-section" id="inicio" style="background:url('/images/electromecanico-a-domicilio-en-santiago-24-7-pedro-aguirre-cerda-maipu-cerrillos.jpg') no-repeat center center/cover;"></section>
+<section class="hero-section" id="inicio"></section>
 
 <section class="hero-text-section">
   <div class="container">
