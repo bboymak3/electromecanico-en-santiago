@@ -2,6 +2,31 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "chevrolet-onix-1-0-turbo",
+      "vehiculo": "Chevrolet Onix 1.0 Turbo",
+      "servicio": "Mantención de motor de partida a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-car-battery",
+      "resumen": "Desmontaje y mantención del motor de partida (arranque) realizada a domicilio.",
+      "descripcion": "Atendimos este Chevrolet Onix 1.0 Turbo en el domicilio del cliente para realizar la mantención del motor de partida. Se desmontó el motor de arranque, se revisó y realizó su mantención, y luego se reinstaló y probó el arranque del vehículo.",
+      "trabajos_realizados": [
+        "Diagnóstico del sistema de arranque",
+        "Desmontaje del motor de partida",
+        "Mantención y revisión del motor de partida",
+        "Reinstalación y prueba de arranque"
+      ],
+      "fotos": [
+        {
+          "file": "chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago",
+          "caption": "Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente"
+        },
+        {
+          "file": "chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago",
+          "caption": "Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención"
+        }
+      ]
+    },
+    {
       "slug": "hyundai-grand-i10",
       "vehiculo": "Hyundai Grand i10",
       "servicio": "Electricidad automotriz a domicilio",
@@ -16,8 +41,14 @@
         "Rearmado y verificación final"
       ],
       "fotos": [
-        {"file": "hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago", "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero"},
-        {"file": "hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago", "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto"}
+        {
+          "file": "hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago",
+          "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero"
+        },
+        {
+          "file": "hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago",
+          "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto"
+        }
       ]
     },
     {
@@ -35,8 +66,14 @@
         "Revisión de alineación de los focos"
       ],
       "fotos": [
-        {"file": "toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago", "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar"},
-        {"file": "toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago", "caption": "Toyota RAV4 – neblineros LED instalados y funcionando"}
+        {
+          "file": "toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago",
+          "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar"
+        },
+        {
+          "file": "toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago",
+          "caption": "Toyota RAV4 – neblineros LED instalados y funcionando"
+        }
       ]
     },
     {
@@ -54,7 +91,10 @@
         "Control de nivel y temperatura"
       ],
       "fotos": [
-        {"file": "audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago", "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol"}
+        {
+          "file": "audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago",
+          "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol"
+        }
       ]
     },
     {
@@ -71,7 +111,10 @@
         "Entrega del vehículo en el lugar del cliente"
       ],
       "fotos": [
-        {"file": "nissan-versa-mantencion-mecanico-a-domicilio-santiago", "caption": "Nissan Versa – mantención a domicilio"}
+        {
+          "file": "nissan-versa-mantencion-mecanico-a-domicilio-santiago",
+          "caption": "Nissan Versa – mantención a domicilio"
+        }
       ]
     }
   ]
