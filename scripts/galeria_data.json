@@ -2,6 +2,28 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "citroen-c3-xtr",
+      "vehiculo": "Citroën C3 XTR",
+      "servicio": "Auto no enciende: batería descargada y fusible quemado",
+      "comuna": "Pudahuel",
+      "icono": "fa-car-battery",
+      "resumen": "El vehículo no encendía porque se descargó la batería y se quemó un fusible. Solucionado a domicilio en Pudahuel.",
+      "descripcion": "Este Citroën C3 XTR no encendía. Nuestro electromecánico acudió a domicilio en la comuna de Pudahuel y diagnosticó que la batería se había descargado y que además se había quemado un fusible. Se recargó la batería, se reemplazó el fusible dañado y se revisó el sistema de carga para dejar el vehículo encendiendo y funcionando correctamente. Recuerda: en M&E somos tu mejor opción en electromecánica a domicilio.",
+      "trabajos_realizados": [
+        "Diagnóstico de vehículo que no enciende",
+        "Prueba y recarga de batería",
+        "Detección y cambio de fusible quemado",
+        "Revisión del sistema de carga",
+        "Prueba de encendido"
+      ],
+      "fotos": [
+        {
+          "file": "citroen-c3-xtr-no-enciende-bateria-descargada-fusible-quemado-a-domicilio-pudahuel",
+          "caption": "Citroën C3 XTR – auto que no encendía, atendido a domicilio en Pudahuel"
+        }
+      ]
+    },
+    {
       "slug": "dodge-journey",
       "vehiculo": "Dodge Journey",
       "servicio": "Reparación de cañería de calefacción a domicilio",
