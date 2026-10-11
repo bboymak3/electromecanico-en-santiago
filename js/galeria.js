@@ -56,6 +56,17 @@
     if (e.key === 'ArrowLeft') show(idx - 1);
   }, true);
 
+  // Botón "Ver más fotos": muestra el siguiente bloque de fotos ocultas
+  document.addEventListener('click', function(e){
+    var btn = e.target.closest('.gal-more');
+    if (!btn) return;
+    var wrap = btn.closest('.gal-strip-wrap');
+    var step = parseInt(btn.getAttribute('data-step'), 10) || 10;
+    var hidden = wrap.querySelectorAll('.gal-item[data-hidden-item]');
+    for (var i = 0; i < hidden.length && i < step; i++) hidden[i].removeAttribute('data-hidden-item');
+    if (hidden.length <= step) btn.style.display = 'none';
+  });
+
   // Filtros por vehículo
   document.addEventListener('click', function(e){
     var btn = e.target.closest('.gal-filters button');

@@ -157,12 +157,18 @@ def build_index():
     </div>
   </div>
 </section>'''
-    strip_items = "\n".join(gal_item(t, f, "tira-index") for t in TRABAJOS for f in t["fotos"])
+    fotos = [(t, f) for t in TRABAJOS for f in t["fotos"]]
+    strip_items = "\n".join(gal_item(t, f, "tira-index", ' data-hidden-item' if i >= 10 else "")
+                             for i, (t, f) in enumerate(fotos))
+    more_btn = ('<button type="button" class="btn fw-bold btn-outline-secondary gal-more" data-step="10" '
+                'style="border-radius:999px;padding:8px 22px;"><i class="fas fa-plus-circle me-2"></i>Ver más fotos</button>'
+                if len(fotos) > 10 else "")
     strip = f'''    <div class="gal-strip-wrap mb-5">
       <div class="gal-strip">
 {strip_items}
       </div>
-      <div class="text-center mt-3">
+      <div class="text-center mt-3 d-flex justify-content-center gap-2 flex-wrap">
+        {more_btn}
         <a href="/galeria" class="btn fw-bold" style="background:#0d7377;color:#fff;border-radius:999px;padding:8px 22px;"><i class="fas fa-images me-2"></i>Ver galería de trabajos</a>
       </div>
     </div>'''

@@ -16,35 +16,41 @@ Sitio web oficial de **Electromecánico a Domicilio en Santiago** — servicio d
 ## 🛠️ Stack Tecnológico
 
 - HTML5 semántico
-- Bootstrap 5 (grid, componentes, utilidades)
+- Bootstrap 5 (grid, componentes, modales)
 - CSS3 + JS Vanilla
-- jQuery (carrusel y modales)
+- Skin visual tipo iPhone (iOS) en todo el sitio: `css/ios-skin.css`
 - Font Awesome 6 (iconografía)
-- Sin build step — todo es estático
+- Sin build step — todo es estático (los scripts de `scripts/` generan HTML y se versiona el resultado)
 
 ## 📁 Estructura del Proyecto
 
 ```
 electromecanico-en-santiago/
-├── index.html                  # Página principal (hero + servicios + comunas + FAQ + CTA)
+├── index.html                  # Página principal (hero, valor estándar, instalaciones, servicios, galería, trabajos realizados, comunas, FAQ)
+├── galeria.html                # Galería de trabajos realizados (fotos + fichas de vehículos)
 ├── quienes-somos.html          # Sobre la empresa
-├── contacto.html               # Formulario de contacto
+├── contacto.html               # Contacto
 ├── faq.html                    # Preguntas frecuentes
 ├── servicios-domicilio.html    # Listado de servicios
 ├── inspeccion-mecanica.html    # Inspección técnica vehicular
 ├── politica-privacidad.html    # Política de privacidad
 ├── 404.html                    # Página no encontrada
-├── servicios/                  # 31 landings de servicios específicos
+├── servicios/                  # 69 landings de servicios (incluye 6 de valor estándar, 18 instalaciones y el hub instalaciones-automotrices)
 ├── comunas/                    # 52 landings por comuna (SEO local)
 ├── blog/                       # 61 artículos de blog (SEO temático)
-├── en/                         # Versión en inglés (mirror del sitio)
-│   ├── comunas/
-│   └── marcas_automotrices/
+├── vehiculos/                  # 33 páginas por modelo de vehículo
+├── marcas_automotrices/        # 10 páginas por marca/modelo
+├── en/                         # 110 páginas en inglés
 ├── images/                     # Logo, banner, favicon, imágenes
-├── css/styles.css              # Estilos globales
-├── js/                         # Scripts (carrusel, modales, SEO)
-├── sitemap.xml                 # 220 URLs indexables
-├── robots.txt                  # 30 user-agents IA permitidos
+│   └── galeria/                # Fotos de trabajos realizados (nombres SEO + comuna) y miniaturas
+├── css/
+│   ├── styles.css              # Estilos globales
+│   ├── galeria.css             # Galería, fichas y lightbox
+│   └── ios-skin.css            # Skin tipo iPhone
+├── js/galeria.js               # Lightbox, filtros y botón "Ver más" de la galería
+├── scripts/                    # Generadores (ver Mantenimiento)
+├── sitemap.xml                 # 246 URLs indexables
+├── robots.txt
 ├── _redirects                  # Redirecciones 301 (Cloudflare Pages)
 ├── _headers                    # Cabeceras HTTP
 └── favicon.jpg
@@ -54,12 +60,18 @@ electromecanico-en-santiago/
 
 | Sección | Cantidad |
 |---------|----------|
-| Páginas raíz | 7 |
-| Landings de servicios | 31 |
-| Landings por comuna | 52 |
-| Posts de blog | 61 |
-| Páginas en inglés | 70 |
-| **Total páginas HTML** | **223** |
+| Páginas raíz (incluye galería y 404) | 9 |
+| Landings de servicios (`servicios/`) | 69 |
+| Landings por comuna (`comunas/`) | 52 |
+| Posts de blog (`blog/`) | 61 |
+| Páginas de vehículos (`vehiculos/`) | 33 |
+| Páginas de marcas (`marcas_automotrices/`) | 10 |
+| **Total páginas en español** | **234** |
+| Páginas en inglés (`en/`) | 110 |
+| **Total páginas HTML** | **344** |
+| URLs en `sitemap.xml` | 246 |
+
+*No incluye `google7a5c4682e9b25d4f.html` (verificación de Google Search Console). Conteo al 2026-10-11.*
 
 ## 🎨 Identidad visual
 
@@ -84,22 +96,29 @@ npx wrangler@latest pages deploy . --project-name=electromecanico-en-santiago --
 
 ## 📝 SEO
 
-- Sitemap autogenerado con 220 URLs (excluye 404)
-- Robots.txt permite 30 user-agents de IA (GPTBot, ClaudeBot, PerplexityBot, etc.)
+- `sitemap.xml` con 246 URLs
+- Robots.txt permite user-agents de IA (GPTBot, ClaudeBot, PerplexityBot, etc.)
 - Redirecciones 301 de URLs con `.html` a URLs limpias
-- Schema.org LocalBusiness en index.html
-- 52 landings por comuna (SEO local)
-- 31 landings de servicios (SEO temático)
+- Schema.org: LocalBusiness (index), Service + FAQPage + BreadcrumbList (landings de servicios), ImageGallery (galería)
+- 52 landings por comuna (SEO local) y 69 landings de servicios (SEO temático)
 - 61 posts de blog (SEO de contenido)
-- Versión en inglés mirror
+- Fotos de la galería con nombres de palabras clave separadas por `-` y la comuna al final
+- Versión en inglés
 
 ## 🔧 Mantenimiento
 
-Para regenerar `sitemap.xml`, `robots.txt`, `_redirects` y este `README.md`:
+Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar nada):
 
-```bash
-python3 scripts/regenerate_seo.py
-```
+| Script | Qué hace | Datos |
+|--------|----------|-------|
+| `python3 scripts/build_galeria.py` | Regenera `galeria.html`, la grilla de fotos, la sección "Trabajos Realizados" y las fichas modales del index | `scripts/galeria_data.json` |
+| `python3 scripts/build_landings_servicios.py` | Regenera las landings de valor estándar e instalaciones, el hub, sus secciones/modales en el index y el sitemap | `scripts/landings_data.json` |
+| `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
+| `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
+
+**Agregar un vehículo a la galería:** copia la foto a `images/galeria/` con nombre `palabras-clave-separadas-con-guion-comuna.jpg` (+ versión `-thumb.jpg`), agrega la entrada en `scripts/galeria_data.json` y ejecuta `build_galeria.py`.
+
+> ⚠️ `scripts/regenerate_seo_electromecanico.py` reescribe `sitemap.xml`, `robots.txt`, `_redirects` **y este README** desde cero. Si lo ejecutas, revisa que el sitemap conserve `/galeria` y las landings nuevas, y vuelve a aplicar estos cambios al README.
 
 ---
 
