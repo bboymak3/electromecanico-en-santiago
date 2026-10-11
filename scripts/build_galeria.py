@@ -129,13 +129,15 @@ def gallery_modal():
 </div>'''
 
 
-def replace_block(s, name, content, anchor_before):
+def replace_block(s, name, content, anchor_before=None, anchor_after=None):
     start, end = f"<!-- {name}:START -->", f"<!-- {name}:END -->"
     block = f"{start}\n{content}\n{end}"
     if start in s:
         return re.sub(re.escape(start) + r".*?" + re.escape(end), lambda m: block, s, flags=re.S)
-    assert anchor_before in s, f"anchor not found: {anchor_before}"
-    return s.replace(anchor_before, block + "\n\n" + anchor_before, 1)
+    anchor = anchor_before or anchor_after
+    assert anchor in s, f"anchor not found: {anchor}"
+    new = block + "\n" + anchor if anchor_before else anchor + block + "\n"
+    return s.replace(anchor, new, 1)
 
 
 def build_index():
@@ -155,6 +157,17 @@ def build_index():
     </div>
   </div>
 </section>'''
+    strip_items = "\n".join(gal_item(t, f, "tira-index") for t in TRABAJOS for f in t["fotos"])
+    strip = f'''    <div class="gal-strip-wrap mb-5">
+      <div class="gal-strip">
+{strip_items}
+      </div>
+      <div class="text-center mt-3">
+        <a href="/galeria" class="btn fw-bold" style="background:#0d7377;color:#fff;border-radius:999px;padding:8px 22px;"><i class="fas fa-images me-2"></i>Ver galería de trabajos</a>
+      </div>
+    </div>'''
+    s = replace_block(s, "GALERIA-TIRA", strip,
+                      anchor_after="Cobertura en toda la Región Metropolitana.</p>\n    </div>\n")
     s = replace_block(s, "GALERIA-SECCION", section, "<!-- CONTACTO -->")
     s = replace_block(s, "GALERIA-MODALES", gallery_modal() + "\n" + ficha_modals(), "<!-- MODALES DE SERVICIOS -->")
     if "/css/galeria.css" not in s:
