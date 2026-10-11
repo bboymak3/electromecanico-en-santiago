@@ -2,6 +2,44 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "dodge-journey",
+      "vehiculo": "Dodge Journey",
+      "servicio": "Reparación de cañería de calefacción a domicilio",
+      "comuna": "Buin",
+      "icono": "fa-temperature-high",
+      "resumen": "El vehículo se encontraba sin refrigerante por una cañería de calefacción rota. Reparado a domicilio en Buin.",
+      "descripcion": "Este Dodge Journey se encontraba sin refrigerante debido a una cañería de calefacción rota, que dejaba escapar el líquido del sistema de enfriamiento. Nuestro electromecánico se trasladó hasta la comuna de Buin, ubicó la fuga, reparó la cañería de calefacción y rellenó el sistema con refrigerante, verificando la temperatura del motor en el tablero antes de entregar el vehículo.",
+      "trabajos_realizados": [
+        "Diagnóstico de pérdida de refrigerante",
+        "Detección de cañería de calefacción rota",
+        "Reparación de la cañería de calefacción",
+        "Llenado de refrigerante y purgado del sistema",
+        "Control de temperatura del motor"
+      ],
+      "fotos": [
+        {
+          "file": "dodge-journey-reparacion-caneria-calefaccion-mecanico-a-domicilio-buin",
+          "caption": "Dodge Journey atendido a domicilio en Buin"
+        },
+        {
+          "file": "dodge-journey-fuga-refrigerante-caneria-calefaccion-rota-buin",
+          "caption": "Fuga de refrigerante por cañería de calefacción rota"
+        },
+        {
+          "file": "dodge-journey-temperatura-refrigerante-motor-electromecanico-a-domicilio-buin",
+          "caption": "Control de temperatura del refrigerante en el tablero"
+        },
+        {
+          "file": "dodge-journey-mecanico-a-domicilio-sistema-refrigeracion-buin",
+          "caption": "Dodge Journey – reparación del sistema de refrigeración en Buin"
+        },
+        {
+          "file": "electromecanico-a-domicilio-en-ruta-a-buin-paine",
+          "caption": "En ruta a Buin para atender el Dodge Journey a domicilio"
+        }
+      ]
+    },
+    {
       "slug": "chevrolet-onix-1-0-turbo",
       "vehiculo": "Chevrolet Onix 1.0 Turbo",
       "servicio": "Mantención de motor de partida a domicilio",

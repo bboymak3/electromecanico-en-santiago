@@ -74,6 +74,14 @@ def trabajo_cards(cols="col-12 col-sm-6 col-lg-3"):
     return "\n".join(out)
 
 
+def comuna_link(nombre):
+    import unicodedata
+    slug = "".join(c for c in unicodedata.normalize("NFD", nombre.lower()) if unicodedata.category(c) != "Mn").replace(" ", "-")
+    if os.path.exists(os.path.join(ROOT, "comunas", slug + ".html")):
+        return f'<a href="/comunas/{slug}" style="color:#0d7377;">{e(nombre)}</a>'
+    return e(nombre)
+
+
 def ficha_modals():
     out = []
     for t in TRABAJOS:
@@ -91,7 +99,7 @@ def ficha_modals():
         <table class="table table-sm ficha-table mb-3">
           <tr><th>Vehículo</th><td>{e(t["vehiculo"])}</td></tr>
           <tr><th>Servicio</th><td>{e(t["servicio"])}</td></tr>
-          <tr><th>Comuna</th><td>{e(t["comuna"])}</td></tr>
+          <tr><th>Comuna</th><td>{comuna_link(t["comuna"])}</td></tr>
           <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
         </table>
         <p>{e(t["descripcion"])}</p>
