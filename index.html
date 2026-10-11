@@ -302,13 +302,13 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
     .expand-icon { color: white; font-size: 2rem; }
 
     .logo-img {
-      background-color: var(--gp-blood-red); 
-      width: 50px; height: 50px; display: flex; align-items: center; justify-content: center;
-      border-radius: 8px; margin-right: 15px; overflow: hidden; 
+      background: transparent; border: none; box-shadow: none; border-radius: 0;
+      width: 75px; height: 50px; flex-shrink: 0; display: flex; align-items: center; justify-content: center;
+      margin-right: 15px; overflow: visible;
       color: white; font-weight: bold; font-size: 1.2rem;
     }
     .logo-img img {
-      width: 100%; height: 100%; object-fit: contain; padding: 5px;
+      width: 100%; height: 100%; object-fit: contain; padding: 0; border: none;
     }
 
     body, .container-fluid {
@@ -787,7 +787,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
   <div class="container nav-container">
     <a href="#inicio" class="logo d-flex align-items-center text-decoration-none text-white">
-      <div class="logo-img"><img src="/images/electromecanico-a-domicilio-en-santiago-logo.jpg" alt="Electromecánico en Santiago" style="width:100%;height:100%;object-fit:cover;border-radius:8px;"></div>
+      <div class="logo-img"><img src="/images/electromecanico-a-domicilio-en-santiago-logo.jpg" alt="Electromecánico en Santiago" width="75" height="50" style="width:100%;height:100%;object-fit:contain;"></div>
       <div>
         <div class="logo-text">ELECTROMECANICO EN SANTIAGO</div>
         <div class="logo-subtext">Taller Mecánico</div>
