@@ -89,8 +89,77 @@
     color: #1a1a2e;
     margin-top: 20px;
   }
-  .hero-text-section .lead {
-    c<section class="hero-section" id="inicio"></section>
+  .hero-text-section .lead { color: #4a5568; }
+  </style>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "Service",
+  "name": "Mecánico de autos",
+  "serviceType": "mecánico de autos a domicilio",
+  "description": "Servicio integral de mecánica y electromecánica en Santiago con servicio a domicilio. Mantenciones por kilometraje, revisiones preventivas y reparaciones multimarca garantizadas. Servicio a domicilio en Santiago. Cotiza gratis al +56 9 7362 2291.",
+  "url": "https://electromecanico-en-santiago.pages.dev/servicios/mecanico-de-autos",
+  "areaServed": {
+    "@type": "AdministrativeArea",
+    "name": "Región Metropolitana de Santiago"
+  },
+  "provider": {
+    "@type": "LocalBusiness",
+    "name": "Electromecánico en Santiago",
+    "telephone": "+56 9 7362 2291",
+    "url": "https://electromecanico-en-santiago.pages.dev"
+  }
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "¿Qué trabajos realiza el mecánico a domicilio?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Diagnóstico, mantenciones, frenos, suspensión, distribución, motor de partida, electricidad y más, directamente donde está tu auto."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿Atienden autos que no encienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Sí. Por ejemplo, en un Nissan Sentra 1997 que no encendía detectamos la distribución saltada y la pusimos a punto a domicilio."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "¿En qué comunas atienden?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "En toda la Región Metropolitana: Santiago, Maipú, Providencia, Ñuñoa, La Florida, Puente Alto, Las Condes y más."
+      }
+    }
+  ]
+}
+</script>
+</head>
+<body>
+<style>
+  .svc-nav { position:fixed; top:0; left:0; right:0; z-index:1000; display:flex; align-items:center; gap:14px; padding:12px 20px; background:rgba(26,26,26,.88); }
+  .svc-nav a { color:#fff; text-decoration:none; font-weight:700; font-size:.9rem; }
+  .svc-nav .svc-brand { margin-right:auto; }
+  .svc-nav .svc-wa { background:#25D366; padding:7px 14px; border-radius:20px; }
+  @media (max-width:576px) { .svc-nav .svc-hide-sm { display:none; } }
+</style>
+<nav class="svc-nav">
+  <a href="/" class="svc-brand"><strong>ELECTROMECANICO</strong> <small style="color:#999;">en Santiago</small></a>
+  <a href="/#servicios" class="svc-hide-sm">Servicios</a>
+  <a href="/galeria"><i class="fas fa-images"></i> Galería</a>
+  <a href="https://wa.me/56973622291" target="_blank" rel="noopener" class="svc-wa"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+</nav>
+
+<section class="hero-section" id="inicio"></section>
 
 <section class="hero-text-section">
   <div class="container">
@@ -99,7 +168,7 @@
         <div style="font-size:3rem;color:#0d7377;" class="mb-3"><i class="fas fa-wrench"></i></div>
       <span class="badge mb-2" style="background:#0d7377;color:#fff;">🟢 Servicio a Domicilio en Santiago</span>
       <h1 class="display-4 fw-bold mb-3">Mecánico de autos</h1>
-      <p class="lead text-white-50 mx-auto" style="max-width:700px;">🔹 Servicio integral de mecánica y electromecánica en Santiago con servicio a domicilio. Mantenciones por kilometraje, revisiones preventivas y reparaciones multimarca garantizadas.</p>
+      <p class="lead mx-auto" style="max-width:700px;">🔹 Servicio integral de mecánica y electromecánica en Santiago con servicio a domicilio. Mantenciones por kilometraje, revisiones preventivas y reparaciones multimarca garantizadas.</p>
       <a href="https://wa.me/56973622291?text=Hola%2C%20quiero%20cotizar%20Mecánico%20de%20autos" target="_blank" class="btn btn-lg text-white fw-bold mt-3" style="background:#0d7377;border:none;border-radius:12px;padding:14px 36px;">
         <i class="fab fa-whatsapp me-2"></i> Cotizar por WhatsApp
       </a>
@@ -120,6 +189,37 @@
       </div>
     </div>
   </section>
+  <!-- SERVICIO-CONTEXTO:START -->
+  <style>
+    .svc-faq { background:#fff; border:0.5px solid rgba(60,60,67,.18); border-radius:14px; padding:14px 16px; margin-bottom:10px; }
+    .svc-faq summary { font-weight:600; cursor:pointer; }
+  </style>
+  <section class="py-5 bg-white" id="contexto-servicio">
+    <div class="container" style="max-width:900px;">
+      <h2 class="fw-bold mb-3">¿Cuándo necesitas el servicio de mecánico de autos a domicilio?</h2>
+      <p class="text-muted">Estas señales indican que conviene revisar tu vehículo. Atenderlas a tiempo evita fallas mayores y reparaciones más costosas.</p>
+      <ul class="list-unstyled"><li class="mb-2"><i class="fas fa-exclamation-circle me-2" style="color:#0d7377;"></i>El auto no enciende</li><li class="mb-2"><i class="fas fa-exclamation-circle me-2" style="color:#0d7377;"></i>Ruidos o vibraciones nuevas</li><li class="mb-2"><i class="fas fa-exclamation-circle me-2" style="color:#0d7377;"></i>Fugas de líquidos bajo el vehículo</li><li class="mb-2"><i class="fas fa-exclamation-circle me-2" style="color:#0d7377;"></i>Testigos encendidos en el tablero</li><li class="mb-2"><i class="fas fa-exclamation-circle me-2" style="color:#0d7377;"></i>Mantención atrasada</li></ul>
+
+      <h2 class="fw-bold mt-5 mb-3">Cómo trabajamos a domicilio</h2>
+      <div class="row g-3"><div class="col-6 col-md-3"><div class="p-3 h-100 text-center rounded" style="background:#f0f4f8;"><div style="font-size:1.6rem;color:#0d7377;"><i class="fas fa-comments"></i></div><div class="fw-bold mt-2">1. Nos contactas</div><div class="text-muted small mt-1">Cotiza por WhatsApp o teléfono y cuéntanos qué le pasa a tu vehículo.</div></div></div><div class="col-6 col-md-3"><div class="p-3 h-100 text-center rounded" style="background:#f0f4f8;"><div style="font-size:1.6rem;color:#0d7377;"><i class="fas fa-map-marker-alt"></i></div><div class="fw-bold mt-2">2. Vamos a tu domicilio</div><div class="text-muted small mt-1">Llegamos a tu casa, oficina o donde esté el auto, en toda la Región Metropolitana.</div></div></div><div class="col-6 col-md-3"><div class="p-3 h-100 text-center rounded" style="background:#f0f4f8;"><div style="font-size:1.6rem;color:#0d7377;"><i class="fas fa-search"></i></div><div class="fw-bold mt-2">3. Diagnóstico</div><div class="text-muted small mt-1">Revisamos el sistema con herramientas profesionales y te explicamos qué necesita antes de empezar.</div></div></div><div class="col-6 col-md-3"><div class="p-3 h-100 text-center rounded" style="background:#f0f4f8;"><div style="font-size:1.6rem;color:#0d7377;"><i class="fas fa-tools"></i></div><div class="fw-bold mt-2">4. Reparación y prueba</div><div class="text-muted small mt-1">Realizamos el trabajo en el lugar y probamos el vehículo contigo antes de terminar.</div></div></div></div>
+
+      <h2 class="fw-bold mt-5 mb-3">Preguntas frecuentes sobre mecánico de autos a domicilio</h2>
+      <div id="faq-mecanico-de-autos"><details class="svc-faq"><summary>¿Qué trabajos realiza el mecánico a domicilio?</summary><p class="text-muted mb-0 mt-2">Diagnóstico, mantenciones, frenos, suspensión, distribución, motor de partida, electricidad y más, directamente donde está tu auto.</p></details><details class="svc-faq"><summary>¿Atienden autos que no encienden?</summary><p class="text-muted mb-0 mt-2">Sí. Por ejemplo, en un Nissan Sentra 1997 que no encendía detectamos la distribución saltada y la pusimos a punto a domicilio.</p></details><details class="svc-faq"><summary>¿En qué comunas atienden?</summary><p class="text-muted mb-0 mt-2">En toda la Región Metropolitana: Santiago, Maipú, Providencia, Ñuñoa, La Florida, Puente Alto, Las Condes y más.</p></details></div>
+
+      <div class="p-4 mt-5 rounded" style="background:#f0f4f8;">
+        <h2 class="h5 fw-bold mb-2"><i class="fas fa-images me-2" style="color:#0d7377;"></i>Mira nuestros trabajos reales</h2>
+        <p class="text-muted mb-3">Revisa fotos de vehículos atendidos a domicilio por nuestro equipo en Santiago.</p>
+        <a href="/galeria" class="btn fw-bold text-white" style="background:#0d7377;">Ver galería de trabajos</a>
+      </div>
+
+      <h2 class="h5 fw-bold mt-5 mb-2">Atendemos en toda la Región Metropolitana</h2>
+      <p class="text-muted small"><a href="/comunas/santiago" style="color:#0d7377;">Santiago</a> · <a href="/comunas/providencia" style="color:#0d7377;">Providencia</a> · <a href="/comunas/nunoa" style="color:#0d7377;">Ñuñoa</a> · <a href="/comunas/las-condes" style="color:#0d7377;">Las Condes</a> · <a href="/comunas/maipu" style="color:#0d7377;">Maipú</a> · <a href="/comunas/la-florida" style="color:#0d7377;">La Florida</a> · <a href="/comunas/puente-alto" style="color:#0d7377;">Puente Alto</a> · <a href="/comunas/san-miguel" style="color:#0d7377;">San Miguel</a> · <a href="/comunas/estacion-central" style="color:#0d7377;">Estación Central</a> · <a href="/comunas/pedro-aguirre-cerda" style="color:#0d7377;">Pedro Aguirre Cerda</a> · <a href="/comunas/la-cisterna" style="color:#0d7377;">La Cisterna</a> · <a href="/comunas/penalolen" style="color:#0d7377;">Peñalolén</a> y más comunas.</p>
+
+      <h2 class="h5 fw-bold mt-4 mb-2">Servicios relacionados</h2>
+      <div><a href="/servicios/diagnostico-de-automoviles" class="btn btn-outline-secondary btn-sm m-1">Diagnóstico de automóviles</a><a href="/servicios/cambio-de-aceite" class="btn btn-outline-secondary btn-sm m-1">Cambio de aceite</a><a href="/servicios/direccion-y-suspension" class="btn btn-outline-secondary btn-sm m-1">Reparación de dirección y suspensión</a></div>
+    </div>
+  </section>
+  <!-- SERVICIO-CONTEXTO:END -->
   <section class="py-4" style="background:#0d7377;">
     <div class="container text-center">
       <h2 class="text-white fw-bold mb-2">¿Necesitas mecánico de autos?</h2>
