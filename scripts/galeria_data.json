@@ -1,0 +1,207 @@
+{
+  "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
+  "trabajos": [
+    {
+      "slug": "chevrolet-onix-1-0-turbo",
+      "vehiculo": "Chevrolet Onix 1.0 Turbo",
+      "servicio": "Mantención de motor de partida a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-car-battery",
+      "resumen": "Desmontaje y mantención del motor de partida (arranque) realizada a domicilio.",
+      "descripcion": "Atendimos este Chevrolet Onix 1.0 Turbo en el domicilio del cliente para realizar la mantención del motor de partida. Se desmontó el motor de arranque, se revisó y realizó su mantención, y luego se reinstaló y probó el arranque del vehículo.",
+      "trabajos_realizados": [
+        "Diagnóstico del sistema de arranque",
+        "Desmontaje del motor de partida",
+        "Mantención y revisión del motor de partida",
+        "Reinstalación y prueba de arranque"
+      ],
+      "fotos": [
+        {
+          "file": "chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago",
+          "caption": "Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente"
+        },
+        {
+          "file": "chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago",
+          "caption": "Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención"
+        }
+      ]
+    },
+    {
+      "slug": "mazda-cx-3",
+      "vehiculo": "Mazda CX-3",
+      "servicio": "Motor trabado por agua en el cilindro",
+      "comuna": "Santiago",
+      "icono": "fa-water",
+      "resumen": "Diagnóstico a domicilio de motor trabado por ingreso de agua al cilindro, con inspección por boroscopio.",
+      "descripcion": "Esta Mazda CX-3 presentaba el motor trabado tras el ingreso de agua al cilindro (hidrobloqueo). Nuestro electromecánico a domicilio realizó el diagnóstico en el lugar, inspeccionando el interior del cilindro con cámara boroscópica para confirmar la presencia de agua y evaluar el estado del motor sin necesidad de desarmarlo.",
+      "trabajos_realizados": [
+        "Diagnóstico de motor trabado",
+        "Retiro de bujías y bobinas",
+        "Inspección del cilindro con boroscopio",
+        "Evaluación del daño y recomendación de reparación"
+      ],
+      "fotos": [
+        {
+          "file": "mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago",
+          "caption": "Mazda CX-3 – diagnóstico de motor trabado a domicilio"
+        },
+        {
+          "file": "mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago",
+          "caption": "Inspección con boroscopio: agua dentro del cilindro"
+        },
+        {
+          "file": "mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago",
+          "caption": "Mazda CX-3 atendida a domicilio"
+        }
+      ]
+    },
+    {
+      "slug": "chery-tiggo-2",
+      "vehiculo": "Chery Tiggo 2",
+      "servicio": "Mantención del sistema de refrigeración",
+      "comuna": "Santiago",
+      "icono": "fa-temperature-low",
+      "resumen": "Revisión de mangueras y refrigerante del sistema de enfriamiento a domicilio.",
+      "descripcion": "En este Chery Tiggo 2 trabajamos a domicilio en el sistema de refrigeración del motor: revisión de mangueras y abrazaderas, y reposición de refrigerante para dejar el sistema funcionando correctamente.",
+      "trabajos_realizados": [
+        "Revisión de mangueras y abrazaderas",
+        "Revisión de fugas en el sistema de enfriamiento",
+        "Reposición de refrigerante",
+        "Prueba de temperatura de funcionamiento"
+      ],
+      "fotos": [
+        {
+          "file": "chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago",
+          "caption": "Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio"
+        },
+        {
+          "file": "chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – trabajo en el domicilio del cliente"
+        },
+        {
+          "file": "chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – revisión de manguera de refrigerante"
+        },
+        {
+          "file": "chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento"
+        }
+      ]
+    },
+    {
+      "slug": "nissan-v16",
+      "vehiculo": "Nissan V16",
+      "servicio": "Revisión electromecánica a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-tools",
+      "resumen": "Revisión y mantención del motor realizada a domicilio.",
+      "descripcion": "Atendimos este clásico Nissan V16 a domicilio, realizando revisión electromecánica y mantención del motor directamente en el lugar del cliente.",
+      "trabajos_realizados": [
+        "Revisión electromecánica general",
+        "Revisión de sistema de encendido y batería",
+        "Mantención del motor a domicilio"
+      ],
+      "fotos": [
+        {
+          "file": "nissan-v16-revision-electromecanica-a-domicilio-santiago",
+          "caption": "Nissan V16 – revisión electromecánica a domicilio"
+        },
+        {
+          "file": "nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago",
+          "caption": "Nissan V16 – motor revisado a domicilio"
+        }
+      ]
+    },
+    {
+      "slug": "hyundai-grand-i10",
+      "vehiculo": "Hyundai Grand i10",
+      "servicio": "Electricidad automotriz a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-bolt",
+      "resumen": "Revisión del sistema eléctrico y cableado bajo el tablero, realizada a domicilio.",
+      "descripcion": "Nuestro electromecánico a domicilio atendió este Hyundai Grand i10 directamente en el lugar del cliente. Se desmontaron los paneles inferiores del tablero para revisar el cableado y las conexiones eléctricas, y se realizaron pruebas alimentando el circuito desde la batería para verificar el correcto funcionamiento.",
+      "trabajos_realizados": [
+        "Desmontaje de paneles bajo el tablero",
+        "Revisión de cableado y conectores",
+        "Pruebas eléctricas desde la batería",
+        "Rearmado y verificación final"
+      ],
+      "fotos": [
+        {
+          "file": "hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago",
+          "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero"
+        },
+        {
+          "file": "hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago",
+          "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto"
+        }
+      ]
+    },
+    {
+      "slug": "toyota-rav4",
+      "vehiculo": "Toyota RAV4",
+      "servicio": "Cambio de neblineros LED a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-lightbulb",
+      "resumen": "Instalación de neblineros LED nuevos con su conexión eléctrica.",
+      "descripcion": "En esta Toyota RAV4 realizamos el cambio de neblineros por unidades LED nuevas, a domicilio. Se retiraron los neblineros originales, se montaron los nuevos focos con sus bases y se conectaron al sistema eléctrico del vehículo, quedando funcionando y alineados.",
+      "trabajos_realizados": [
+        "Desmontaje de neblineros antiguos",
+        "Montaje de neblineros LED con sus bases",
+        "Conexión eléctrica y prueba de encendido",
+        "Revisión de alineación de los focos"
+      ],
+      "fotos": [
+        {
+          "file": "toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago",
+          "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar"
+        },
+        {
+          "file": "toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago",
+          "caption": "Toyota RAV4 – neblineros LED instalados y funcionando"
+        }
+      ]
+    },
+    {
+      "slug": "audi-a3",
+      "vehiculo": "Audi A3",
+      "servicio": "Cambio de refrigerante a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-temperature-low",
+      "resumen": "Cambio de refrigerante y anticongelante del sistema de enfriamiento.",
+      "descripcion": "Atendimos este Audi A3 en el estacionamiento del cliente para realizar el cambio de refrigerante. Se vació el sistema de enfriamiento y se llenó con refrigerante anticongelante Ravenol, purgando el circuito para evitar bolsas de aire.",
+      "trabajos_realizados": [
+        "Vaciado del refrigerante antiguo",
+        "Llenado con anticongelante Ravenol",
+        "Purgado del sistema de enfriamiento",
+        "Control de nivel y temperatura"
+      ],
+      "fotos": [
+        {
+          "file": "audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago",
+          "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol"
+        }
+      ]
+    },
+    {
+      "slug": "nissan-versa",
+      "vehiculo": "Nissan Versa",
+      "servicio": "Mantención a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-tools",
+      "resumen": "Mantención y revisión electromecánica realizada a domicilio.",
+      "descripcion": "Este Nissan Versa recibió mantención y revisión electromecánica a domicilio, sin que el cliente tuviera que trasladarse a un taller.",
+      "trabajos_realizados": [
+        "Revisión electromecánica general",
+        "Mantención a domicilio",
+        "Entrega del vehículo en el lugar del cliente"
+      ],
+      "fotos": [
+        {
+          "file": "nissan-versa-mantencion-mecanico-a-domicilio-santiago",
+          "caption": "Nissan Versa – mantención a domicilio"
+        }
+      ]
+    }
+  ]
+}

@@ -228,6 +228,7 @@ j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
   <!-- Leaflet CSS (mapa para seleccionar ubicacion en modal Agenda) -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
   <link rel="stylesheet" href="/css/styles.css"/>
+  <link rel="stylesheet" href="/css/galeria.css"/>
 
   <style>
     :root {
@@ -896,6 +897,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/contacto">Contacto</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="/galeria">Galería</a>
         </li>
         <li class="nav-item">
           <a class="nav-link" href="/blog/">Blog</a>
@@ -1631,6 +1635,31 @@ function loadMoreVehicles(slug){
 }
 </script>
 
+<!-- GALERIA-SECCION:START -->
+<section class="py-5" style="background:#f0f4f8;" id="trabajos-realizados">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" style="color:#0d7377;font-size:2rem;"><i class="fas fa-camera me-2"></i>Trabajos Realizados</h2>
+      <p style="color:#666;max-width:640px;margin:0 auto;">Fotos reales de vehículos atendidos por nuestro electromecánico a domicilio en Santiago. Haz clic en cada vehículo para ver su ficha.</p>
+    </div>
+    <div class="row g-4">
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-chevrolet-onix-1-0-turbo"><img src="/images/galeria/chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago-thumb.jpg" alt="Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-car-battery me-1"></i>Mantención de motor de partida a domicilio</span><h3>Chevrolet Onix 1.0 Turbo</h3><p>Desmontaje y mantención del motor de partida (arranque) realizada a domicilio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-mazda-cx-3"><img src="/images/galeria/mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Mazda CX-3 – diagnóstico de motor trabado a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-water me-1"></i>Motor trabado por agua en el cilindro</span><h3>Mazda CX-3</h3><p>Diagnóstico a domicilio de motor trabado por ingreso de agua al cilindro, con inspección por boroscopio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-chery-tiggo-2"><img src="/images/galeria/chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago-thumb.jpg" alt="Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-temperature-low me-1"></i>Mantención del sistema de refrigeración</span><h3>Chery Tiggo 2</h3><p>Revisión de mangueras y refrigerante del sistema de enfriamiento a domicilio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-nissan-v16"><img src="/images/galeria/nissan-v16-revision-electromecanica-a-domicilio-santiago-thumb.jpg" alt="Nissan V16 – revisión electromecánica a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-tools me-1"></i>Revisión electromecánica a domicilio</span><h3>Nissan V16</h3><p>Revisión y mantención del motor realizada a domicilio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-hyundai-grand-i10"><img src="/images/galeria/hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago-thumb.jpg" alt="Hyundai Grand i10 – revisión de cableado bajo el tablero – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-bolt me-1"></i>Electricidad automotriz a domicilio</span><h3>Hyundai Grand i10</h3><p>Revisión del sistema eléctrico y cableado bajo el tablero, realizada a domicilio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-toyota-rav4"><img src="/images/galeria/toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago-thumb.jpg" alt="Toyota RAV4 – neblineros LED nuevos listos para instalar – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-lightbulb me-1"></i>Cambio de neblineros LED a domicilio</span><h3>Toyota RAV4</h3><p>Instalación de neblineros LED nuevos con su conexión eléctrica.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-audi-a3"><img src="/images/galeria/audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago-thumb.jpg" alt="Audi A3 – cambio de refrigerante con anticongelante Ravenol – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-temperature-low me-1"></i>Cambio de refrigerante a domicilio</span><h3>Audi A3</h3><p>Cambio de refrigerante y anticongelante del sistema de enfriamiento.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+<div class="col-12 col-sm-6 col-lg-3"><div class="trabajo-card" role="button" tabindex="0" data-bs-toggle="modal" data-bs-target="#modal-trabajo-nissan-versa"><img src="/images/galeria/nissan-versa-mantencion-mecanico-a-domicilio-santiago-thumb.jpg" alt="Nissan Versa – mantención a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><div class="tc-body"><span class="tc-badge"><i class="fas fa-tools me-1"></i>Mantención a domicilio</span><h3>Nissan Versa</h3><p>Mantención y revisión electromecánica realizada a domicilio.</p><p class="mt-2 fw-bold" style="color:#0d7377;font-size:.8rem;"><i class="fas fa-map-marker-alt me-1"></i>Santiago · Ver ficha <i class="fas fa-arrow-right ms-1"></i></p></div></div></div>
+    </div>
+    <div class="text-center mt-4 d-flex justify-content-center gap-2 flex-wrap">
+      <button type="button" class="btn btn-lg fw-bold" style="background:#0d7377;color:#fff;" data-bs-toggle="modal" data-bs-target="#modal-galeria"><i class="fas fa-images me-2"></i>Ver Galería de Fotos</button>
+      <a href="/galeria" class="btn btn-lg btn-outline-secondary fw-bold"><i class="fas fa-external-link-alt me-2"></i>Página de Galería</a>
+    </div>
+  </div>
+</section>
+<!-- GALERIA-SECCION:END -->
+
 <!-- CONTACTO -->
 <section class="py-5" style="background:#0d7377;" id="contacto">
   <div class="container text-center text-white">
@@ -1670,6 +1699,262 @@ function loadMoreVehicles(slug){
 <!-- ======================================================================= -->
 <!-- FIN SECCIÓN TAPIZADO DE VOLANTES -->
 <!-- ======================================================================= -->
+
+<!-- GALERIA-MODALES:START -->
+<div class="modal fade" id="modal-galeria" tabindex="-1" aria-labelledby="modal-galeria-title" aria-hidden="true">
+  <div class="modal-dialog modal-xl modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-galeria-title"><i class="fas fa-images me-2"></i>Galería de Trabajos Realizados</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+<div data-gal-scope>
+<div class="gal-filters"><button type="button" class="active" data-filter="all">Todos</button><button type="button" data-filter="chevrolet-onix-1-0-turbo">Chevrolet Onix 1.0 Turbo</button><button type="button" data-filter="mazda-cx-3">Mazda CX-3</button><button type="button" data-filter="chery-tiggo-2">Chery Tiggo 2</button><button type="button" data-filter="nissan-v16">Nissan V16</button><button type="button" data-filter="hyundai-grand-i10">Hyundai Grand i10</button><button type="button" data-filter="toyota-rav4">Toyota RAV4</button><button type="button" data-filter="audi-a3">Audi A3</button><button type="button" data-filter="nissan-versa">Nissan Versa</button></div>
+<div class="gal-grid">
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chevrolet-onix-1-0-turbo" data-full="/images/galeria/chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago.jpg" data-caption="Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente"><img src="/images/galeria/chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago-thumb.jpg" alt="Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chevrolet Onix 1.0 Turbo</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chevrolet-onix-1-0-turbo" data-full="/images/galeria/chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago.jpg" data-caption="Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención"><img src="/images/galeria/chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chevrolet Onix 1.0 Turbo</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago.jpg" data-caption="Mazda CX-3 – diagnóstico de motor trabado a domicilio"><img src="/images/galeria/mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Mazda CX-3 – diagnóstico de motor trabado a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago.jpg" data-caption="Inspección con boroscopio: agua dentro del cilindro"><img src="/images/galeria/mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago-thumb.jpg" alt="Inspección con boroscopio: agua dentro del cilindro – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago.jpg" data-caption="Mazda CX-3 atendida a domicilio"><img src="/images/galeria/mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago-thumb.jpg" alt="Mazda CX-3 atendida a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago.jpg" data-caption="Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio"><img src="/images/galeria/chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago-thumb.jpg" alt="Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – trabajo en el domicilio del cliente"><img src="/images/galeria/chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – trabajo en el domicilio del cliente – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – revisión de manguera de refrigerante"><img src="/images/galeria/chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – revisión de manguera de refrigerante – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento"><img src="/images/galeria/chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="nissan-v16" data-full="/images/galeria/nissan-v16-revision-electromecanica-a-domicilio-santiago.jpg" data-caption="Nissan V16 – revisión electromecánica a domicilio"><img src="/images/galeria/nissan-v16-revision-electromecanica-a-domicilio-santiago-thumb.jpg" alt="Nissan V16 – revisión electromecánica a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan V16</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="nissan-v16" data-full="/images/galeria/nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago.jpg" data-caption="Nissan V16 – motor revisado a domicilio"><img src="/images/galeria/nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago-thumb.jpg" alt="Nissan V16 – motor revisado a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan V16</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="hyundai-grand-i10" data-full="/images/galeria/hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago.jpg" data-caption="Hyundai Grand i10 – revisión de cableado bajo el tablero"><img src="/images/galeria/hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago-thumb.jpg" alt="Hyundai Grand i10 – revisión de cableado bajo el tablero – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Hyundai Grand i10</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="hyundai-grand-i10" data-full="/images/galeria/hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago.jpg" data-caption="Hyundai Grand i10 – pruebas eléctricas con capó abierto"><img src="/images/galeria/hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago-thumb.jpg" alt="Hyundai Grand i10 – pruebas eléctricas con capó abierto – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Hyundai Grand i10</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="toyota-rav4" data-full="/images/galeria/toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago.jpg" data-caption="Toyota RAV4 – neblineros LED nuevos listos para instalar"><img src="/images/galeria/toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago-thumb.jpg" alt="Toyota RAV4 – neblineros LED nuevos listos para instalar – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Toyota RAV4</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="toyota-rav4" data-full="/images/galeria/toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago.jpg" data-caption="Toyota RAV4 – neblineros LED instalados y funcionando"><img src="/images/galeria/toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Toyota RAV4 – neblineros LED instalados y funcionando – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Toyota RAV4</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="audi-a3" data-full="/images/galeria/audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago.jpg" data-caption="Audi A3 – cambio de refrigerante con anticongelante Ravenol"><img src="/images/galeria/audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago-thumb.jpg" alt="Audi A3 – cambio de refrigerante con anticongelante Ravenol – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Audi A3</figcaption></button>
+<button type="button" class="gal-item" data-group="galeria-modal" data-veh="nissan-versa" data-full="/images/galeria/nissan-versa-mantencion-mecanico-a-domicilio-santiago.jpg" data-caption="Nissan Versa – mantención a domicilio"><img src="/images/galeria/nissan-versa-mantencion-mecanico-a-domicilio-santiago-thumb.jpg" alt="Nissan Versa – mantención a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan Versa</figcaption></button>
+</div>
+</div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn fw-bold" style="background:#0d7377;color:#fff;"><i class="fas fa-external-link-alt me-1"></i> Abrir página de galería</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-chevrolet-onix-1-0-turbo" tabindex="-1" aria-labelledby="modal-trabajo-chevrolet-onix-1-0-turbo-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-chevrolet-onix-1-0-turbo-title"><i class="fas fa-car me-2"></i>Ficha: Chevrolet Onix 1.0 Turbo</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Chevrolet Onix 1.0 Turbo</td></tr>
+          <tr><th>Servicio</th><td>Mantención de motor de partida a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Atendimos este Chevrolet Onix 1.0 Turbo en el domicilio del cliente para realizar la mantención del motor de partida. Se desmontó el motor de arranque, se revisó y realizó su mantención, y luego se reinstaló y probó el arranque del vehículo.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Diagnóstico del sistema de arranque</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Desmontaje del motor de partida</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Mantención y revisión del motor de partida</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Reinstalación y prueba de arranque</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-chevrolet-onix-1-0-turbo" data-veh="chevrolet-onix-1-0-turbo" data-full="/images/galeria/chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago.jpg" data-caption="Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente"><img src="/images/galeria/chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago-thumb.jpg" alt="Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chevrolet Onix 1.0 Turbo</figcaption></button><button type="button" class="gal-item" data-group="ficha-chevrolet-onix-1-0-turbo" data-veh="chevrolet-onix-1-0-turbo" data-full="/images/galeria/chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago.jpg" data-caption="Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención"><img src="/images/galeria/chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chevrolet Onix 1.0 Turbo</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Chevrolet%20Onix%201.0%20Turbo%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-mazda-cx-3" tabindex="-1" aria-labelledby="modal-trabajo-mazda-cx-3-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-mazda-cx-3-title"><i class="fas fa-car me-2"></i>Ficha: Mazda CX-3</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Mazda CX-3</td></tr>
+          <tr><th>Servicio</th><td>Motor trabado por agua en el cilindro</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Esta Mazda CX-3 presentaba el motor trabado tras el ingreso de agua al cilindro (hidrobloqueo). Nuestro electromecánico a domicilio realizó el diagnóstico en el lugar, inspeccionando el interior del cilindro con cámara boroscópica para confirmar la presencia de agua y evaluar el estado del motor sin necesidad de desarmarlo.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Diagnóstico de motor trabado</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Retiro de bujías y bobinas</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Inspección del cilindro con boroscopio</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Evaluación del daño y recomendación de reparación</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-mazda-cx-3" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago.jpg" data-caption="Mazda CX-3 – diagnóstico de motor trabado a domicilio"><img src="/images/galeria/mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Mazda CX-3 – diagnóstico de motor trabado a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button><button type="button" class="gal-item" data-group="ficha-mazda-cx-3" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago.jpg" data-caption="Inspección con boroscopio: agua dentro del cilindro"><img src="/images/galeria/mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago-thumb.jpg" alt="Inspección con boroscopio: agua dentro del cilindro – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button><button type="button" class="gal-item" data-group="ficha-mazda-cx-3" data-veh="mazda-cx-3" data-full="/images/galeria/mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago.jpg" data-caption="Mazda CX-3 atendida a domicilio"><img src="/images/galeria/mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago-thumb.jpg" alt="Mazda CX-3 atendida a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Mazda CX-3</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Mazda%20CX-3%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-chery-tiggo-2" tabindex="-1" aria-labelledby="modal-trabajo-chery-tiggo-2-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-chery-tiggo-2-title"><i class="fas fa-car me-2"></i>Ficha: Chery Tiggo 2</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Chery Tiggo 2</td></tr>
+          <tr><th>Servicio</th><td>Mantención del sistema de refrigeración</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>En este Chery Tiggo 2 trabajamos a domicilio en el sistema de refrigeración del motor: revisión de mangueras y abrazaderas, y reposición de refrigerante para dejar el sistema funcionando correctamente.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión de mangueras y abrazaderas</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión de fugas en el sistema de enfriamiento</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Reposición de refrigerante</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Prueba de temperatura de funcionamiento</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-chery-tiggo-2" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago.jpg" data-caption="Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio"><img src="/images/galeria/chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago-thumb.jpg" alt="Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button><button type="button" class="gal-item" data-group="ficha-chery-tiggo-2" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – trabajo en el domicilio del cliente"><img src="/images/galeria/chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – trabajo en el domicilio del cliente – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button><button type="button" class="gal-item" data-group="ficha-chery-tiggo-2" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – revisión de manguera de refrigerante"><img src="/images/galeria/chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – revisión de manguera de refrigerante – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button><button type="button" class="gal-item" data-group="ficha-chery-tiggo-2" data-veh="chery-tiggo-2" data-full="/images/galeria/chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago.jpg" data-caption="Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento"><img src="/images/galeria/chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago-thumb.jpg" alt="Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Chery Tiggo 2</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Chery%20Tiggo%202%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-nissan-v16" tabindex="-1" aria-labelledby="modal-trabajo-nissan-v16-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-nissan-v16-title"><i class="fas fa-car me-2"></i>Ficha: Nissan V16</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Nissan V16</td></tr>
+          <tr><th>Servicio</th><td>Revisión electromecánica a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Atendimos este clásico Nissan V16 a domicilio, realizando revisión electromecánica y mantención del motor directamente en el lugar del cliente.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión electromecánica general</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión de sistema de encendido y batería</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Mantención del motor a domicilio</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-nissan-v16" data-veh="nissan-v16" data-full="/images/galeria/nissan-v16-revision-electromecanica-a-domicilio-santiago.jpg" data-caption="Nissan V16 – revisión electromecánica a domicilio"><img src="/images/galeria/nissan-v16-revision-electromecanica-a-domicilio-santiago-thumb.jpg" alt="Nissan V16 – revisión electromecánica a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan V16</figcaption></button><button type="button" class="gal-item" data-group="ficha-nissan-v16" data-veh="nissan-v16" data-full="/images/galeria/nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago.jpg" data-caption="Nissan V16 – motor revisado a domicilio"><img src="/images/galeria/nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago-thumb.jpg" alt="Nissan V16 – motor revisado a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan V16</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Nissan%20V16%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-hyundai-grand-i10" tabindex="-1" aria-labelledby="modal-trabajo-hyundai-grand-i10-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-hyundai-grand-i10-title"><i class="fas fa-car me-2"></i>Ficha: Hyundai Grand i10</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Hyundai Grand i10</td></tr>
+          <tr><th>Servicio</th><td>Electricidad automotriz a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Nuestro electromecánico a domicilio atendió este Hyundai Grand i10 directamente en el lugar del cliente. Se desmontaron los paneles inferiores del tablero para revisar el cableado y las conexiones eléctricas, y se realizaron pruebas alimentando el circuito desde la batería para verificar el correcto funcionamiento.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Desmontaje de paneles bajo el tablero</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión de cableado y conectores</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Pruebas eléctricas desde la batería</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Rearmado y verificación final</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-hyundai-grand-i10" data-veh="hyundai-grand-i10" data-full="/images/galeria/hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago.jpg" data-caption="Hyundai Grand i10 – revisión de cableado bajo el tablero"><img src="/images/galeria/hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago-thumb.jpg" alt="Hyundai Grand i10 – revisión de cableado bajo el tablero – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Hyundai Grand i10</figcaption></button><button type="button" class="gal-item" data-group="ficha-hyundai-grand-i10" data-veh="hyundai-grand-i10" data-full="/images/galeria/hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago.jpg" data-caption="Hyundai Grand i10 – pruebas eléctricas con capó abierto"><img src="/images/galeria/hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago-thumb.jpg" alt="Hyundai Grand i10 – pruebas eléctricas con capó abierto – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Hyundai Grand i10</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Hyundai%20Grand%20i10%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-toyota-rav4" tabindex="-1" aria-labelledby="modal-trabajo-toyota-rav4-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-toyota-rav4-title"><i class="fas fa-car me-2"></i>Ficha: Toyota RAV4</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Toyota RAV4</td></tr>
+          <tr><th>Servicio</th><td>Cambio de neblineros LED a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>En esta Toyota RAV4 realizamos el cambio de neblineros por unidades LED nuevas, a domicilio. Se retiraron los neblineros originales, se montaron los nuevos focos con sus bases y se conectaron al sistema eléctrico del vehículo, quedando funcionando y alineados.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Desmontaje de neblineros antiguos</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Montaje de neblineros LED con sus bases</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Conexión eléctrica y prueba de encendido</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión de alineación de los focos</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-toyota-rav4" data-veh="toyota-rav4" data-full="/images/galeria/toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago.jpg" data-caption="Toyota RAV4 – neblineros LED nuevos listos para instalar"><img src="/images/galeria/toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago-thumb.jpg" alt="Toyota RAV4 – neblineros LED nuevos listos para instalar – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Toyota RAV4</figcaption></button><button type="button" class="gal-item" data-group="ficha-toyota-rav4" data-veh="toyota-rav4" data-full="/images/galeria/toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago.jpg" data-caption="Toyota RAV4 – neblineros LED instalados y funcionando"><img src="/images/galeria/toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago-thumb.jpg" alt="Toyota RAV4 – neblineros LED instalados y funcionando – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Toyota RAV4</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Toyota%20RAV4%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-audi-a3" tabindex="-1" aria-labelledby="modal-trabajo-audi-a3-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-audi-a3-title"><i class="fas fa-car me-2"></i>Ficha: Audi A3</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Audi A3</td></tr>
+          <tr><th>Servicio</th><td>Cambio de refrigerante a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Atendimos este Audi A3 en el estacionamiento del cliente para realizar el cambio de refrigerante. Se vació el sistema de enfriamiento y se llenó con refrigerante anticongelante Ravenol, purgando el circuito para evitar bolsas de aire.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Vaciado del refrigerante antiguo</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Llenado con anticongelante Ravenol</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Purgado del sistema de enfriamiento</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Control de nivel y temperatura</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-audi-a3" data-veh="audi-a3" data-full="/images/galeria/audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago.jpg" data-caption="Audi A3 – cambio de refrigerante con anticongelante Ravenol"><img src="/images/galeria/audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago-thumb.jpg" alt="Audi A3 – cambio de refrigerante con anticongelante Ravenol – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Audi A3</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Audi%20A3%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="modal fade" id="modal-trabajo-nissan-versa" tabindex="-1" aria-labelledby="modal-trabajo-nissan-versa-title" aria-hidden="true">
+  <div class="modal-dialog modal-lg modal-dialog-centered modal-dialog-scrollable">
+    <div class="modal-content" style="border-radius:16px;border:none;">
+      <div class="modal-header" style="background:#0d7377;color:#fff;border-radius:16px 16px 0 0;">
+        <h5 class="modal-title" id="modal-trabajo-nissan-versa-title"><i class="fas fa-car me-2"></i>Ficha: Nissan Versa</h5>
+        <button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="Cerrar"></button>
+      </div>
+      <div class="modal-body p-4">
+        <table class="table table-sm ficha-table mb-3">
+          <tr><th>Vehículo</th><td>Nissan Versa</td></tr>
+          <tr><th>Servicio</th><td>Mantención a domicilio</td></tr>
+          <tr><th>Comuna</th><td>Santiago</td></tr>
+          <tr><th>Modalidad</th><td>Electromecánico a domicilio</td></tr>
+        </table>
+        <p>Este Nissan Versa recibió mantención y revisión electromecánica a domicilio, sin que el cliente tuviera que trasladarse a un taller.</p>
+        <h6 class="fw-bold" style="color:#0d7377;">Trabajos realizados</h6>
+        <ul class="list-unstyled mb-3"><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Revisión electromecánica general</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Mantención a domicilio</li><li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>Entrega del vehículo en el lugar del cliente</li></ul>
+        <h6 class="fw-bold" style="color:#0d7377;">Fotos del trabajo</h6>
+        <div class="ficha-fotos"><button type="button" class="gal-item" data-group="ficha-nissan-versa" data-veh="nissan-versa" data-full="/images/galeria/nissan-versa-mantencion-mecanico-a-domicilio-santiago.jpg" data-caption="Nissan Versa – mantención a domicilio"><img src="/images/galeria/nissan-versa-mantencion-mecanico-a-domicilio-santiago-thumb.jpg" alt="Nissan Versa – mantención a domicilio – electromecánico a domicilio en Santiago" loading="lazy"><figcaption>Nissan Versa</figcaption></button></div>
+      </div>
+      <div class="modal-footer" style="border:none;">
+        <a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-1"></i> Ver galería</a>
+        <a href="https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20Nissan%20Versa%20y%20quiero%20cotizar" target="_blank" rel="noopener" class="btn fw-bold" style="background:#14a098;color:#fff;"><i class="fab fa-whatsapp me-1"></i> Cotizar trabajo similar</a>
+      </div>
+    </div>
+  </div>
+</div>
+<!-- GALERIA-MODALES:END -->
 
 <!-- MODALES DE SERVICIOS -->
 <div class="modal fade" id="modal-bateria" tabindex="-1" aria-hidden="true">
@@ -2454,5 +2739,6 @@ function loadMoreVehicles(slug){
 </script>
 <!-- End Google My Business Modal -->
 
+<script defer src="/js/galeria.js"></script>
 </body>
 </html>
