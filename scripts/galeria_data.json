@@ -27,6 +27,92 @@
       ]
     },
     {
+      "slug": "mazda-cx-3",
+      "vehiculo": "Mazda CX-3",
+      "servicio": "Motor trabado por agua en el cilindro",
+      "comuna": "Santiago",
+      "icono": "fa-water",
+      "resumen": "Diagnóstico a domicilio de motor trabado por ingreso de agua al cilindro, con inspección por boroscopio.",
+      "descripcion": "Esta Mazda CX-3 presentaba el motor trabado tras el ingreso de agua al cilindro (hidrobloqueo). Nuestro electromecánico a domicilio realizó el diagnóstico en el lugar, inspeccionando el interior del cilindro con cámara boroscópica para confirmar la presencia de agua y evaluar el estado del motor sin necesidad de desarmarlo.",
+      "trabajos_realizados": [
+        "Diagnóstico de motor trabado",
+        "Retiro de bujías y bobinas",
+        "Inspección del cilindro con boroscopio",
+        "Evaluación del daño y recomendación de reparación"
+      ],
+      "fotos": [
+        {
+          "file": "mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago",
+          "caption": "Mazda CX-3 – diagnóstico de motor trabado a domicilio"
+        },
+        {
+          "file": "mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago",
+          "caption": "Inspección con boroscopio: agua dentro del cilindro"
+        },
+        {
+          "file": "mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago",
+          "caption": "Mazda CX-3 atendida a domicilio"
+        }
+      ]
+    },
+    {
+      "slug": "chery-tiggo-2",
+      "vehiculo": "Chery Tiggo 2",
+      "servicio": "Mantención del sistema de refrigeración",
+      "comuna": "Santiago",
+      "icono": "fa-temperature-low",
+      "resumen": "Revisión de mangueras y refrigerante del sistema de enfriamiento a domicilio.",
+      "descripcion": "En este Chery Tiggo 2 trabajamos a domicilio en el sistema de refrigeración del motor: revisión de mangueras y abrazaderas, y reposición de refrigerante para dejar el sistema funcionando correctamente.",
+      "trabajos_realizados": [
+        "Revisión de mangueras y abrazaderas",
+        "Revisión de fugas en el sistema de enfriamiento",
+        "Reposición de refrigerante",
+        "Prueba de temperatura de funcionamiento"
+      ],
+      "fotos": [
+        {
+          "file": "chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago",
+          "caption": "Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio"
+        },
+        {
+          "file": "chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – trabajo en el domicilio del cliente"
+        },
+        {
+          "file": "chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – revisión de manguera de refrigerante"
+        },
+        {
+          "file": "chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago",
+          "caption": "Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento"
+        }
+      ]
+    },
+    {
+      "slug": "nissan-v16",
+      "vehiculo": "Nissan V16",
+      "servicio": "Revisión electromecánica a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-tools",
+      "resumen": "Revisión y mantención del motor realizada a domicilio.",
+      "descripcion": "Atendimos este clásico Nissan V16 a domicilio, realizando revisión electromecánica y mantención del motor directamente en el lugar del cliente.",
+      "trabajos_realizados": [
+        "Revisión electromecánica general",
+        "Revisión de sistema de encendido y batería",
+        "Mantención del motor a domicilio"
+      ],
+      "fotos": [
+        {
+          "file": "nissan-v16-revision-electromecanica-a-domicilio-santiago",
+          "caption": "Nissan V16 – revisión electromecánica a domicilio"
+        },
+        {
+          "file": "nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago",
+          "caption": "Nissan V16 – motor revisado a domicilio"
+        }
+      ]
+    },
+    {
       "slug": "hyundai-grand-i10",
       "vehiculo": "Hyundai Grand i10",
       "servicio": "Electricidad automotriz a domicilio",
