@@ -49,7 +49,7 @@ electromecanico-en-santiago/
 │   └── ios-skin.css            # Skin tipo iPhone
 ├── js/galeria.js               # Lightbox, filtros y botón "Ver más" de la galería
 ├── scripts/                    # Generadores (ver Mantenimiento)
-├── sitemap.xml                 # 246 URLs indexables
+├── sitemap.xml                 # 339 URLs indexables (+ imágenes de la galería)
 ├── robots.txt
 ├── _redirects                  # Redirecciones 301 (Cloudflare Pages)
 ├── _headers                    # Cabeceras HTTP
@@ -69,7 +69,7 @@ electromecanico-en-santiago/
 | **Total páginas en español** | **234** |
 | Páginas en inglés (`en/`) | 110 |
 | **Total páginas HTML** | **344** |
-| URLs en `sitemap.xml` | 246 |
+| URLs en `sitemap.xml` | 339 |
 
 *No incluye `google7a5c4682e9b25d4f.html` (verificación de Google Search Console). Conteo al 2026-10-11.*
 
@@ -96,10 +96,12 @@ npx wrangler@latest pages deploy . --project-name=electromecanico-en-santiago --
 
 ## 📝 SEO
 
-- `sitemap.xml` con 246 URLs
+- `sitemap.xml` con 339 URLs (todas las páginas indexables, incluye vehículos, marcas e inglés) y fotos de la galería como `image:image`
+- Al compartir cualquier enlace (WhatsApp, Facebook, X, LinkedIn) se muestra el logo: `images/electromecanico-a-domicilio-en-santiago-logo-og.jpg` (1200×630)
+- Canónicas: cada página apunta a su propia URL limpia
 - Robots.txt permite user-agents de IA (GPTBot, ClaudeBot, PerplexityBot, etc.)
 - Redirecciones 301 de URLs con `.html` a URLs limpias
-- Schema.org: LocalBusiness (index), Service + FAQPage + BreadcrumbList (landings de servicios), ImageGallery (galería)
+- Schema.org en todas las páginas: AutoRepair/LocalBusiness con logo, WebSite, WebPage y BreadcrumbList; FAQPage en el index; Service + FAQPage en las landings de servicios; ImageGallery en la galería
 - 52 landings por comuna (SEO local) y 69 landings de servicios (SEO temático)
 - 61 posts de blog (SEO de contenido)
 - Fotos de la galería con nombres de palabras clave separadas por `-` y la comuna al final
@@ -115,6 +117,9 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 | `python3 scripts/build_landings_servicios.py` | Regenera las landings de valor estándar e instalaciones, el hub, sus secciones/modales en el index y el sitemap | `scripts/landings_data.json` |
 | `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
 | `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
+| `python3 scripts/seo_social_schema.py` | Imagen del logo al compartir, canónicas, datos estructurados (@graph) y `sitemap.xml` completo | — |
+
+**Orden recomendado después de cambios:** ejecuta primero el script que corresponda (galería, landings, contexto) y al final `seo_social_schema.py`, para que las páginas regeneradas recuperen sus metadatos y el sitemap quede completo.
 
 **Agregar un vehículo a la galería:** copia la foto a `images/galeria/` con nombre `palabras-clave-separadas-con-guion-comuna.jpg` (+ versión `-thumb.jpg`), agrega la entrada en `scripts/galeria_data.json` y ejecuta `build_galeria.py`.
 
