@@ -113,3 +113,139 @@ img { -webkit-user-drag: none; }
   html { scroll-behavior: auto; }
   .btn, .card, .trabajo-card, .veh-thumb, .modal.fade .modal-dialog { transition: none !important; }
 }
+
+/* =====================================================================
+   v2 — estilo iPhone más marcado
+   Vidrio esmerilado, botones tipo píldora, fondos agrupados de iOS,
+   tarjetas de vidrio, hojas (sheets) inferiores en celular.
+   ===================================================================== */
+:root {
+  --ios-grouped: #f2f2f7;
+  --ios-tint: #0d7377;
+  --ios-tint-2: #14a098;
+  --ios-hairline: rgba(60,60,67,.14);
+  --ios-spring: cubic-bezier(.32,.72,0,1);
+}
+
+/* Barra de navegación: vidrio oscuro translúcido con línea fina */
+html body .navbar, html body .svc-nav, html body .nav-bar {
+  background: rgba(22,22,24,.78) !important;
+  -webkit-backdrop-filter: saturate(190%) blur(28px) !important;
+  backdrop-filter: saturate(190%) blur(28px) !important;
+  border-bottom: 0.5px solid rgba(255,255,255,.10) !important;
+  box-shadow: 0 1px 0 rgba(0,0,0,.25) !important;
+}
+html body .navbar-nav .dropdown-menu {
+  background: rgba(30,30,32,.82) !important;
+  -webkit-backdrop-filter: saturate(180%) blur(24px);
+  backdrop-filter: saturate(180%) blur(24px);
+  border: 0.5px solid rgba(255,255,255,.12) !important;
+  border-radius: 16px !important;
+}
+.nav-link { letter-spacing: -0.01em !important; }
+
+/* Títulos estilo SF Pro Display */
+h1, .h1, .display-4, .display-5, .hero-title { font-weight: 800 !important; letter-spacing: -0.035em !important; }
+h2, .h2 { font-weight: 700; letter-spacing: -0.03em; }
+
+/* Fondos de sección grises → gris agrupado de iOS */
+section[style*="#f0f4f8"], section[style*="#f8f9fa"], .bg-light { background-color: var(--ios-grouped) !important; }
+section[style*="#f0f4f8"] .card, section[style*="#f8f9fa"] .card { background: #fff; }
+
+/* Botones tipo píldora */
+.btn:not(.btn-close):not(.btn-link):not(.navbar-toggler) {
+  border-radius: 999px !important;
+  font-weight: 600 !important;
+  letter-spacing: -0.01em;
+  box-shadow: 0 1px 2px rgba(0,0,0,.06), 0 4px 14px rgba(0,0,0,.10);
+}
+.btn-lg:not(.btn-close) { border-radius: 999px !important; padding-left: 1.6rem; padding-right: 1.6rem; }
+.btn-outline-secondary, .btn-outline-primary, .btn-outline-light {
+  background: rgba(118,118,128,.12) !important;
+  border-color: transparent !important;
+  box-shadow: none !important;
+}
+.btn-outline-secondary { color: var(--ios-tint) !important; }
+.btn-outline-secondary:hover, .btn-outline-primary:hover { background: rgba(13,115,119,.16) !important; }
+.btn-primary { background: var(--ios-tint) !important; border-color: var(--ios-tint) !important; }
+.whatsapp-btn { border-radius: 999px !important; }
+
+/* Tarjetas: esquinas grandes, línea fina y elevación al pasar */
+.card, .trabajo-card, .veh-thumb, .service-card, .feature-card, .blog-card, .stat-card, .svc-link-card, .svc-box {
+  border-radius: 22px !important;
+  border: 0.5px solid var(--ios-hairline) !important;
+}
+.card:hover, .trabajo-card:hover, .veh-thumb:hover, .svc-link-card:hover, .stat-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 2px 6px rgba(0,0,0,.05), 0 18px 40px rgba(0,0,0,.12) !important;
+}
+.card img, .trabajo-card img { border-radius: 0; }
+.trabajo-card img, .card-img-top { border-top-left-radius: 22px; border-top-right-radius: 22px; }
+
+/* Recuadro de estadística: tarjeta de vidrio */
+.stats-container .stat-item {
+  background: rgba(255,255,255,.72);
+  -webkit-backdrop-filter: saturate(180%) blur(20px);
+  backdrop-filter: saturate(180%) blur(20px);
+  border: 0.5px solid var(--ios-hairline);
+  border-radius: 22px !important;
+  padding: 14px 18px;
+  box-shadow: 0 1px 2px rgba(0,0,0,.04), 0 10px 28px rgba(0,0,0,.08);
+  max-width: 320px;
+  margin: 0 auto;
+}
+.stats-container .stat-number { font-weight: 800; letter-spacing: -0.03em; }
+
+/* Insignias: píldoras translúcidas */
+.badge, .hero-badge, .tc-badge { border-radius: 999px !important; letter-spacing: 0; }
+
+/* Galería: esquinas iOS */
+.gal-item { border-radius: 18px !important; }
+.gal-filters button { border-radius: 999px !important; border-width: 0 !important; background: rgba(118,118,128,.12) !important; color: var(--ios-tint) !important; }
+.gal-filters button.active { background: var(--ios-tint) !important; color: #fff !important; }
+
+/* Formularios rellenos estilo iOS */
+.form-control, .form-select, input[type="text"], input[type="email"], input[type="tel"], input[type="search"], textarea, select {
+  background-color: rgba(118,118,128,.12) !important;
+  border: 0.5px solid transparent !important;
+  border-radius: 12px !important;
+}
+.form-control:focus, .form-select:focus { background-color: #fff !important; }
+
+/* Preguntas frecuentes como lista agrupada (inset grouped) */
+.accordion-item, .svc-faq { border-radius: 16px !important; border: 0.5px solid var(--ios-hairline) !important; }
+.accordion-button:not(.collapsed) { background: rgba(13,115,119,.08) !important; color: var(--ios-tint) !important; }
+.svc-faq summary { list-style: none; position: relative; padding-right: 22px; }
+.svc-faq summary::-webkit-details-marker { display: none; }
+.svc-faq summary::after { content: "›"; position: absolute; right: 2px; top: -2px; font-size: 1.4rem; color: #c7c7cc; transition: transform .25s var(--ios-spring); }
+.svc-faq[open] summary::after { transform: rotate(90deg); }
+
+/* Modales: hoja inferior en celular con "agarradera" */
+.modal-content { border-radius: 28px !important; }
+.modal-header { border-radius: 28px 28px 0 0 !important; border-bottom: 0.5px solid rgba(255,255,255,.15) !important; }
+.modal-backdrop.show { opacity: .35; }
+.modal.fade .modal-dialog { transition: transform .45s var(--ios-spring), opacity .3s ease; }
+@media (max-width: 575.98px) {
+  .modal-dialog { margin: 0 !important; max-width: 100% !important; min-height: 100% !important; display: flex !important; align-items: flex-end !important; }
+  .modal-dialog-scrollable { height: 100% !important; }
+  .modal-dialog-scrollable .modal-content { max-height: 92vh !important; }
+  .modal-content { border-radius: 28px 28px 0 0 !important; width: 100%; padding-top: 8px; }
+  .modal-content::before { content: ""; position: absolute; top: 7px; left: 50%; width: 38px; height: 5px; margin-left: -19px; border-radius: 3px; background: rgba(255,255,255,.55); z-index: 2; }
+  .modal-header { border-radius: 28px 28px 0 0 !important; margin-top: -8px; padding-top: 22px; }
+  .modal.fade .modal-dialog { transform: translateY(100%); }
+  .modal.show .modal-dialog { transform: none; }
+}
+
+/* Lightbox de galería con botones de vidrio */
+#galLightbox { -webkit-backdrop-filter: blur(20px); backdrop-filter: blur(20px); background: rgba(0,0,0,.82) !important; }
+#galLightbox .gl-prev, #galLightbox .gl-next { background: rgba(255,255,255,.18) !important; -webkit-backdrop-filter: blur(16px); backdrop-filter: blur(16px); }
+#galLightbox img { border-radius: 18px !important; }
+
+/* Enlaces y foco con color de acento */
+a { -webkit-tap-highlight-color: transparent; }
+:focus-visible { outline: 3px solid rgba(13,115,119,.45); outline-offset: 2px; border-radius: 10px; }
+
+@media (prefers-reduced-motion: reduce) {
+  .card:hover, .trabajo-card:hover, .veh-thumb:hover, .svc-link-card:hover, .stat-card:hover { transform: none; }
+  .modal.fade .modal-dialog { transition: none !important; }
+}

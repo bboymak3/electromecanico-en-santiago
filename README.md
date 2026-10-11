@@ -18,7 +18,7 @@ Sitio web oficial de **Electromecánico a Domicilio en Santiago** — servicio d
 - HTML5 semántico
 - Bootstrap 5 (grid, componentes, modales)
 - CSS3 + JS Vanilla
-- Skin visual tipo iPhone (iOS) en todo el sitio: `css/ios-skin.css`
+- Skin visual tipo iPhone (iOS) en todo el sitio: `css/ios-skin.css` (vidrio esmerilado, botones píldora, fondos agrupados, modales tipo hoja en celular)
 - Font Awesome 6 (iconografía)
 - Sin build step — todo es estático (los scripts de `scripts/` generan HTML y se versiona el resultado)
 
@@ -117,6 +117,7 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 | `python3 scripts/build_landings_servicios.py` | Regenera las landings de valor estándar e instalaciones, el hub, sus secciones/modales en el index y el sitemap | `scripts/landings_data.json` |
 | `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
 | `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
+| `python3 scripts/stats_clientes.py` | Deja un solo recuadro "+100 Clientes Atendidos" en el encabezado y actualiza la cifra en los textos | — |
 | `python3 scripts/seo_social_schema.py` | Imagen del logo al compartir, canónicas, datos estructurados (@graph) y `sitemap.xml` completo | — |
 
 **Orden recomendado después de cambios:** ejecuta primero el script que corresponda (galería, landings, contexto) y al final `seo_social_schema.py`, para que las páginas regeneradas recuperen sus metadatos y el sitemap quede completo.
