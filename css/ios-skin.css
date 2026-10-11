@@ -1,0 +1,115 @@
+/* =====================================================================
+   Skin tipo iPhone (iOS) — capa visual global
+   Solo cambia apariencia (tipografía, bordes, sombras, vidrio, toques);
+   no oculta, mueve ni elimina secciones ni contenido.
+   Se enlaza al final del <head> de cada página (scripts/add_ios_skin.py).
+   ===================================================================== */
+:root {
+  --ios-font: -apple-system, BlinkMacSystemFont, "SF Pro Text", "SF Pro Display", "Helvetica Neue", "Inter", "Segoe UI", Roboto, Arial, sans-serif;
+  --ios-radius: 20px;
+  --ios-radius-md: 14px;
+  --ios-radius-sm: 10px;
+  --ios-shadow: 0 1px 2px rgba(0,0,0,.04), 0 8px 24px rgba(0,0,0,.08);
+  --ios-shadow-lg: 0 2px 6px rgba(0,0,0,.06), 0 18px 48px rgba(0,0,0,.16);
+  --ios-glass: rgba(255,255,255,.72);
+  --ios-glass-dark: rgba(22,22,24,.72);
+  --ios-separator: rgba(60,60,67,.18);
+  --ios-ease: cubic-bezier(.25,.1,.25,1);
+}
+
+/* ---------- Tipografía San Francisco ---------- */
+html { -webkit-text-size-adjust: 100%; text-size-adjust: 100%; scroll-behavior: smooth; }
+body {
+  font-family: var(--ios-font) !important;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  -webkit-tap-highlight-color: transparent;
+}
+h1, h2, h3, h4, h5, h6, .h1, .h2, .h3, .h4, .h5, .h6,
+.navbar, .nav-link, .dropdown-item, .btn, button, input, select, textarea, .modal-title {
+  font-family: var(--ios-font) !important;
+}
+h1, h2, h3, .h1, .h2, .h3, .display-5 { letter-spacing: -0.022em; }
+h4, h5, h6, .h4, .h5, .h6 { letter-spacing: -0.012em; }
+
+/* ---------- Barras de navegación con vidrio esmerilado ---------- */
+.navbar, .nav-bar, body > header, .site-header {
+  -webkit-backdrop-filter: saturate(180%) blur(20px) !important;
+  backdrop-filter: saturate(180%) blur(20px) !important;
+}
+
+/* Menús desplegables estilo iOS */
+.dropdown-menu {
+  border-radius: var(--ios-radius-md) !important;
+  border: 0.5px solid var(--ios-separator) !important;
+  box-shadow: var(--ios-shadow-lg) !important;
+  padding: 6px !important;
+}
+.dropdown-item { border-radius: var(--ios-radius-sm); }
+
+/* ---------- Tarjetas ---------- */
+.card, .trabajo-card, .veh-thumb, .service-card, .feature-card, .blog-card, .stat-item {
+  border-radius: var(--ios-radius) !important;
+}
+.card.shadow-sm, .trabajo-card, .veh-thumb { box-shadow: var(--ios-shadow) !important; }
+.card, .trabajo-card, .veh-thumb { transition: transform .25s var(--ios-ease), box-shadow .25s var(--ios-ease); }
+
+/* ---------- Botones redondeados con efecto de pulsación ---------- */
+.btn:not(.btn-close):not(.btn-link) {
+  border-radius: var(--ios-radius-md) !important;
+  font-weight: 600;
+  transition: transform .15s var(--ios-ease), filter .15s var(--ios-ease), box-shadow .2s var(--ios-ease), background-color .2s var(--ios-ease);
+}
+.btn:not(.btn-close):active, a.btn:active, .trabajo-card:active, .veh-thumb:active, .gal-item:active {
+  transform: scale(.97);
+  filter: brightness(.95);
+}
+.btn-lg:not(.btn-close) { border-radius: 16px !important; }
+
+/* ---------- Modales tipo hoja (sheet) de iOS ---------- */
+.modal-content {
+  border-radius: 22px !important;
+  border: none !important;
+  box-shadow: var(--ios-shadow-lg) !important;
+  overflow: hidden;
+}
+.modal-header { border-radius: 22px 22px 0 0 !important; }
+.modal-backdrop.show { opacity: .4; }
+.modal.fade .modal-dialog { transition: transform .35s var(--ios-ease), opacity .35s var(--ios-ease); }
+@media (max-width: 575.98px) {
+  .modal.fade .modal-dialog { transform: translateY(40px); }
+  .modal.show .modal-dialog { transform: none; }
+}
+
+/* ---------- Formularios ---------- */
+.form-control, .form-select, input[type="text"], input[type="email"], input[type="tel"], input[type="search"], textarea, select {
+  border-radius: 12px !important;
+}
+.form-control:focus, .form-select:focus, input:focus, textarea:focus, select:focus {
+  border-color: #0d7377 !important;
+  box-shadow: 0 0 0 4px rgba(13,115,119,.18) !important;
+  outline: none;
+}
+
+/* ---------- Acordeones / FAQ como listas agrupadas de iOS ---------- */
+.accordion-item {
+  border-radius: var(--ios-radius-md) !important;
+  overflow: hidden;
+  border: 0.5px solid var(--ios-separator) !important;
+  margin-bottom: 10px;
+}
+.accordion-button { font-weight: 600; }
+.accordion-button:focus { box-shadow: none; }
+
+/* ---------- Detalles ---------- */
+.badge { border-radius: 999px !important; font-weight: 600; }
+img { -webkit-user-drag: none; }
+::selection { background: rgba(13,115,119,.22); }
+.breadcrumb { border-radius: var(--ios-radius-sm); }
+
+/* Respeta la preferencia de menos movimiento */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  .btn, .card, .trabajo-card, .veh-thumb, .modal.fade .modal-dialog { transition: none !important; }
+}
