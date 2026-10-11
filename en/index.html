@@ -1206,7 +1206,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             </label>
             <div style="position:relative;">
               <i class="fas fa-phone" style="position:absolute; left:16px; top:50%; transform:translateY(-50%); color:#9ca3af; font-size:1.1rem;"></i>
-              <input type="tel" id="sec-phone" class="alerta-input" placeholder="Ej: +56 9 1234 5678" required>
+              <input type="tel" id="sec-phone" class="alerta-input" placeholder="Ej: +56 9 7362 2291" required>
             </div>
           </div>
 
@@ -1225,7 +1225,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
           <div style="margin-top:24px; text-align:center;">
             <p style="color:#9ca3af; font-size:0.95rem; margin-bottom:10px;">No you want more recordatorios?</p>
             <div style="display:flex; gap:10px;">
-              <input type="tel" id="sec-low-phone" class="alerta-input" placeholder="+56 9 1234 5678" style="flex:1; padding:14px 16px 14px 16px; font-size:1rem;">
+              <input type="tel" id="sec-low-phone" class="alerta-input" placeholder="+56 9 7362 2291" style="flex:1; padding:14px 16px 14px 16px; font-size:1rem;">
               <button onclick="darmeDeLowSec()" class="alerta-low-btn" style="width:auto; padding:14px 24px; flex-shrink:0;">
                 <i class="fas fa-user-slash"></i> DARME DE BAJA
               </button>
@@ -3375,7 +3375,7 @@ document.getElementById('modal-chat-ia').addEventListener('click', function(e) {
       <label style="display:block; font-weight:600; font-size:0.85rem; color:#4b5563; margin-bottom:5px;"><i class="fab fa-whatsapp" style="color:#a80000; margin-right:4px;"></i> Tu WhatsApp</label>
       <div style="position:relative;">
         <i class="fas fa-phone" style="position:absolute; left:12px; top:50%; transform:translateY(-50%); color:#9ca3af;"></i>
-        <input type="tel" id="rec-phone" placeholder="Ej: +56 9 1234 5678" required style="width:100%; padding:12px 12px 12px 38px; border:2px solid #e5e7eb; border-radius:10px; font-size:1rem; outline:none; font-family:inherit;">
+        <input type="tel" id="rec-phone" placeholder="Ej: +56 9 7362 2291" required style="width:100%; padding:12px 12px 12px 38px; border:2px solid #e5e7eb; border-radius:10px; font-size:1rem; outline:none; font-family:inherit;">
       </div>
     </div>
     <div style="display:flex; align-items:flex-start; gap:8px; margin-bottom:16px; padding:10px; background:#f9fafb; border-radius:8px;">
@@ -3520,7 +3520,7 @@ function showRecResult(type, html) {
         <!-- Phone -->
         <div style="margin-bottom:14px;">
           <label style="display:block; font-weight:700; font-size:0.84rem; color:#333; margin-bottom:5px;"><i class="fas fa-phone" style="color:#ff6b00; margin-right:5px;"></i>Phone</label>
-          <input type="tel" id="schedule-phone" class="form-control" placeholder="+56 9 1234 5678" required style="border:2px solid #ddd; border-radius:10px; padding:11px 13px; font-size:0.93rem;">
+          <input type="tel" id="schedule-phone" class="form-control" placeholder="+56 9 7362 2291" required style="border:2px solid #ddd; border-radius:10px; padding:11px 13px; font-size:0.93rem;">
         </div>
 
         <!-- Steering -->
@@ -4023,5 +4023,41 @@ function resetScheduleVisita() {
   sessionStorage.setItem('lang_choice', 'es');
 })();
 </script>
+
+<!-- Google My Business Modal -->
+<div id="gmb-modal" style="display:none;position:fixed;inset:0;z-index:99999;background:rgba(0,0,0,0.7);backdrop-filter:blur(4px);align-items:center;justify-content:center;padding:20px;" onclick="if(event.target===this)document.getElementById('gmb-modal').style.display='none'">
+  <div style="background:#fff;border-radius:16px;max-width:420px;width:100%;padding:32px 24px;text-align:center;box-shadow:0 20px 60px rgba(0,0,0,0.3);position:relative;">
+    <button onclick="document.getElementById('gmb-modal').style.display='none'" style="position:absolute;top:12px;right:12px;background:none;border:none;font-size:24px;color:#999;cursor:pointer;width:32px;height:32px;">&times;</button>
+    <div style="width:64px;height:64px;margin:0 auto 16px;background:linear-gradient(135deg,#4285F4,#34A853);border-radius:50%;display:flex;align-items:center;justify-content:center;">
+      <svg width="32" height="32" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+    </div>
+    <h3 style="font-size:1.3rem;font-weight:800;color:#1a1a1a;margin-bottom:8px;">📍 DRAUTOMOTRIZ en Google</h3>
+    <p style="color:#666;font-size:0.9rem;margin-bottom:20px;">Visita nuestro perfil de Google Business y descubre por qué nuestros clientes nos califican con 5 estrellas ⭐⭐⭐⭐⭐</p>
+    <a href="https://maps.app.goo.gl/ygW6nj3w9J16C86N7?g_st=ac" target="_blank" rel="noopener noreferrer" style="display:inline-flex;align-items:center;gap:8px;background:#4285F4;color:#fff;padding:14px 28px;border-radius:10px;font-weight:700;font-size:1rem;text-decoration:none;">
+      <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>
+      Ver perfil de Google
+    </a>
+    <p style="color:#999;font-size:0.75rem;margin-top:16px;">Reseñas reales · Fotos · Horarios · Ubicación</p>
+  </div>
+</div>
+<script>
+(function(){
+  // Agregar botón flotante de Google si no existe
+  if(!document.getElementById('gmb-float-btn')){
+    var btn=document.createElement('button');
+    btn.id='gmb-float-btn';
+    btn.style.cssText='position:fixed;bottom:20px;left:20px;z-index:99998;width:52px;height:52px;border-radius:50%;background:linear-gradient(135deg,#4285F4,#34A853);border:none;cursor:pointer;box-shadow:0 4px 20px rgba(66,133,244,0.4);display:flex;align-items:center;justify-content:center;transition:transform 0.2s;';
+    btn.innerHTML='<svg width="26" height="26" viewBox="0 0 24 24" fill="white"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5a2.5 2.5 0 010-5 2.5 2.5 0 010 5z"/></svg>';
+    btn.title='Ver nuestro perfil de Google';
+    btn.onclick=function(){document.getElementById('gmb-modal').style.display='flex';};
+    document.body.appendChild(btn);
+  }
+  document.addEventListener('keydown',function(e){
+    if(e.key==='Escape'){document.getElementById('gmb-modal').style.display='none';}
+  });
+})();
+</script>
+<!-- End Google My Business Modal -->
+
 </body>
 </html>
