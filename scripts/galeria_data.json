@@ -1,0 +1,78 @@
+{
+  "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
+  "trabajos": [
+    {
+      "slug": "hyundai-grand-i10",
+      "vehiculo": "Hyundai Grand i10",
+      "servicio": "Electricidad automotriz a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-bolt",
+      "resumen": "Revisión del sistema eléctrico y cableado bajo el tablero, realizada a domicilio.",
+      "descripcion": "Nuestro electromecánico a domicilio atendió este Hyundai Grand i10 directamente en el lugar del cliente. Se desmontaron los paneles inferiores del tablero para revisar el cableado y las conexiones eléctricas, y se realizaron pruebas alimentando el circuito desde la batería para verificar el correcto funcionamiento.",
+      "trabajos_realizados": [
+        "Desmontaje de paneles bajo el tablero",
+        "Revisión de cableado y conectores",
+        "Pruebas eléctricas desde la batería",
+        "Rearmado y verificación final"
+      ],
+      "fotos": [
+        {"file": "hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago", "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero"},
+        {"file": "hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago", "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto"}
+      ]
+    },
+    {
+      "slug": "toyota-rav4",
+      "vehiculo": "Toyota RAV4",
+      "servicio": "Cambio de neblineros LED a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-lightbulb",
+      "resumen": "Instalación de neblineros LED nuevos con su conexión eléctrica.",
+      "descripcion": "En esta Toyota RAV4 realizamos el cambio de neblineros por unidades LED nuevas, a domicilio. Se retiraron los neblineros originales, se montaron los nuevos focos con sus bases y se conectaron al sistema eléctrico del vehículo, quedando funcionando y alineados.",
+      "trabajos_realizados": [
+        "Desmontaje de neblineros antiguos",
+        "Montaje de neblineros LED con sus bases",
+        "Conexión eléctrica y prueba de encendido",
+        "Revisión de alineación de los focos"
+      ],
+      "fotos": [
+        {"file": "toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago", "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar"},
+        {"file": "toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago", "caption": "Toyota RAV4 – neblineros LED instalados y funcionando"}
+      ]
+    },
+    {
+      "slug": "audi-a3",
+      "vehiculo": "Audi A3",
+      "servicio": "Cambio de refrigerante a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-temperature-low",
+      "resumen": "Cambio de refrigerante y anticongelante del sistema de enfriamiento.",
+      "descripcion": "Atendimos este Audi A3 en el estacionamiento del cliente para realizar el cambio de refrigerante. Se vació el sistema de enfriamiento y se llenó con refrigerante anticongelante Ravenol, purgando el circuito para evitar bolsas de aire.",
+      "trabajos_realizados": [
+        "Vaciado del refrigerante antiguo",
+        "Llenado con anticongelante Ravenol",
+        "Purgado del sistema de enfriamiento",
+        "Control de nivel y temperatura"
+      ],
+      "fotos": [
+        {"file": "audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago", "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol"}
+      ]
+    },
+    {
+      "slug": "nissan-versa",
+      "vehiculo": "Nissan Versa",
+      "servicio": "Mantención a domicilio",
+      "comuna": "Santiago",
+      "icono": "fa-tools",
+      "resumen": "Mantención y revisión electromecánica realizada a domicilio.",
+      "descripcion": "Este Nissan Versa recibió mantención y revisión electromecánica a domicilio, sin que el cliente tuviera que trasladarse a un taller.",
+      "trabajos_realizados": [
+        "Revisión electromecánica general",
+        "Mantención a domicilio",
+        "Entrega del vehículo en el lugar del cliente"
+      ],
+      "fotos": [
+        {"file": "nissan-versa-mantencion-mecanico-a-domicilio-santiago", "caption": "Nissan Versa – mantención a domicilio"}
+      ]
+    }
+  ]
+}
