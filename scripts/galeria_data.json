@@ -89,26 +89,27 @@
       ]
     },
     {
-      "slug": "nissan-v16",
-      "vehiculo": "Nissan V16",
-      "servicio": "Revisión electromecánica a domicilio",
+      "slug": "nissan-sentra-1997",
+      "vehiculo": "Nissan Sentra 1997",
+      "servicio": "Reparación de distribución a domicilio",
       "comuna": "Santiago",
-      "icono": "fa-tools",
-      "resumen": "Revisión y mantención del motor realizada a domicilio.",
-      "descripcion": "Atendimos este clásico Nissan V16 a domicilio, realizando revisión electromecánica y mantención del motor directamente en el lugar del cliente.",
+      "icono": "fa-cogs",
+      "resumen": "El vehículo no encendía porque la distribución se había saltado unos dientes. Reparado a domicilio.",
+      "descripcion": "Este Nissan Sentra año 1997 no encendía. Nuestro electromecánico a domicilio diagnosticó en el lugar que la distribución se había saltado unos dientes, dejando el motor fuera de punto. Se corrigió la sincronización de la distribución, dejando el motor nuevamente a punto y el vehículo encendiendo y funcionando correctamente, sin necesidad de trasladarlo a un taller.",
       "trabajos_realizados": [
-        "Revisión electromecánica general",
-        "Revisión de sistema de encendido y batería",
-        "Mantención del motor a domicilio"
+        "Diagnóstico de vehículo que no enciende",
+        "Detección de distribución saltada (dientes corridos)",
+        "Puesta a punto y sincronización de la distribución",
+        "Prueba de encendido y funcionamiento del motor"
       ],
       "fotos": [
         {
-          "file": "nissan-v16-revision-electromecanica-a-domicilio-santiago",
-          "caption": "Nissan V16 – revisión electromecánica a domicilio"
+          "file": "nissan-sentra-1997-no-enciende-distribucion-saltada-a-domicilio-santiago",
+          "caption": "Nissan Sentra 1997 – no encendía por distribución saltada"
         },
         {
-          "file": "nissan-v16-motor-ga16-mantencion-mecanico-a-domicilio-santiago",
-          "caption": "Nissan V16 – motor revisado a domicilio"
+          "file": "nissan-sentra-1997-puesta-a-punto-distribucion-mecanico-a-domicilio-santiago",
+          "caption": "Nissan Sentra 1997 – motor con distribución puesta a punto"
         }
       ]
     },
