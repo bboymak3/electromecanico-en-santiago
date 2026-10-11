@@ -17,6 +17,7 @@ import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://electromecanico-en-santiago.pages.dev"
+LANDINGS = json.load(open(os.path.join(ROOT, "scripts", "landings_data.json"), encoding="utf-8"))
 DATA = json.load(open(os.path.join(ROOT, "scripts", "servicios_contexto.json"), encoding="utf-8"))
 e = html.escape
 
@@ -75,6 +76,10 @@ def contexto(slug, titulo, d, accent, titles):
         for q, a in d["faq"])
     comunas = " · ".join(f'<a href="/comunas/{c}" style="color:{accent};">{n}</a>' for c, n in COMUNAS)
     rel = "".join(f'<a href="/servicios/{r}" class="btn btn-outline-secondary btn-sm m-1">{e(titles.get(r, r))}</a>' for r in d["relacionados"])
+    nuevas = {x["slug"]: x["nombre"] for g in LANDINGS.values() for x in g}
+    ins = "".join(f'<a href="/servicios/{r}" class="btn btn-outline-secondary btn-sm m-1">{e(nuevas[r])}</a>' for r in d.get("instalaciones", []) if r in nuevas)
+    if ins:
+        rel += f'</div>\n      <h2 class="h5 fw-bold mt-4 mb-2">Instalaciones relacionadas</h2>\n      <div>{ins} <a href="/servicios/instalaciones-automotrices" class="btn btn-sm m-1 text-white" style="background:{accent};">Ver todas</a>'
     return f'''<style>
     .svc-faq {{ background:#fff; border:0.5px solid rgba(60,60,67,.18); border-radius:14px; padding:14px 16px; margin-bottom:10px; }}
     .svc-faq summary {{ font-weight:600; cursor:pointer; }}

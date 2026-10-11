@@ -1,26 +1,751 @@
 {
-  "frenos": {"nombre":"frenos","senales":["Chirrido o rechinido al frenar","Pedal de freno esponjoso o que se va al fondo","Vibración en el volante o pedal al frenar","Luz de freno o ABS encendida en el tablero","El auto se desvía hacia un lado al frenar"],"faq":[["¿Cada cuánto se cambian las pastillas de freno?","Depende del uso y del tipo de conducción, pero se recomienda revisarlas en cada mantención o cada 10.000 km aproximadamente. En ciudad, con mucho tráfico, se desgastan más rápido."],["¿Pueden cambiar los frenos en mi casa?","Sí. Realizamos el cambio de pastillas, discos y el purgado del líquido de frenos directamente en tu domicilio u oficina, con herramientas profesionales."],["¿Cuándo hay que rectificar o cambiar los discos?","Cuando presentan vibración, surcos profundos o están bajo el espesor mínimo indicado por el fabricante. Lo evaluamos en la inspección sin costo."]],"relacionados":["servicio-y-reparacion-de-frenos","diagnostico-de-sensores-abs-esp","direccion-y-suspension"]},
-  "servicio-y-reparacion-de-frenos": {"nombre":"reparación de frenos","senales":["Ruidos metálicos al frenar","Distancia de frenado más larga de lo normal","Pedal duro, blando o con recorrido irregular","Fugas de líquido de frenos cerca de las ruedas","Olor a quemado después de frenar"],"faq":[["¿Qué incluye la reparación de frenos?","Inspección de pastillas, discos, balatas, tambores, cálipers y líquido de frenos; reemplazo de las piezas desgastadas y purgado del sistema."],["¿Cada cuánto se cambia el líquido de frenos?","En general cada 2 años o según el manual del vehículo, ya que absorbe humedad y pierde eficacia."],["¿Es seguro manejar con los frenos sonando?","No es recomendable. Un ruido al frenar suele indicar desgaste; mientras antes se revise, menor es el riesgo y el costo de la reparación."]],"relacionados":["frenos","diagnostico-de-sensores-abs-esp","direccion-y-suspension"]},
-  "reparacion-de-alternadores": {"nombre":"reparación de alternadores y motores de arranque","senales":["Luz de batería encendida con el motor en marcha","Batería que se descarga aunque sea nueva","Luces que bajan de intensidad o parpadean","Clic o giro lento al dar arranque","Ruido o zumbido en la zona del alternador"],"faq":[["¿Cómo sé si falla el alternador o la batería?","Medimos el voltaje de carga con el motor encendido y la capacidad real de la batería. Así evitamos cambiar piezas que están buenas."],["¿Reparan motores de partida a domicilio?","Sí. Desmontamos, revisamos y realizamos la mantención o el reemplazo del motor de partida en el lugar, como en el trabajo del Chevrolet Onix que puedes ver en nuestra galería."],["¿Cuánto dura la reparación?","Muchos trabajos se resuelven el mismo día. Si se requiere un repuesto específico, te informamos el plazo antes de comenzar."]],"relacionados":["bateria","deteccion-de-fugas-de-corriente","electricidad"]},
-  "aire-acondicionado": {"nombre":"aire acondicionado automotriz","senales":["El aire sale tibio o no enfría","Mal olor al encender el aire acondicionado","Ruidos al activar el compresor","Poco flujo de aire por las salidas","Vidrios que se empañan con facilidad"],"faq":[["¿Cada cuánto se recarga el gas del aire acondicionado?","Un sistema sano no debería perder gas. Si enfría menos, revisamos fugas antes de recargar para que la solución sea duradera."],["¿Pueden revisar el aire acondicionado a domicilio?","Sí. Hacemos diagnóstico de presiones, búsqueda de fugas y recarga en tu domicilio."],["¿Por qué huele mal el aire acondicionado?","Generalmente por humedad y bacterias en el evaporador o un filtro de cabina saturado. Se soluciona con limpieza y cambio de filtro."]],"relacionados":["servicios-de-aa","cambio-de-filtros-de-aa","revision-de-electroventiladores"]},
-  "servicios-de-aa": {"nombre":"servicios de aire acondicionado","senales":["Enfriamiento deficiente en días calurosos","El compresor no se activa","Goteo de agua dentro del habitáculo","Olor a humedad en la cabina","Ventilador de cabina que no funciona en todas las velocidades"],"faq":[["¿Qué servicios de A/A realizan?","Diagnóstico, detección de fugas, recarga de gas, limpieza del sistema, cambio de filtro de cabina y revisión eléctrica del compresor y ventiladores."],["¿Cuánto demora una recarga de aire acondicionado?","Normalmente entre 1 y 2 horas, incluyendo vacío del sistema y prueba de funcionamiento."],["¿Es necesario usar el aire acondicionado en invierno?","Sí, usarlo de vez en cuando lubrica el compresor y ayuda a desempañar los vidrios."]],"relacionados":["aire-acondicionado","cambio-de-filtros-de-aa","revision-de-electroventiladores"]},
-  "cambio-de-filtros-de-aa": {"nombre":"cambio de filtros de A/A y ventilación","senales":["Poco flujo de aire por las rejillas","Olor a polvo o humedad en la cabina","Aumento de alergias o estornudos dentro del auto","Vidrios que se empañan más de lo normal","Ruido de ventilador forzado"],"faq":[["¿Cada cuánto se cambia el filtro de cabina?","Se recomienda una vez al año o cada 15.000 km; en Santiago, por el polvo y la contaminación, conviene revisarlo con más frecuencia."],["¿El filtro de cabina afecta el aire acondicionado?","Sí. Un filtro saturado reduce el flujo de aire y hace que el sistema trabaje más."],["¿Pueden cambiarlo a domicilio?","Sí, es un trabajo rápido que realizamos en tu domicilio junto con una revisión general del sistema de ventilación."]],"relacionados":["aire-acondicionado","servicios-de-aa","cambio-de-aceite"]},
-  "diagnostico-de-automoviles": {"nombre":"diagnóstico de automóviles","senales":["Luz Check Engine encendida","Pérdida de potencia o tirones al acelerar","Ralentí inestable o el motor se apaga","Consumo de combustible más alto de lo normal","Ruidos o vibraciones nuevas"],"faq":[["¿Qué incluye el diagnóstico?","Lectura de códigos de falla con scanner multimarca, revisión de datos en vivo de sensores e inspección mecánica y eléctrica para identificar la causa real."],["¿El diagnóstico se hace a domicilio?","Sí, llevamos el scanner y las herramientas a tu domicilio u oficina."],["¿Borrar el código de falla soluciona el problema?","No. Borrar el código solo apaga la luz temporalmente; hay que reparar la causa para que no vuelva a aparecer."]],"relacionados":["scanner-y-diagnostico-electronico","mecanico-de-autos","mantencion-de-inyeccion-electronica"]},
-  "scanner-y-diagnostico-electronico": {"nombre":"scanner y diagnóstico electrónico","senales":["Testigos encendidos en el tablero (motor, ABS, airbag)","Fallas intermitentes difíciles de reproducir","Problemas de arranque sin causa aparente","Caja automática con cambios bruscos","Sensores que entregan lecturas erróneas"],"faq":[["¿Con qué marcas trabaja el scanner?","Usamos equipos multimarca compatibles con la mayoría de los vehículos que circulan en Chile."],["¿Qué sistemas se pueden escanear?","Motor, transmisión automática, ABS/ESP, airbag, carrocería y otros módulos según el modelo."],["¿Entregan informe del diagnóstico?","Te explicamos los códigos encontrados, la causa probable y la reparación recomendada antes de realizar cualquier trabajo."]],"relacionados":["diagnostico-de-automoviles","diagnostico-de-sensores-abs-esp","mantencion-de-inyeccion-electronica"]},
-  "diagnostico-de-sensores-abs-esp": {"nombre":"diagnóstico de sensores ABS y ESP","senales":["Luz de ABS o de control de estabilidad encendida","El ABS se activa sin motivo a baja velocidad","Velocímetro que marca de forma irregular","Pérdida de asistencia de frenado de emergencia","Testigo de tracción (TCS) encendido"],"faq":[["¿Es peligroso manejar con la luz de ABS encendida?","Los frenos normales siguen funcionando, pero el sistema antibloqueo y el control de estabilidad pueden quedar desactivados. Conviene revisarlo pronto."],["¿Qué causa una falla de sensor ABS?","Suciedad, cables dañados, conectores sulfatados o un sensor defectuoso. Lo identificamos con scanner y medición eléctrica."],["¿Se revisa a domicilio?","Sí, el diagnóstico y el reemplazo del sensor se pueden hacer en tu domicilio."]],"relacionados":["frenos","scanner-y-diagnostico-electronico","servicio-y-reparacion-de-frenos"]},
-  "mantencion-de-inyeccion-electronica": {"nombre":"mantención de inyección electrónica","senales":["Tirones o pérdida de potencia","Arranque difícil en frío","Ralentí irregular","Aumento del consumo de combustible","Olor a combustible o humo negro"],"faq":[["¿Cada cuánto se limpian los inyectores?","Como referencia cada 30.000 a 40.000 km, o antes si notas síntomas de mala pulverización."],["¿Qué incluye la mantención de inyección?","Revisión con scanner, limpieza de cuerpo de aceleración, revisión de inyectores, bujías, sensores y filtro de combustible según el caso."],["¿Se puede hacer a domicilio?","Sí, la mayor parte de la mantención de inyección electrónica se realiza en tu domicilio."]],"relacionados":["diagnostico-de-automoviles","scanner-y-diagnostico-electronico","cambio-de-aceite"]},
-  "reparacion-de-alzavidrios": {"nombre":"reparación de alzavidrios y cierre centralizado","senales":["Vidrio que sube o baja lento o se detiene","Ruido de motor sin que el vidrio se mueva","Vidrio caído dentro de la puerta","Cierre centralizado que no traba todas las puertas","Botones de la puerta que no responden"],"faq":[["¿Reparan alzavidrios a domicilio?","Sí. Desmontamos el tapiz de la puerta, revisamos motor, mecanismo y cableado, y reparamos o reemplazamos la pieza dañada."],["¿La falla puede ser eléctrica y no mecánica?","Sí, muchas veces es un switch, un fusible o un cable cortado en la bisagra de la puerta. Por eso diagnosticamos antes de cambiar piezas."],["¿Trabajan con cierre centralizado y alarmas?","Sí, revisamos actuadores de chapas, módulos y controles remotos."]],"relacionados":["trabajos-de-electricidad","electricidad","deteccion-de-fugas-de-corriente"]},
-  "trabajos-de-electricidad": {"nombre":"trabajos de electricidad automotriz","senales":["Accesorios eléctricos que dejan de funcionar","Fusibles que se queman repetidamente","Alarma o cierre centralizado con fallas","Cables recalentados o con olor a quemado","Batería que se descarga sin explicación"],"faq":[["¿Qué trabajos eléctricos realizan?","Alzavidrios, cierre centralizado, alarmas, GPS y corta corriente, luces, cableado, fusibles y relés, entre otros."],["¿Instalan GPS y corta corriente?","Sí, realizamos instalaciones limpias y seguras, sin dañar el cableado original del vehículo."],["¿Puedo ver trabajos eléctricos que han realizado?","Sí, en nuestra galería hay trabajos reales, como la revisión de cableado bajo el tablero de un Hyundai Grand i10."]],"relacionados":["electricidad","reparacion-de-alzavidrios","deteccion-de-fugas-de-corriente"]},
-  "electricidad": {"nombre":"electricidad automotriz","senales":["El auto no arranca o le cuesta arrancar","Luces del tablero que parpadean","Batería descargada con frecuencia","Componentes eléctricos que fallan de forma intermitente","Olor a plástico quemado"],"faq":[["¿Atienden urgencias eléctricas a domicilio?","Sí, acudimos a tu domicilio para diagnosticar y resolver fallas eléctricas en el lugar siempre que sea posible."],["¿Qué herramientas usan?","Multímetro, pinza amperimétrica, scanner automotriz y probadores de batería y alternador."],["¿Revisan el sistema de carga completo?","Sí, batería, alternador, motor de partida, cables y conexiones a masa."]],"relacionados":["trabajos-de-electricidad","bateria","reparacion-de-alternadores"]},
-  "deteccion-de-fugas-de-corriente": {"nombre":"detección de fugas de corriente y cortocircuitos","senales":["La batería amanece descargada","Batería nueva que dura poco","Fusibles que se queman sin motivo aparente","Accesorios que quedan encendidos con el auto apagado","Calor o humo en algún cableado"],"faq":[["¿Cómo se detecta una fuga de corriente?","Medimos el consumo en reposo con el auto apagado y aislamos circuito por circuito hasta encontrar el que consume más de lo normal."],["¿Una alarma o radio mal instalada puede causar fugas?","Sí, es una de las causas más comunes, junto con relés pegados y módulos que no se duermen."],["¿Se hace a domicilio?","Sí, realizamos la medición y la reparación en tu domicilio."]],"relacionados":["bateria","electricidad","reparacion-de-alternadores"]},
-  "diagnostico-y-reparacion-de-luces": {"nombre":"diagnóstico y reparación de luces","senales":["Focos o ampolletas que no encienden","Luces que parpadean o se ven débiles","Ópticos opacos o amarillentos","Neblineros que no funcionan","Testigo de luz quemada en el tablero"],"faq":[["¿Instalan neblineros o luces LED?","Sí, instalamos y conectamos neblineros y luces LED correctamente, como en el trabajo de la Toyota RAV4 de nuestra galería."],["¿Por qué se queman seguido las ampolletas?","Puede deberse a sobrevoltaje del alternador, mala conexión o humedad en el óptico. Lo revisamos antes de cambiar la ampolleta."],["¿Reparan luces a domicilio?","Sí, diagnosticamos y reparamos el sistema de iluminación en tu domicilio."]],"relacionados":["electricidad","trabajos-de-electricidad","instalacion-de-camaras-de-retroceso"]},
-  "revision-de-electroventiladores": {"nombre":"revisión de electroventiladores y sistema térmico","senales":["El motor se calienta en el taco o detenido","El electroventilador no enciende","Ventilador que funciona siempre, incluso con el motor frío","Aguja de temperatura más alta de lo normal","El aire acondicionado enfría poco detenido"],"faq":[["¿Qué hace el electroventilador?","Enfría el radiador cuando el auto está detenido o a baja velocidad. Si falla, el motor puede sobrecalentarse."],["¿Qué revisan en el sistema térmico?","Electroventilador, relés, fusibles, sensor de temperatura, termostato, nivel y estado del refrigerante."],["¿Cambian el refrigerante a domicilio?","Sí, como el cambio de refrigerante del Audi A3 y la mantención del Chery Tiggo 2 que puedes ver en nuestra galería."]],"relacionados":["aire-acondicionado","mecanico-de-autos","electricidad"]},
-  "instalacion-de-camaras-de-retroceso": {"nombre":"instalación de cámaras de retroceso y accesorios","senales":["Quieres más seguridad al estacionar","Tu pantalla no tiene cámara conectada","Cámara existente sin imagen o con interferencia","Sensores de retroceso que no suenan","Necesitas instalar accesorios eléctricos"],"faq":[["¿Instalan cámaras de retroceso a domicilio?","Sí, realizamos la instalación completa en tu domicilio, con cableado oculto y conexión a la luz de retroceso."],["¿Se puede conectar a la radio original?","Depende del modelo; si la pantalla tiene entrada de cámara, la conectamos directamente. Si no, te ofrecemos alternativas."],["¿Qué otros accesorios instalan?","Sensores de estacionamiento, GPS, alarmas, luces LED y otros accesorios eléctricos."]],"relacionados":["trabajos-de-electricidad","diagnostico-y-reparacion-de-luces","electricidad"]},
-  "bateria": {"nombre":"batería","senales":["El motor gira lento al arrancar","Clic al girar la llave y el auto no enciende","Luces débiles con el motor apagado","Bornes sulfatados o con polvo blanco","Batería con más de 3 años de uso"],"faq":[["¿Cuánto dura una batería de auto?","En promedio entre 2 y 4 años, según el uso, el clima y el estado del sistema de carga."],["¿Cambian la batería a domicilio?","Sí, llevamos la batería adecuada para tu vehículo, la instalamos y verificamos el sistema de carga."],["¿Por qué se descarga mi batería nueva?","Puede ser una fuga de corriente o un alternador que no carga bien. Lo medimos para encontrar la causa."]],"relacionados":["reparacion-de-alternadores","deteccion-de-fugas-de-corriente","electricidad"]},
-  "cambio-de-aceite": {"nombre":"cambio de aceite","senales":["Se cumplió el kilometraje o plazo de mantención","Testigo de aceite o mantención encendido","Aceite oscuro, espeso o con bajo nivel","Ruido de motor más fuerte de lo normal","Olor a aceite quemado"],"faq":[["¿Cada cuánto se cambia el aceite?","Según el tipo de aceite y el fabricante, normalmente entre 5.000 y 10.000 km, o al menos una vez al año."],["¿Qué incluye el cambio de aceite a domicilio?","Aceite según la especificación del fabricante, cambio de filtro de aceite y revisión de niveles y filtros de aire y cabina."],["¿Qué pasa con el aceite usado?","Lo retiramos del domicilio para su disposición responsable."]],"relacionados":["cambio-de-filtros-de-aa","mantencion-de-inyeccion-electronica","mecanico-de-autos"]},
-  "mecanico-de-autos": {"nombre":"mecánico de autos a domicilio","senales":["El auto no enciende","Ruidos o vibraciones nuevas","Fugas de líquidos bajo el vehículo","Testigos encendidos en el tablero","Mantención atrasada"],"faq":[["¿Qué trabajos realiza el mecánico a domicilio?","Diagnóstico, mantenciones, frenos, suspensión, distribución, motor de partida, electricidad y más, directamente donde está tu auto."],["¿Atienden autos que no encienden?","Sí. Por ejemplo, en un Nissan Sentra 1997 que no encendía detectamos la distribución saltada y la pusimos a punto a domicilio."],["¿En qué comunas atienden?","En toda la Región Metropolitana: Santiago, Maipú, Providencia, Ñuñoa, La Florida, Puente Alto, Las Condes y más."]],"relacionados":["diagnostico-de-automoviles","cambio-de-aceite","direccion-y-suspension"]},
-  "mecanica-diesel": {"nombre":"mecánica diésel","senales":["Humo negro o blanco excesivo","Arranque difícil en frío","Pérdida de potencia o modo de emergencia","Testigo de bujías de precalentamiento encendido","Ruido de golpeteo en el motor"],"faq":[["¿Atienden vehículos diésel a domicilio?","Sí, diagnosticamos y realizamos mantenciones a camionetas y autos diésel en tu domicilio."],["¿Qué mantenciones necesita un motor diésel?","Cambio de aceite y filtros, revisión de bujías de precalentamiento, filtro de combustible y sistema de inyección."],["¿Revisan fallas electrónicas en diésel?","Sí, con scanner revisamos sensores, inyectores, turbo y sistema de postratamiento."]],"relacionados":["diagnostico-de-automoviles","cambio-de-aceite","mantencion-de-inyeccion-electronica"]},
-  "autos-automaticos": {"nombre":"autos automáticos","senales":["Cambios bruscos o tardíos","Patinazo o revoluciones altas sin avanzar","Testigo de transmisión encendido","Demora al poner D o R","Fugas de aceite de transmisión"],"faq":[["¿Cada cuánto se cambia el aceite de la caja automática?","Depende del fabricante; muchos lo recomiendan entre 40.000 y 60.000 km. Lo revisamos según tu modelo."],["¿Pueden diagnosticar la caja automática a domicilio?","Sí, con scanner leemos códigos y datos de la transmisión para orientar la reparación."],["¿Un cambio de aceite soluciona los cambios bruscos?","En algunos casos ayuda, pero primero hay que diagnosticar si existe una falla eléctrica o mecánica."]],"relacionados":["transmision","scanner-y-diagnostico-electronico","diagnostico-de-automoviles"]},
-  "transmision": {"nombre":"sistemas de transmisión","senales":["Dificultad para pasar los cambios","Embrague que patina o pedal duro","Ruidos en la caja de cambios","Vibraciones al acelerar","Fugas de aceite de caja"],"faq":[["¿Qué incluye la revisión de transmisión?","Embrague, caja de cambios, palieres, soportes y nivel de aceite, según el tipo de transmisión."],["¿Cuándo hay que cambiar el embrague?","Cuando patina, el pedal queda alto o cuesta pasar los cambios. Lo evaluamos en la inspección."],["¿Trabajan autos mecánicos y automáticos?","Sí, atendemos ambos tipos de transmisión."]],"relacionados":["autos-automaticos","direccion-y-suspension","mecanico-de-autos"]},
-  "direccion-y-suspension": {"nombre":"dirección y suspensión","senales":["Golpes o crujidos al pasar lomos de toro","El auto se va hacia un lado","Volante que vibra o tiene juego","Desgaste irregular de neumáticos","El auto rebota mucho después de un bache"],"faq":[["¿Qué componentes revisan?","Amortiguadores, bandejas, rótulas, terminales de dirección, bujes, barra estabilizadora y cremallera."],["¿Cada cuánto se revisa la suspensión?","Se recomienda en cada mantención o cada 20.000 km, y siempre que notes ruidos o golpes."],["¿Hay que alinear después de cambiar piezas?","Sí, al cambiar terminales o componentes de la dirección se recomienda alinear para evitar desgaste de neumáticos."]],"relacionados":["frenos","transmision","mecanico-de-autos"]}
+  "frenos": {
+    "nombre": "frenos",
+    "senales": [
+      "Chirrido o rechinido al frenar",
+      "Pedal de freno esponjoso o que se va al fondo",
+      "Vibración en el volante o pedal al frenar",
+      "Luz de freno o ABS encendida en el tablero",
+      "El auto se desvía hacia un lado al frenar"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se cambian las pastillas de freno?",
+        "Depende del uso y del tipo de conducción, pero se recomienda revisarlas en cada mantención o cada 10.000 km aproximadamente. En ciudad, con mucho tráfico, se desgastan más rápido."
+      ],
+      [
+        "¿Pueden cambiar los frenos en mi casa?",
+        "Sí. Realizamos el cambio de pastillas, discos y el purgado del líquido de frenos directamente en tu domicilio u oficina, con herramientas profesionales."
+      ],
+      [
+        "¿Cuándo hay que rectificar o cambiar los discos?",
+        "Cuando presentan vibración, surcos profundos o están bajo el espesor mínimo indicado por el fabricante. Lo evaluamos en la inspección sin costo."
+      ]
+    ],
+    "relacionados": [
+      "servicio-y-reparacion-de-frenos",
+      "diagnostico-de-sensores-abs-esp",
+      "direccion-y-suspension"
+    ]
+  },
+  "servicio-y-reparacion-de-frenos": {
+    "nombre": "reparación de frenos",
+    "senales": [
+      "Ruidos metálicos al frenar",
+      "Distancia de frenado más larga de lo normal",
+      "Pedal duro, blando o con recorrido irregular",
+      "Fugas de líquido de frenos cerca de las ruedas",
+      "Olor a quemado después de frenar"
+    ],
+    "faq": [
+      [
+        "¿Qué incluye la reparación de frenos?",
+        "Inspección de pastillas, discos, balatas, tambores, cálipers y líquido de frenos; reemplazo de las piezas desgastadas y purgado del sistema."
+      ],
+      [
+        "¿Cada cuánto se cambia el líquido de frenos?",
+        "En general cada 2 años o según el manual del vehículo, ya que absorbe humedad y pierde eficacia."
+      ],
+      [
+        "¿Es seguro manejar con los frenos sonando?",
+        "No es recomendable. Un ruido al frenar suele indicar desgaste; mientras antes se revise, menor es el riesgo y el costo de la reparación."
+      ]
+    ],
+    "relacionados": [
+      "frenos",
+      "diagnostico-de-sensores-abs-esp",
+      "direccion-y-suspension"
+    ]
+  },
+  "reparacion-de-alternadores": {
+    "nombre": "reparación de alternadores y motores de arranque",
+    "senales": [
+      "Luz de batería encendida con el motor en marcha",
+      "Batería que se descarga aunque sea nueva",
+      "Luces que bajan de intensidad o parpadean",
+      "Clic o giro lento al dar arranque",
+      "Ruido o zumbido en la zona del alternador"
+    ],
+    "faq": [
+      [
+        "¿Cómo sé si falla el alternador o la batería?",
+        "Medimos el voltaje de carga con el motor encendido y la capacidad real de la batería. Así evitamos cambiar piezas que están buenas."
+      ],
+      [
+        "¿Reparan motores de partida a domicilio?",
+        "Sí. Desmontamos, revisamos y realizamos la mantención o el reemplazo del motor de partida en el lugar, como en el trabajo del Chevrolet Onix que puedes ver en nuestra galería."
+      ],
+      [
+        "¿Cuánto dura la reparación?",
+        "Muchos trabajos se resuelven el mismo día. Si se requiere un repuesto específico, te informamos el plazo antes de comenzar."
+      ]
+    ],
+    "relacionados": [
+      "bateria",
+      "deteccion-de-fugas-de-corriente",
+      "electricidad"
+    ]
+  },
+  "aire-acondicionado": {
+    "nombre": "aire acondicionado automotriz",
+    "senales": [
+      "El aire sale tibio o no enfría",
+      "Mal olor al encender el aire acondicionado",
+      "Ruidos al activar el compresor",
+      "Poco flujo de aire por las salidas",
+      "Vidrios que se empañan con facilidad"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se recarga el gas del aire acondicionado?",
+        "Un sistema sano no debería perder gas. Si enfría menos, revisamos fugas antes de recargar para que la solución sea duradera."
+      ],
+      [
+        "¿Pueden revisar el aire acondicionado a domicilio?",
+        "Sí. Hacemos diagnóstico de presiones, búsqueda de fugas y recarga en tu domicilio."
+      ],
+      [
+        "¿Por qué huele mal el aire acondicionado?",
+        "Generalmente por humedad y bacterias en el evaporador o un filtro de cabina saturado. Se soluciona con limpieza y cambio de filtro."
+      ]
+    ],
+    "relacionados": [
+      "servicios-de-aa",
+      "cambio-de-filtros-de-aa",
+      "revision-de-electroventiladores"
+    ]
+  },
+  "servicios-de-aa": {
+    "nombre": "servicios de aire acondicionado",
+    "senales": [
+      "Enfriamiento deficiente en días calurosos",
+      "El compresor no se activa",
+      "Goteo de agua dentro del habitáculo",
+      "Olor a humedad en la cabina",
+      "Ventilador de cabina que no funciona en todas las velocidades"
+    ],
+    "faq": [
+      [
+        "¿Qué servicios de A/A realizan?",
+        "Diagnóstico, detección de fugas, recarga de gas, limpieza del sistema, cambio de filtro de cabina y revisión eléctrica del compresor y ventiladores."
+      ],
+      [
+        "¿Cuánto demora una recarga de aire acondicionado?",
+        "Normalmente entre 1 y 2 horas, incluyendo vacío del sistema y prueba de funcionamiento."
+      ],
+      [
+        "¿Es necesario usar el aire acondicionado en invierno?",
+        "Sí, usarlo de vez en cuando lubrica el compresor y ayuda a desempañar los vidrios."
+      ]
+    ],
+    "relacionados": [
+      "aire-acondicionado",
+      "cambio-de-filtros-de-aa",
+      "revision-de-electroventiladores"
+    ]
+  },
+  "cambio-de-filtros-de-aa": {
+    "nombre": "cambio de filtros de A/A y ventilación",
+    "senales": [
+      "Poco flujo de aire por las rejillas",
+      "Olor a polvo o humedad en la cabina",
+      "Aumento de alergias o estornudos dentro del auto",
+      "Vidrios que se empañan más de lo normal",
+      "Ruido de ventilador forzado"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se cambia el filtro de cabina?",
+        "Se recomienda una vez al año o cada 15.000 km; en Santiago, por el polvo y la contaminación, conviene revisarlo con más frecuencia."
+      ],
+      [
+        "¿El filtro de cabina afecta el aire acondicionado?",
+        "Sí. Un filtro saturado reduce el flujo de aire y hace que el sistema trabaje más."
+      ],
+      [
+        "¿Pueden cambiarlo a domicilio?",
+        "Sí, es un trabajo rápido que realizamos en tu domicilio junto con una revisión general del sistema de ventilación."
+      ]
+    ],
+    "relacionados": [
+      "aire-acondicionado",
+      "servicios-de-aa",
+      "cambio-de-aceite"
+    ]
+  },
+  "diagnostico-de-automoviles": {
+    "nombre": "diagnóstico de automóviles",
+    "senales": [
+      "Luz Check Engine encendida",
+      "Pérdida de potencia o tirones al acelerar",
+      "Ralentí inestable o el motor se apaga",
+      "Consumo de combustible más alto de lo normal",
+      "Ruidos o vibraciones nuevas"
+    ],
+    "faq": [
+      [
+        "¿Qué incluye el diagnóstico?",
+        "Lectura de códigos de falla con scanner multimarca, revisión de datos en vivo de sensores e inspección mecánica y eléctrica para identificar la causa real."
+      ],
+      [
+        "¿El diagnóstico se hace a domicilio?",
+        "Sí, llevamos el scanner y las herramientas a tu domicilio u oficina."
+      ],
+      [
+        "¿Borrar el código de falla soluciona el problema?",
+        "No. Borrar el código solo apaga la luz temporalmente; hay que reparar la causa para que no vuelva a aparecer."
+      ]
+    ],
+    "relacionados": [
+      "scanner-y-diagnostico-electronico",
+      "mecanico-de-autos",
+      "mantencion-de-inyeccion-electronica"
+    ]
+  },
+  "scanner-y-diagnostico-electronico": {
+    "nombre": "scanner y diagnóstico electrónico",
+    "senales": [
+      "Testigos encendidos en el tablero (motor, ABS, airbag)",
+      "Fallas intermitentes difíciles de reproducir",
+      "Problemas de arranque sin causa aparente",
+      "Caja automática con cambios bruscos",
+      "Sensores que entregan lecturas erróneas"
+    ],
+    "faq": [
+      [
+        "¿Con qué marcas trabaja el scanner?",
+        "Usamos equipos multimarca compatibles con la mayoría de los vehículos que circulan en Chile."
+      ],
+      [
+        "¿Qué sistemas se pueden escanear?",
+        "Motor, transmisión automática, ABS/ESP, airbag, carrocería y otros módulos según el modelo."
+      ],
+      [
+        "¿Entregan informe del diagnóstico?",
+        "Te explicamos los códigos encontrados, la causa probable y la reparación recomendada antes de realizar cualquier trabajo."
+      ]
+    ],
+    "relacionados": [
+      "diagnostico-de-automoviles",
+      "diagnostico-de-sensores-abs-esp",
+      "mantencion-de-inyeccion-electronica"
+    ],
+    "instalaciones": [
+      "escaner-automotriz-a-domicilio"
+    ]
+  },
+  "diagnostico-de-sensores-abs-esp": {
+    "nombre": "diagnóstico de sensores ABS y ESP",
+    "senales": [
+      "Luz de ABS o de control de estabilidad encendida",
+      "El ABS se activa sin motivo a baja velocidad",
+      "Velocímetro que marca de forma irregular",
+      "Pérdida de asistencia de frenado de emergencia",
+      "Testigo de tracción (TCS) encendido"
+    ],
+    "faq": [
+      [
+        "¿Es peligroso manejar con la luz de ABS encendida?",
+        "Los frenos normales siguen funcionando, pero el sistema antibloqueo y el control de estabilidad pueden quedar desactivados. Conviene revisarlo pronto."
+      ],
+      [
+        "¿Qué causa una falla de sensor ABS?",
+        "Suciedad, cables dañados, conectores sulfatados o un sensor defectuoso. Lo identificamos con scanner y medición eléctrica."
+      ],
+      [
+        "¿Se revisa a domicilio?",
+        "Sí, el diagnóstico y el reemplazo del sensor se pueden hacer en tu domicilio."
+      ]
+    ],
+    "relacionados": [
+      "frenos",
+      "scanner-y-diagnostico-electronico",
+      "servicio-y-reparacion-de-frenos"
+    ]
+  },
+  "mantencion-de-inyeccion-electronica": {
+    "nombre": "mantención de inyección electrónica",
+    "senales": [
+      "Tirones o pérdida de potencia",
+      "Arranque difícil en frío",
+      "Ralentí irregular",
+      "Aumento del consumo de combustible",
+      "Olor a combustible o humo negro"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se limpian los inyectores?",
+        "Como referencia cada 30.000 a 40.000 km, o antes si notas síntomas de mala pulverización."
+      ],
+      [
+        "¿Qué incluye la mantención de inyección?",
+        "Revisión con scanner, limpieza de cuerpo de aceleración, revisión de inyectores, bujías, sensores y filtro de combustible según el caso."
+      ],
+      [
+        "¿Se puede hacer a domicilio?",
+        "Sí, la mayor parte de la mantención de inyección electrónica se realiza en tu domicilio."
+      ]
+    ],
+    "relacionados": [
+      "diagnostico-de-automoviles",
+      "scanner-y-diagnostico-electronico",
+      "cambio-de-aceite"
+    ]
+  },
+  "reparacion-de-alzavidrios": {
+    "nombre": "reparación de alzavidrios y cierre centralizado",
+    "senales": [
+      "Vidrio que sube o baja lento o se detiene",
+      "Ruido de motor sin que el vidrio se mueva",
+      "Vidrio caído dentro de la puerta",
+      "Cierre centralizado que no traba todas las puertas",
+      "Botones de la puerta que no responden"
+    ],
+    "faq": [
+      [
+        "¿Reparan alzavidrios a domicilio?",
+        "Sí. Desmontamos el tapiz de la puerta, revisamos motor, mecanismo y cableado, y reparamos o reemplazamos la pieza dañada."
+      ],
+      [
+        "¿La falla puede ser eléctrica y no mecánica?",
+        "Sí, muchas veces es un switch, un fusible o un cable cortado en la bisagra de la puerta. Por eso diagnosticamos antes de cambiar piezas."
+      ],
+      [
+        "¿Trabajan con cierre centralizado y alarmas?",
+        "Sí, revisamos actuadores de chapas, módulos y controles remotos."
+      ]
+    ],
+    "relacionados": [
+      "trabajos-de-electricidad",
+      "electricidad",
+      "deteccion-de-fugas-de-corriente"
+    ],
+    "instalaciones": [
+      "instalacion-motor-alzavidrios",
+      "instalacion-alzavidrios",
+      "reparacion-e-instalacion-de-retrovisores"
+    ]
+  },
+  "trabajos-de-electricidad": {
+    "nombre": "trabajos de electricidad automotriz",
+    "senales": [
+      "Accesorios eléctricos que dejan de funcionar",
+      "Fusibles que se queman repetidamente",
+      "Alarma o cierre centralizado con fallas",
+      "Cables recalentados o con olor a quemado",
+      "Batería que se descarga sin explicación"
+    ],
+    "faq": [
+      [
+        "¿Qué trabajos eléctricos realizan?",
+        "Alzavidrios, cierre centralizado, alarmas, GPS y corta corriente, luces, cableado, fusibles y relés, entre otros."
+      ],
+      [
+        "¿Instalan GPS y corta corriente?",
+        "Sí, realizamos instalaciones limpias y seguras, sin dañar el cableado original del vehículo."
+      ],
+      [
+        "¿Puedo ver trabajos eléctricos que han realizado?",
+        "Sí, en nuestra galería hay trabajos reales, como la revisión de cableado bajo el tablero de un Hyundai Grand i10."
+      ]
+    ],
+    "relacionados": [
+      "electricidad",
+      "reparacion-de-alzavidrios",
+      "deteccion-de-fugas-de-corriente"
+    ],
+    "instalaciones": [
+      "instalacion-de-corta-corriente",
+      "instalacion-motor-limpiaparabrisas",
+      "instalacion-motor-alzavidrios",
+      "instalacion-alzavidrios",
+      "reparacion-e-instalacion-de-retrovisores",
+      "fabricacion-e-instalacion-de-espejos-retrovisores",
+      "instalacion-pantalla-android",
+      "instalacion-camara-de-retroceso",
+      "instalacion-sensores-de-retroceso"
+    ]
+  },
+  "electricidad": {
+    "nombre": "electricidad automotriz",
+    "senales": [
+      "El auto no arranca o le cuesta arrancar",
+      "Luces del tablero que parpadean",
+      "Batería descargada con frecuencia",
+      "Componentes eléctricos que fallan de forma intermitente",
+      "Olor a plástico quemado"
+    ],
+    "faq": [
+      [
+        "¿Atienden urgencias eléctricas a domicilio?",
+        "Sí, acudimos a tu domicilio para diagnosticar y resolver fallas eléctricas en el lugar siempre que sea posible."
+      ],
+      [
+        "¿Qué herramientas usan?",
+        "Multímetro, pinza amperimétrica, scanner automotriz y probadores de batería y alternador."
+      ],
+      [
+        "¿Revisan el sistema de carga completo?",
+        "Sí, batería, alternador, motor de partida, cables y conexiones a masa."
+      ]
+    ],
+    "relacionados": [
+      "trabajos-de-electricidad",
+      "bateria",
+      "reparacion-de-alternadores"
+    ],
+    "instalaciones": [
+      "instalacion-de-corta-corriente",
+      "instalacion-motor-limpiaparabrisas",
+      "instalacion-luces-intermitentes",
+      "instalacion-ampolleta-cola-de-pescado",
+      "instalacion-ampolleta-h11",
+      "instalacion-neblineros"
+    ]
+  },
+  "deteccion-de-fugas-de-corriente": {
+    "nombre": "detección de fugas de corriente y cortocircuitos",
+    "senales": [
+      "La batería amanece descargada",
+      "Batería nueva que dura poco",
+      "Fusibles que se queman sin motivo aparente",
+      "Accesorios que quedan encendidos con el auto apagado",
+      "Calor o humo en algún cableado"
+    ],
+    "faq": [
+      [
+        "¿Cómo se detecta una fuga de corriente?",
+        "Medimos el consumo en reposo con el auto apagado y aislamos circuito por circuito hasta encontrar el que consume más de lo normal."
+      ],
+      [
+        "¿Una alarma o radio mal instalada puede causar fugas?",
+        "Sí, es una de las causas más comunes, junto con relés pegados y módulos que no se duermen."
+      ],
+      [
+        "¿Se hace a domicilio?",
+        "Sí, realizamos la medición y la reparación en tu domicilio."
+      ]
+    ],
+    "relacionados": [
+      "bateria",
+      "electricidad",
+      "reparacion-de-alternadores"
+    ],
+    "instalaciones": [
+      "servicio-electrico-a-domicilio"
+    ]
+  },
+  "diagnostico-y-reparacion-de-luces": {
+    "nombre": "diagnóstico y reparación de luces",
+    "senales": [
+      "Focos o ampolletas que no encienden",
+      "Luces que parpadean o se ven débiles",
+      "Ópticos opacos o amarillentos",
+      "Neblineros que no funcionan",
+      "Testigo de luz quemada en el tablero"
+    ],
+    "faq": [
+      [
+        "¿Instalan neblineros o luces LED?",
+        "Sí, instalamos y conectamos neblineros y luces LED correctamente, como en el trabajo de la Toyota RAV4 de nuestra galería."
+      ],
+      [
+        "¿Por qué se queman seguido las ampolletas?",
+        "Puede deberse a sobrevoltaje del alternador, mala conexión o humedad en el óptico. Lo revisamos antes de cambiar la ampolleta."
+      ],
+      [
+        "¿Reparan luces a domicilio?",
+        "Sí, diagnosticamos y reparamos el sistema de iluminación en tu domicilio."
+      ]
+    ],
+    "relacionados": [
+      "electricidad",
+      "trabajos-de-electricidad",
+      "instalacion-de-camaras-de-retroceso"
+    ],
+    "instalaciones": [
+      "instalacion-luces-de-freno",
+      "instalacion-luces-intermitentes",
+      "instalacion-luz-de-parqueo",
+      "instalacion-ampolleta-cola-de-pescado",
+      "instalacion-ampolleta-h4",
+      "instalacion-ampolleta-h7",
+      "instalacion-ampolleta-h11",
+      "instalacion-ampolleta-9007",
+      "instalacion-luz-de-reversa",
+      "instalacion-neblineros"
+    ]
+  },
+  "revision-de-electroventiladores": {
+    "nombre": "revisión de electroventiladores y sistema térmico",
+    "senales": [
+      "El motor se calienta en el taco o detenido",
+      "El electroventilador no enciende",
+      "Ventilador que funciona siempre, incluso con el motor frío",
+      "Aguja de temperatura más alta de lo normal",
+      "El aire acondicionado enfría poco detenido"
+    ],
+    "faq": [
+      [
+        "¿Qué hace el electroventilador?",
+        "Enfría el radiador cuando el auto está detenido o a baja velocidad. Si falla, el motor puede sobrecalentarse."
+      ],
+      [
+        "¿Qué revisan en el sistema térmico?",
+        "Electroventilador, relés, fusibles, sensor de temperatura, termostato, nivel y estado del refrigerante."
+      ],
+      [
+        "¿Cambian el refrigerante a domicilio?",
+        "Sí, como el cambio de refrigerante del Audi A3 y la mantención del Chery Tiggo 2 que puedes ver en nuestra galería."
+      ]
+    ],
+    "relacionados": [
+      "aire-acondicionado",
+      "mecanico-de-autos",
+      "electricidad"
+    ]
+  },
+  "instalacion-de-camaras-de-retroceso": {
+    "nombre": "instalación de cámaras de retroceso y accesorios",
+    "senales": [
+      "Quieres más seguridad al estacionar",
+      "Tu pantalla no tiene cámara conectada",
+      "Cámara existente sin imagen o con interferencia",
+      "Sensores de retroceso que no suenan",
+      "Necesitas instalar accesorios eléctricos"
+    ],
+    "faq": [
+      [
+        "¿Instalan cámaras de retroceso a domicilio?",
+        "Sí, realizamos la instalación completa en tu domicilio, con cableado oculto y conexión a la luz de retroceso."
+      ],
+      [
+        "¿Se puede conectar a la radio original?",
+        "Depende del modelo; si la pantalla tiene entrada de cámara, la conectamos directamente. Si no, te ofrecemos alternativas."
+      ],
+      [
+        "¿Qué otros accesorios instalan?",
+        "Sensores de estacionamiento, GPS, alarmas, luces LED y otros accesorios eléctricos."
+      ]
+    ],
+    "relacionados": [
+      "trabajos-de-electricidad",
+      "diagnostico-y-reparacion-de-luces",
+      "electricidad"
+    ],
+    "instalaciones": [
+      "instalacion-luz-de-reversa",
+      "fabricacion-e-instalacion-de-espejos-retrovisores",
+      "instalacion-pantalla-android",
+      "instalacion-camara-de-retroceso",
+      "instalacion-sensores-de-retroceso"
+    ]
+  },
+  "bateria": {
+    "nombre": "batería",
+    "senales": [
+      "El motor gira lento al arrancar",
+      "Clic al girar la llave y el auto no enciende",
+      "Luces débiles con el motor apagado",
+      "Bornes sulfatados o con polvo blanco",
+      "Batería con más de 3 años de uso"
+    ],
+    "faq": [
+      [
+        "¿Cuánto dura una batería de auto?",
+        "En promedio entre 2 y 4 años, según el uso, el clima y el estado del sistema de carga."
+      ],
+      [
+        "¿Cambian la batería a domicilio?",
+        "Sí, llevamos la batería adecuada para tu vehículo, la instalamos y verificamos el sistema de carga."
+      ],
+      [
+        "¿Por qué se descarga mi batería nueva?",
+        "Puede ser una fuga de corriente o un alternador que no carga bien. Lo medimos para encontrar la causa."
+      ]
+    ],
+    "relacionados": [
+      "reparacion-de-alternadores",
+      "deteccion-de-fugas-de-corriente",
+      "electricidad"
+    ]
+  },
+  "cambio-de-aceite": {
+    "nombre": "cambio de aceite",
+    "senales": [
+      "Se cumplió el kilometraje o plazo de mantención",
+      "Testigo de aceite o mantención encendido",
+      "Aceite oscuro, espeso o con bajo nivel",
+      "Ruido de motor más fuerte de lo normal",
+      "Olor a aceite quemado"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se cambia el aceite?",
+        "Según el tipo de aceite y el fabricante, normalmente entre 5.000 y 10.000 km, o al menos una vez al año."
+      ],
+      [
+        "¿Qué incluye el cambio de aceite a domicilio?",
+        "Aceite según la especificación del fabricante, cambio de filtro de aceite y revisión de niveles y filtros de aire y cabina."
+      ],
+      [
+        "¿Qué pasa con el aceite usado?",
+        "Lo retiramos del domicilio para su disposición responsable."
+      ]
+    ],
+    "relacionados": [
+      "cambio-de-filtros-de-aa",
+      "mantencion-de-inyeccion-electronica",
+      "mecanico-de-autos"
+    ]
+  },
+  "mecanico-de-autos": {
+    "nombre": "mecánico de autos a domicilio",
+    "senales": [
+      "El auto no enciende",
+      "Ruidos o vibraciones nuevas",
+      "Fugas de líquidos bajo el vehículo",
+      "Testigos encendidos en el tablero",
+      "Mantención atrasada"
+    ],
+    "faq": [
+      [
+        "¿Qué trabajos realiza el mecánico a domicilio?",
+        "Diagnóstico, mantenciones, frenos, suspensión, distribución, motor de partida, electricidad y más, directamente donde está tu auto."
+      ],
+      [
+        "¿Atienden autos que no encienden?",
+        "Sí. Por ejemplo, en un Nissan Sentra 1997 que no encendía detectamos la distribución saltada y la pusimos a punto a domicilio."
+      ],
+      [
+        "¿En qué comunas atienden?",
+        "En toda la Región Metropolitana: Santiago, Maipú, Providencia, Ñuñoa, La Florida, Puente Alto, Las Condes y más."
+      ]
+    ],
+    "relacionados": [
+      "diagnostico-de-automoviles",
+      "cambio-de-aceite",
+      "direccion-y-suspension"
+    ],
+    "instalaciones": [
+      "servicio-a-domicilio-valor-estandar",
+      "mecanica-a-domicilio"
+    ]
+  },
+  "mecanica-diesel": {
+    "nombre": "mecánica diésel",
+    "senales": [
+      "Humo negro o blanco excesivo",
+      "Arranque difícil en frío",
+      "Pérdida de potencia o modo de emergencia",
+      "Testigo de bujías de precalentamiento encendido",
+      "Ruido de golpeteo en el motor"
+    ],
+    "faq": [
+      [
+        "¿Atienden vehículos diésel a domicilio?",
+        "Sí, diagnosticamos y realizamos mantenciones a camionetas y autos diésel en tu domicilio."
+      ],
+      [
+        "¿Qué mantenciones necesita un motor diésel?",
+        "Cambio de aceite y filtros, revisión de bujías de precalentamiento, filtro de combustible y sistema de inyección."
+      ],
+      [
+        "¿Revisan fallas electrónicas en diésel?",
+        "Sí, con scanner revisamos sensores, inyectores, turbo y sistema de postratamiento."
+      ]
+    ],
+    "relacionados": [
+      "diagnostico-de-automoviles",
+      "cambio-de-aceite",
+      "mantencion-de-inyeccion-electronica"
+    ]
+  },
+  "autos-automaticos": {
+    "nombre": "autos automáticos",
+    "senales": [
+      "Cambios bruscos o tardíos",
+      "Patinazo o revoluciones altas sin avanzar",
+      "Testigo de transmisión encendido",
+      "Demora al poner D o R",
+      "Fugas de aceite de transmisión"
+    ],
+    "faq": [
+      [
+        "¿Cada cuánto se cambia el aceite de la caja automática?",
+        "Depende del fabricante; muchos lo recomiendan entre 40.000 y 60.000 km. Lo revisamos según tu modelo."
+      ],
+      [
+        "¿Pueden diagnosticar la caja automática a domicilio?",
+        "Sí, con scanner leemos códigos y datos de la transmisión para orientar la reparación."
+      ],
+      [
+        "¿Un cambio de aceite soluciona los cambios bruscos?",
+        "En algunos casos ayuda, pero primero hay que diagnosticar si existe una falla eléctrica o mecánica."
+      ]
+    ],
+    "relacionados": [
+      "transmision",
+      "scanner-y-diagnostico-electronico",
+      "diagnostico-de-automoviles"
+    ]
+  },
+  "transmision": {
+    "nombre": "sistemas de transmisión",
+    "senales": [
+      "Dificultad para pasar los cambios",
+      "Embrague que patina o pedal duro",
+      "Ruidos en la caja de cambios",
+      "Vibraciones al acelerar",
+      "Fugas de aceite de caja"
+    ],
+    "faq": [
+      [
+        "¿Qué incluye la revisión de transmisión?",
+        "Embrague, caja de cambios, palieres, soportes y nivel de aceite, según el tipo de transmisión."
+      ],
+      [
+        "¿Cuándo hay que cambiar el embrague?",
+        "Cuando patina, el pedal queda alto o cuesta pasar los cambios. Lo evaluamos en la inspección."
+      ],
+      [
+        "¿Trabajan autos mecánicos y automáticos?",
+        "Sí, atendemos ambos tipos de transmisión."
+      ]
+    ],
+    "relacionados": [
+      "autos-automaticos",
+      "direccion-y-suspension",
+      "mecanico-de-autos"
+    ]
+  },
+  "direccion-y-suspension": {
+    "nombre": "dirección y suspensión",
+    "senales": [
+      "Golpes o crujidos al pasar lomos de toro",
+      "El auto se va hacia un lado",
+      "Volante que vibra o tiene juego",
+      "Desgaste irregular de neumáticos",
+      "El auto rebota mucho después de un bache"
+    ],
+    "faq": [
+      [
+        "¿Qué componentes revisan?",
+        "Amortiguadores, bandejas, rótulas, terminales de dirección, bujes, barra estabilizadora y cremallera."
+      ],
+      [
+        "¿Cada cuánto se revisa la suspensión?",
+        "Se recomienda en cada mantención o cada 20.000 km, y siempre que notes ruidos o golpes."
+      ],
+      [
+        "¿Hay que alinear después de cambiar piezas?",
+        "Sí, al cambiar terminales o componentes de la dirección se recomienda alinear para evitar desgaste de neumáticos."
+      ]
+    ],
+    "relacionados": [
+      "frenos",
+      "transmision",
+      "mecanico-de-autos"
+    ]
+  }
 }
