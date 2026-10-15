@@ -4,7 +4,7 @@ Sitio web oficial de **Electromecánico a Domicilio en Santiago** — servicio d
 
 ## 🌐 Sitio en producción
 
-- **URL**: https://electromecanico-en-santiago.pages.dev
+- **URL**: https://electromecanico247.com
 - **Hosting**: Cloudflare Pages
 - **Repositorio**: https://github.com/bboymak3/electromecanico-en-santiago
 

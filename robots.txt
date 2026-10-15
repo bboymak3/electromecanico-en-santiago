@@ -1,5 +1,5 @@
 # robots.txt - Electromecánico en Santiago
-# https://electromecanico-en-santiago.pages.dev
+# https://electromecanico247.com
 
 User-agent: GPTBot
 Allow: /
@@ -97,5 +97,5 @@ Disallow: /cdn-cgi/
 Disallow: /404.html
 Disallow: /en/404.html
 
-Sitemap: https://electromecanico-en-santiago.pages.dev/sitemap.xml
-Host: https://electromecanico-en-santiago.pages.dev
+Sitemap: https://electromecanico247.com/sitemap.xml
+Host: https://electromecanico247.com
