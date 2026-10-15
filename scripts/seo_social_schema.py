@@ -17,7 +17,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://electromecanico-en-santiago.pages.dev"
+SITE = "https://electromecanico247.com"
 OG_IMG = SITE + "/images/electromecanico-a-domicilio-en-santiago-logo-og.jpg"
 LOGO = SITE + "/images/electromecanico-a-domicilio-en-santiago-logo-512.jpg"
 TODAY = datetime.date.today().isoformat()

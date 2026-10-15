@@ -16,7 +16,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://electromecanico-en-santiago.pages.dev"
+SITE = "https://electromecanico247.com"
 LANDINGS = json.load(open(os.path.join(ROOT, "scripts", "landings_data.json"), encoding="utf-8"))
 DATA = json.load(open(os.path.join(ROOT, "scripts", "servicios_contexto.json"), encoding="utf-8"))
 e = html.escape

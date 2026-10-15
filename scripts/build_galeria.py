@@ -14,7 +14,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://electromecanico-en-santiago.pages.dev"
+SITE = "https://electromecanico247.com"
 IMG_DIR = "/images/galeria/"
 
 with open(os.path.join(ROOT, "scripts", "galeria_data.json"), encoding="utf-8") as f:
@@ -213,7 +213,11 @@ def build_landing():
     s = s.replace("</head>", '<link rel="stylesheet" href="/css/galeria.css"/>\n</head>', 1)
     # charset al inicio del <head> para que el navegador no adivine la codificación
     s = re.sub(r'\s*<meta charset="UTF-8" ?/?>', "", s, count=1)
-    s = s.replace("<head>", '<head>\n<meta charset="UTF-8">', 1)
+    if "<!-- REDIRECT 301" in s:
+        k = s.index("</script>", s.index("<!-- REDIRECT 301")) + len("</script>\n")
+        s = s[:k] + '<meta charset="UTF-8">\n' + s[k:]
+    else:
+        s = s.replace("<head>", '<head>\n<meta charset="UTF-8">', 1)
 
     images_ld = [
         {"@type": "ImageObject", "contentUrl": SITE + IMG_DIR + f["file"] + ".jpg",

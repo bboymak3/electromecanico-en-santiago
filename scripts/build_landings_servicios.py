@@ -13,7 +13,7 @@ import os
 import re
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-SITE = "https://electromecanico-en-santiago.pages.dev"
+SITE = "https://electromecanico247.com"
 WA = "https://wa.me/56973622291?text="
 e = html.escape
 DATA = json.load(open(os.path.join(ROOT, "scripts", "landings_data.json"), encoding="utf-8"))
@@ -90,13 +90,23 @@ FOOTER = '''<footer class="bg-dark text-white-50 py-4">
 </footer>'''
 
 
+def redirect_snippet():
+    """Script de redirección del dominio antiguo (tomado del index para mantenerlo igual en todo el sitio)."""
+    idx = read("index.html")
+    i = idx.find("<!-- REDIRECT 301")
+    if i < 0:
+        return ""
+    j = idx.index("</script>", i) + len("</script>")
+    return idx[i:j] + "\n\n"
+
+
 def page(slug, title, desc, body, lds):
     url = f"{SITE}/servicios/{slug}"
     ld_html = "\n".join(f'<script type="application/ld+json">\n{json.dumps(x, ensure_ascii=False, indent=2)}\n</script>' for x in lds)
     return f'''<!DOCTYPE html>
 <html lang="es-CL">
 <head>
-  <meta charset="UTF-8">
+{redirect_snippet()}  <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- Generado por scripts/build_landings_servicios.py: editar scripts/landings_data.json y re-ejecutar -->
   <title>{e(title)}</title>
