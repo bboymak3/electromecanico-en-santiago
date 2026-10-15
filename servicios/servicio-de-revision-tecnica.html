@@ -1,6 +1,20 @@
 <!DOCTYPE html>
 <html lang="es-CL">
 <head>
+<!-- REDIRECT 301: dominio viejo -> nuevo -->
+<script>
+(function(){
+  var h = window.location.hostname.toLowerCase();
+  var p = window.location.pathname;
+  var s = window.location.search;
+  var old = 'electromecanico-en-santiago.pages.dev';
+  var nue = 'electromecanico247.com';
+  if (h === old || h === 'www.' + old || h.endsWith('.pages.dev') && h === old) {
+    window.location.replace('https://' + nue + p + s);
+  }
+})();
+</script>
+
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Servicio de Revisión Técnica - DRAUTOMOTRIZ Mecánico a Domicilio en Santiago</title>
