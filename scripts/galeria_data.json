@@ -2,6 +2,31 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "suzuki-alto",
+      "vehiculo": "Suzuki Alto",
+      "servicio": "Auto no enciende: cables del distribuidor cortados",
+      "comuna": "La Cisterna",
+      "icono": "fa-bolt",
+      "resumen": "El vehículo no encendía porque tenía cortados los cables del distribuidor. Reparado a domicilio en La Cisterna.",
+      "descripcion": "Este Suzuki Alto no encendía. Nuestro electromecánico acudió a domicilio en la comuna de La Cisterna y detectó que los cables del distribuidor estaban cortados, por lo que no llegaba la corriente de encendido. Se repararon los cables y el cableado de encendido, y se probó el arranque hasta dejar el vehículo funcionando correctamente.",
+      "trabajos_realizados": [
+        "Diagnóstico de vehículo que no enciende",
+        "Detección de cables del distribuidor cortados",
+        "Reparación de cables y cableado de encendido",
+        "Prueba de arranque y funcionamiento"
+      ],
+      "fotos": [
+        {
+          "file": "suzuki-alto-no-enciende-cables-distribuidor-cortados-a-domicilio-la-cisterna",
+          "caption": "Suzuki Alto atendido a domicilio en La Cisterna"
+        },
+        {
+          "file": "suzuki-alto-reparacion-cableado-encendido-electromecanico-a-domicilio-la-cisterna",
+          "caption": "Suzuki Alto – reparación del cableado de encendido"
+        }
+      ]
+    },
+    {
       "slug": "citroen-c3-xtr",
       "vehiculo": "Citroën C3 XTR",
       "servicio": "Auto no enciende: batería descargada y fusible quemado",
