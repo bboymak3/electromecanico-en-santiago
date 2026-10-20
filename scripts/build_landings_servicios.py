@@ -11,6 +11,9 @@ import html
 import json
 import os
 import re
+import sys
+
+sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SITE = "https://electromecanico247.com"
@@ -87,7 +90,7 @@ FOOTER = '''<footer class="bg-dark text-white-50 py-4">
       <a href="/servicios/instalaciones-automotrices" class="text-white-50">Instalaciones</a> · <a href="/galeria" class="text-white-50">Galería</a> ·
       <a href="/contacto" class="text-white-50">Contacto</a> · <a href="/faq" class="text-white-50">FAQ</a> · <a href="/politica-privacidad" class="text-white-50">Privacidad</a></p>
   </div>
-</footer>'''
+''' + __import__("add_makeseo_credit").credit() + '''</footer>'''
 
 
 def redirect_snippet():

@@ -6,6 +6,7 @@ Sitio web oficial de **Electromecánico a Domicilio en Santiago** — servicio d
 
 - **URL**: https://electromecanico247.com
 - **Hosting**: Cloudflare Pages
+- **Desarrollo web**: [makeseo.app](https://makeseo.app)
 - **Repositorio**: https://github.com/bboymak3/electromecanico-en-santiago
 
 ## 📞 Contacto
@@ -118,6 +119,7 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 | `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
 | `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
 | `python3 scripts/stats_clientes.py` | Deja un solo recuadro "+100 Clientes Atendidos" en el encabezado y actualiza la cifra en los textos | — |
+| `python3 scripts/add_makeseo_credit.py` | Agrega el crédito "Página web desarrollada por makeseo.app" al footer de páginas nuevas | — |
 | `python3 scripts/seo_social_schema.py` | Imagen del logo al compartir, canónicas, datos estructurados (@graph) y `sitemap.xml` completo | — |
 
 **Orden recomendado después de cambios:** ejecuta primero el script que corresponda (galería, landings, contexto) y al final `seo_social_schema.py`, para que las páginas regeneradas recuperen sus metadatos y el sitemap quede completo.
@@ -128,4 +130,4 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 
 ---
 
-© Electromecánico en Santiago — Grupo 360 Soluciones
+© Electromecánico en Santiago — Sitio web desarrollado por [makeseo.app](https://makeseo.app)
