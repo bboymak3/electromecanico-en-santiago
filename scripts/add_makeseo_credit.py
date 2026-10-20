@@ -3,6 +3,8 @@
 páginas que no lo tienen (antes de </footer>, o antes de </body> si no hay footer).
 Usa estilos en línea para verse igual aunque la página no cargue css/styles.css.
 Idempotente: python3 scripts/add_makeseo_credit.py
+Para reemplazar créditos antiguos (Santiago 360 / Grupo 360) usa la skill
+.claude/skills/makeseo-footer (apply_makeseo_footer.py).
 """
 import glob
 import os
@@ -29,7 +31,7 @@ if __name__ == "__main__":
         if os.path.basename(f) == "google7a5c4682e9b25d4f.html":
             continue
         s = open(f, encoding="utf-8").read()
-        if "gp-footer-credit" in s:
+        if "gp-footer-credit" in s or "https://makeseo.app" in s:
             continue
         block = credit(f.startswith("en/"))
         i = s.rfind("</footer>")

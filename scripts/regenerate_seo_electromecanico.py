@@ -289,7 +289,7 @@ python3 scripts/regenerate_seo.py
 
 ---
 
-© Electromecánico en Santiago — Grupo 360 Soluciones
+© Electromecánico en Santiago — Sitio web desarrollado por [makeseo.app](https://makeseo.app)
 """
 
 (ROOT / "README.md").write_text(readme, encoding="utf-8")
