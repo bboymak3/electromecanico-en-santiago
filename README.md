@@ -126,7 +126,9 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 
 **Skill de Claude Code `makeseo-footer`** (`.claude/skills/makeseo-footer/`): cambia el crédito "En Santiago 360" / "Grupo 360 Soluciones" a "Página web desarrollada por makeseo.app" en cualquier sitio estático y lo agrega donde falte. Copia la carpeta a otro repositorio (o a `~/.claude/skills/`) y pide "cambia el footer a makeseo.app", o ejecuta `python3 .claude/skills/makeseo-footer/scripts/apply_makeseo_footer.py . --apply`.
 
-**Agregar un vehículo a la galería:** copia la foto a `images/galeria/` con nombre `palabras-clave-separadas-con-guion-comuna.jpg` (+ versión `-thumb.jpg`), agrega la entrada en `scripts/galeria_data.json` y ejecuta `build_galeria.py`.
+**Skill de Claude Code `fichas-vehiculos`** (`.claude/skills/fichas-vehiculos/`): agrega un vehículo atendido (ficha modal + fotos renombradas con la comuna al final) al index y a `/galeria` en un solo paso. Basta con enviar las fotos y decir "agrega este vehículo: <trabajo>, comuna <X>". Script: `python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py ficha.json --apply`.
+
+**Agregar un vehículo a la galería (a mano):** copia la foto a `images/galeria/` con nombre `palabras-clave-separadas-con-guion-comuna.jpg` (+ versión `-thumb.jpg`), agrega la entrada en `scripts/galeria_data.json` y ejecuta `build_galeria.py`.
 
 > ⚠️ `scripts/regenerate_seo_electromecanico.py` reescribe `sitemap.xml`, `robots.txt`, `_redirects` **y este README** desde cero. Si lo ejecutas, revisa que el sitemap conserve `/galeria` y las landings nuevas, y vuelve a aplicar estos cambios al README.
 
