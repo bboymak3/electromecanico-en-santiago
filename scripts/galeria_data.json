@@ -2,6 +2,48 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "jac-t6",
+      "vehiculo": "JAC T6",
+      "servicio": "Ajuste de motor",
+      "comuna": "Santiago",
+      "icono": "fa-cogs",
+      "resumen": "Ajuste de motor: desmontaje, reparación y reinstalación del motor.",
+      "descripcion": "En esta camioneta JAC T6 realizamos un ajuste de motor. Se desmontó el motor del vehículo para revisarlo y repararlo, y luego se volvió a instalar, dejando la camioneta funcionando correctamente.",
+      "trabajos_realizados": [
+        "Diagnóstico del motor",
+        "Desmontaje del motor",
+        "Ajuste y reparación del motor",
+        "Reinstalación y prueba de funcionamiento"
+      ],
+      "fotos": [
+        {
+          "file": "jac-t6-ajuste-de-motor-reparacion-motor-electromecanico-santiago",
+          "caption": "JAC T6 – ajuste de motor, motor desmontado"
+        }
+      ]
+    },
+    {
+      "slug": "opel-corsa-2023",
+      "vehiculo": "Opel Corsa 2023",
+      "servicio": "Servicio de escáner y cambio de batería a domicilio",
+      "comuna": "Macul",
+      "icono": "fa-car-battery",
+      "resumen": "Diagnóstico con escáner y cambio de batería realizado a domicilio en Macul.",
+      "descripcion": "Atendimos este Opel Corsa 2023 a domicilio en la comuna de Macul. Realizamos un diagnóstico con escáner automotriz para revisar los sistemas electrónicos del vehículo y, tras comprobar el estado de la batería, la reemplazamos por una nueva, verificando el sistema de carga y el correcto encendido del motor.",
+      "trabajos_realizados": [
+        "Diagnóstico con escáner automotriz",
+        "Prueba de batería y sistema de carga",
+        "Cambio de batería",
+        "Verificación de encendido y funcionamiento"
+      ],
+      "fotos": [
+        {
+          "file": "opel-corsa-2023-escaner-cambio-de-bateria-a-domicilio-macul",
+          "caption": "Opel Corsa 2023 – escáner y cambio de batería a domicilio en Macul"
+        }
+      ]
+    },
+    {
       "slug": "suzuki-alto",
       "vehiculo": "Suzuki Alto",
       "servicio": "Auto no enciende: cables del distribuidor cortados",
