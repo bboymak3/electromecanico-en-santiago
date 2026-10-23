@@ -2,6 +2,27 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "chery-qq",
+      "vehiculo": "Chery QQ",
+      "servicio": "Problema eléctrico: electroventilador no encendía",
+      "comuna": "La Florida",
+      "icono": "fa-fan",
+      "resumen": "El electroventilador no encendía por un problema eléctrico. Diagnosticado y reparado a domicilio en La Florida.",
+      "descripcion": "Este Chery QQ tenía un problema eléctrico: el electroventilador del radiador no encendía, con riesgo de que el motor se sobrecalentara. Nuestro electromecánico acudió a domicilio en la comuna de La Florida, revisó el circuito del electroventilador (fusible, relé, conexiones y alimentación del motor del ventilador), reparó la falla eléctrica y comprobó que el electroventilador volviera a encender al alcanzar la temperatura de trabajo.",
+      "trabajos_realizados": [
+        "Diagnóstico del sistema eléctrico",
+        "Revisión de fusible, relé y conexiones del electroventilador",
+        "Reparación de la falla eléctrica",
+        "Prueba de encendido del electroventilador y control de temperatura"
+      ],
+      "fotos": [
+        {
+          "file": "chery-qq-electroventilador-no-enciende-problema-electrico-a-domicilio-la-florida",
+          "caption": "Chery QQ – reparación eléctrica del electroventilador a domicilio en La Florida"
+        }
+      ]
+    },
+    {
       "slug": "jac-t6",
       "vehiculo": "JAC T6",
       "servicio": "Ajuste de motor",
