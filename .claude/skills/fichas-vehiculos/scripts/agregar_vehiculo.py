@@ -16,17 +16,21 @@ ficha.json:
   "trabajos_realizados": ["Paso 1", "Paso 2"],
   "fotos": [
     {"src": "/ruta/a/foto1.jpg", "nombre": "opel-corsa-2023-escaner-cambio-de-bateria-a-domicilio",
-     "caption": "Opel Corsa 2023 – escáner y cambio de batería a domicilio en Macul"}
+     "caption": "Opel Corsa 2023 – escáner y cambio de batería a domicilio en Macul",
+     "difuminar": [[0.40, 0.69, 0.55, 0.74]]}
   ]
 }
 - "slug" es opcional (se calcula desde "vehiculo").
 - "nombre" de cada foto: palabras clave separadas con "-"; la comuna se agrega al final
   automáticamente si no está.
+- "difuminar" (obligatorio): zonas [x1,y1,x2,y2] en proporción 0–1 con patentes y números de
+  serie/etiquetas a difuminar; [] si la foto no tiene ninguna.
 - Las fotos repetidas (mismo contenido) se descartan.
 
 Qué hace con --apply:
   1. Redimensiona cada foto a máx. 1200 px (+ miniatura 480 px) en images/galeria/.
   2. Inserta la ficha al inicio de scripts/galeria_data.json.
+  2b. Ejecuta scripts/difuminar_fotos.py (patentes y seriales).
   3. Ejecuta scripts/build_galeria.py (index, /galeria, fichas modales) y
      scripts/seo_social_schema.py (metadatos y sitemap).
 """
@@ -78,20 +82,23 @@ def main():
             nombre = f"{nombre}-{comuna_slug}"
         if os.path.exists(os.path.join(IMG, nombre + ".jpg")):
             sys.exit(f"Ya existe images/galeria/{nombre}.jpg: elige otro 'nombre'.")
-        fotos.append((p["src"], nombre, p.get("caption") or f'{f["vehiculo"]} – {f["servicio"]}'))
+        if "difuminar" not in p:
+            sys.exit(f"Falta 'difuminar' en la foto {p['src']}: indica las zonas de patentes/números de serie "
+                     "como [[x1,y1,x2,y2], ...] en proporción 0–1, o [] si la foto no tiene ninguna.")
+        fotos.append((p["src"], nombre, p.get("caption") or f'{f["vehiculo"]} – {f["servicio"]}', p["difuminar"]))
 
     entry = {"slug": slug, "vehiculo": f["vehiculo"], "servicio": f["servicio"], "comuna": f["comuna"],
              "icono": f.get("icono", "fa-tools"), "resumen": f["resumen"], "descripcion": f["descripcion"],
              "trabajos_realizados": f["trabajos_realizados"],
-             "fotos": [{"file": n, "caption": c} for _, n, c in fotos]}
+             "fotos": [{"file": n, "caption": c, "difuminar": z} for _, n, c, z in fotos]}
     print(f"Vehículo: {entry['vehiculo']}  (slug: {slug}, comuna: {entry['comuna']})")
-    for src, n, c in fotos:
-        print(f"  foto: images/galeria/{n}.jpg  ← {os.path.basename(src)}  «{c}»")
+    for src, n, c, z in fotos:
+        print(f"  foto: images/galeria/{n}.jpg  ← {os.path.basename(src)}  «{c}»  zonas a difuminar: {len(z)}")
     if not a.apply:
         print("\nSimulación: no se escribió nada. Repite con --apply para agregarlo.")
         return
     from PIL import Image, ImageOps
-    for src, n, _ in fotos:
+    for src, n, _, _ in fotos:
         im = ImageOps.exif_transpose(Image.open(src)).convert("RGB")
         big = im.copy(); big.thumbnail((1200, 1200))
         big.save(os.path.join(IMG, n + ".jpg"), quality=82, optimize=True, progressive=True)
@@ -101,7 +108,7 @@ def main():
     with open(DATA, "w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)
         fh.write("\n")
-    for s in ("build_galeria.py", "seo_social_schema.py"):
+    for s in ("difuminar_fotos.py", "build_galeria.py", "seo_social_schema.py"):
         print(subprocess.run([sys.executable, os.path.join("scripts", s)], check=True, capture_output=True, text=True).stdout.strip())
     print(f"\nListo: {entry['vehiculo']} agregado con {len(fotos)} foto(s).")
 

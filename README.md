@@ -116,6 +116,7 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 |--------|----------|-------|
 | `python3 scripts/build_galeria.py` | Regenera `galeria.html`, la grilla de fotos, la sección "Trabajos Realizados" y las fichas modales del index, y la sección "Trabajos realizados en <comuna>" de cada landing de comuna con trabajos | `scripts/galeria_data.json` |
 | `python3 scripts/build_landings_servicios.py` | Regenera las landings de valor estándar e instalaciones, el hub, sus secciones/modales en el index y el sitemap | `scripts/landings_data.json` |
+| `python3 scripts/difuminar_fotos.py` | Difumina patentes y números de serie de las fotos de la galería según las zonas `difuminar` de `galeria_data.json` (no repite las ya difuminadas) | `scripts/galeria_data.json` |
 | `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
 | `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
 | `python3 scripts/stats_clientes.py` | Deja un solo recuadro "+100 Clientes Atendidos" en el encabezado y actualiza la cifra en los textos | — |

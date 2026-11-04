@@ -21,7 +21,22 @@ Cada vehículo atendido se agrega como una **ficha**: tarjeta en "Trabajos Reali
 - No agregar precios, garantías ni datos que el usuario no dio.
 - Si el usuario agrega una frase de marca (p. ej. "recuerda que somos tu mejor opción M&E"), incluirla al final de la descripción.
 
-## 2. Escribir la ficha
+## 2. Privacidad: difuminar patentes y números de serie (obligatorio)
+
+Antes de publicar, **mirar cada foto** y anotar las zonas a difuminar:
+- **Patentes** de todos los vehículos visibles (el atendido y los del fondo), aunque se vean pequeñas o en ángulo.
+- **Números de serie y etiquetas** de piezas (motor de partida, alternador, mangueras con códigos, etiquetas de batería con serie, VIN).
+- Si la patente ya está tapada con la placa M&E PRO, difuminar los bordes que asoman.
+
+Para ubicar las zonas con precisión, generar una vista de la foto con una cuadrícula 10×10 (líneas cada 10 %) y leer las coordenadas. Cada zona es `[x1, y1, x2, y2]` en proporción de la foto (0 = izquierda/arriba, 1 = derecha/abajo), con un poco de margen. Una foto sin nada que difuminar lleva `"difuminar": []` (el campo es obligatorio).
+
+El script `scripts/difuminar_fotos.py` pixela + desenfoca esas zonas en la foto y en su miniatura y marca la foto como `"difuminado": true` para no aplicarlo dos veces. Para revisar las zonas antes de aplicar:
+```bash
+python3 scripts/difuminar_fotos.py --preview /ruta/scratchpad/prev   # dibuja las zonas sin modificar fotos
+```
+Después de aplicar, **verificar** recortando cada zona: ningún carácter de patente o serie debe ser legible. Si quedó legible, agrandar la zona en `galeria_data.json`, quitar `"difuminado"` de esa foto, restaurar la original (`git checkout -- images/galeria/<foto>*.jpg`) y volver a ejecutar.
+
+## 3. Escribir la ficha
 
 Crear un JSON temporal en el scratchpad (no en el repositorio):
 
@@ -37,7 +52,8 @@ Crear un JSON temporal en el scratchpad (no en el repositorio):
   "fotos": [
     {"src": "/root/.claude/uploads/.../foto.jpg",
      "nombre": "suzuki-alto-no-enciende-cables-distribuidor-cortados-a-domicilio",
-     "caption": "Suzuki Alto atendido a domicilio en La Cisterna"}
+     "caption": "Suzuki Alto atendido a domicilio en La Cisterna",
+     "difuminar": [[0.05, 0.80, 0.20, 0.86]]}
   ]
 }
 ```
@@ -48,7 +64,7 @@ Crear un JSON temporal en el scratchpad (no en el repositorio):
 - **Ícono** (Font Awesome): `fa-bolt` eléctrico, `fa-car-battery` batería/arranque, `fa-temperature-high` / `fa-temperature-low` refrigeración, `fa-cogs` motor/distribución, `fa-lightbulb` luces, `fa-water` agua/fugas, `fa-tools` general.
 - Fotos de contexto (p. ej. la carretera camino a la comuna) se pueden incluir con un nombre como `electromecanico-a-domicilio-en-ruta-a-<comuna>`.
 
-## 3. Ejecutar
+## 4. Ejecutar
 
 Desde la raíz del repositorio:
 
@@ -57,16 +73,17 @@ python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py /ruta/ficha.
 python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py /ruta/ficha.json --apply  # aplicar
 ```
 
-El script descarta fotos duplicadas (mismo contenido), redimensiona (1200 px + miniatura 480 px), inserta la ficha **al inicio** de `scripts/galeria_data.json` y ejecuta `build_galeria.py` (index, /galeria y landings de comuna) y `seo_social_schema.py`.
+El script exige el campo `difuminar` en cada foto, descarta fotos duplicadas (mismo contenido), redimensiona (1200 px + miniatura 480 px), difumina patentes y seriales, inserta la ficha **al inicio** de `scripts/galeria_data.json` y ejecuta `build_galeria.py` (index, /galeria y landings de comuna) y `seo_social_schema.py`.
 
-## 4. Verificar antes de subir
+## 5. Verificar antes de subir
 
 - `git status`: solo deben cambiar `index.html`, `galeria.html`, `sitemap.xml`, `scripts/galeria_data.json`, las fotos nuevas y las landings `comunas/*.html` que tienen trabajos (en esas, `git diff --numstat comunas/` debe mostrar **0 líneas eliminadas**).
 - La landing de la comuna (`/comunas/<comuna>`) muestra la sección "Trabajos realizados en <comuna>" con la tarjeta, la ficha modal y las fotos.
 - Probar con Playwright (servidor local `python3 -m http.server`; servir Bootstrap local porque el CDN está bloqueado): la ficha modal abre, la foto abre en el lightbox, el filtro de `/galeria` muestra las fotos del vehículo, sin scroll horizontal a 390 px y 1280 px.
+- Patentes y números de serie difuminados e ilegibles en la foto grande y en la miniatura.
 - `galeria.html` debe conservar el script `REDIRECT 301` y el crédito `https://makeseo.app`.
 
-## 5. Subir y avisar
+## 6. Subir y avisar
 
 - Commit `feat: <Vehículo> en galería (<trabajo>, <comuna>)` y push a `main`.
 - Responder con: datos de la ficha, nombres de las fotos, total de vehículos/fotos de la galería, y lo que se supuso (modelo identificado por foto, comuna por defecto, "a domicilio" o no, interpretación del texto) para que el usuario lo confirme.

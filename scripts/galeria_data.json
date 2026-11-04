@@ -18,11 +18,41 @@
       "fotos": [
         {
           "file": "chery-tiggo-2-no-enciende-bujias-exceso-de-combustible-a-domicilio-lo-barnechea",
-          "caption": "Chery Tiggo 2 atendido a domicilio en Lo Barnechea"
+          "caption": "Chery Tiggo 2 atendido a domicilio en Lo Barnechea",
+          "difuminar": [
+            [
+              0.47,
+              0.66,
+              0.63,
+              0.72
+            ],
+            [
+              0.81,
+              0.59,
+              0.94,
+              0.635
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "chery-tiggo-2-cambio-de-bujias-electromecanico-a-domicilio-lo-barnechea",
-          "caption": "Chery Tiggo 2 – cambio de bujías a domicilio"
+          "caption": "Chery Tiggo 2 – cambio de bujías a domicilio",
+          "difuminar": [
+            [
+              0.69,
+              0.55,
+              0.8,
+              0.605
+            ],
+            [
+              0.8,
+              0.48,
+              0.89,
+              0.535
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -43,7 +73,22 @@
       "fotos": [
         {
           "file": "chery-qq-electroventilador-no-enciende-problema-electrico-a-domicilio-la-florida",
-          "caption": "Chery QQ – reparación eléctrica del electroventilador a domicilio en La Florida"
+          "caption": "Chery QQ – reparación eléctrica del electroventilador a domicilio en La Florida",
+          "difuminar": [
+            [
+              0.445,
+              0.665,
+              0.49,
+              0.745
+            ],
+            [
+              0.615,
+              0.665,
+              0.655,
+              0.745
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -64,7 +109,16 @@
       "fotos": [
         {
           "file": "jac-t6-ajuste-de-motor-reparacion-motor-electromecanico-santiago",
-          "caption": "JAC T6 – ajuste de motor, motor desmontado"
+          "caption": "JAC T6 – ajuste de motor, motor desmontado",
+          "difuminar": [
+            [
+              0.38,
+              0.7,
+              0.42,
+              0.81
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -85,7 +139,8 @@
       "fotos": [
         {
           "file": "opel-corsa-2023-escaner-cambio-de-bateria-a-domicilio-macul",
-          "caption": "Opel Corsa 2023 – escáner y cambio de batería a domicilio en Macul"
+          "caption": "Opel Corsa 2023 – escáner y cambio de batería a domicilio en Macul",
+          "difuminar": []
         }
       ]
     },
@@ -106,11 +161,13 @@
       "fotos": [
         {
           "file": "suzuki-alto-no-enciende-cables-distribuidor-cortados-a-domicilio-la-cisterna",
-          "caption": "Suzuki Alto atendido a domicilio en La Cisterna"
+          "caption": "Suzuki Alto atendido a domicilio en La Cisterna",
+          "difuminar": []
         },
         {
           "file": "suzuki-alto-reparacion-cableado-encendido-electromecanico-a-domicilio-la-cisterna",
-          "caption": "Suzuki Alto – reparación del cableado de encendido"
+          "caption": "Suzuki Alto – reparación del cableado de encendido",
+          "difuminar": []
         }
       ]
     },
@@ -132,7 +189,16 @@
       "fotos": [
         {
           "file": "citroen-c3-xtr-no-enciende-bateria-descargada-fusible-quemado-a-domicilio-pudahuel",
-          "caption": "Citroën C3 XTR – auto que no encendía, atendido a domicilio en Pudahuel"
+          "caption": "Citroën C3 XTR – auto que no encendía, atendido a domicilio en Pudahuel",
+          "difuminar": [
+            [
+              0.6,
+              0.62,
+              0.76,
+              0.7
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -154,23 +220,52 @@
       "fotos": [
         {
           "file": "dodge-journey-reparacion-caneria-calefaccion-mecanico-a-domicilio-buin",
-          "caption": "Dodge Journey atendido a domicilio en Buin"
+          "caption": "Dodge Journey atendido a domicilio en Buin",
+          "difuminar": [
+            [
+              0.4,
+              0.69,
+              0.6,
+              0.755
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "dodge-journey-fuga-refrigerante-caneria-calefaccion-rota-buin",
-          "caption": "Fuga de refrigerante por cañería de calefacción rota"
+          "caption": "Fuga de refrigerante por cañería de calefacción rota",
+          "difuminar": []
         },
         {
           "file": "dodge-journey-temperatura-refrigerante-motor-electromecanico-a-domicilio-buin",
-          "caption": "Control de temperatura del refrigerante en el tablero"
+          "caption": "Control de temperatura del refrigerante en el tablero",
+          "difuminar": []
         },
         {
           "file": "dodge-journey-mecanico-a-domicilio-sistema-refrigeracion-buin",
-          "caption": "Dodge Journey – reparación del sistema de refrigeración en Buin"
+          "caption": "Dodge Journey – reparación del sistema de refrigeración en Buin",
+          "difuminar": [
+            [
+              0.6,
+              0.595,
+              0.73,
+              0.66
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "electromecanico-a-domicilio-en-ruta-a-buin-paine",
-          "caption": "En ruta a Buin para atender el Dodge Journey a domicilio"
+          "caption": "En ruta a Buin para atender el Dodge Journey a domicilio",
+          "difuminar": [
+            [
+              0.44,
+              0.59,
+              0.53,
+              0.645
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -191,11 +286,35 @@
       "fotos": [
         {
           "file": "chevrolet-onix-1-0-turbo-reparacion-motor-de-arranque-mecanico-a-domicilio-santiago",
-          "caption": "Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente"
+          "caption": "Chevrolet Onix 1.0 Turbo – mantención de motor de partida en domicilio del cliente",
+          "difuminar": [
+            [
+              0.41,
+              0.63,
+              0.53,
+              0.685
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "chevrolet-onix-1-0-turbo-mantencion-motor-de-partida-electromecanico-a-domicilio-santiago",
-          "caption": "Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención"
+          "caption": "Chevrolet Onix 1.0 Turbo – motor de partida desmontado para mantención",
+          "difuminar": [
+            [
+              0.29,
+              0.34,
+              0.6,
+              0.61
+            ],
+            [
+              0.08,
+              0.34,
+              0.31,
+              0.53
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -216,15 +335,34 @@
       "fotos": [
         {
           "file": "mazda-cx-3-diagnostico-motor-hidrobloqueado-electromecanico-a-domicilio-santiago",
-          "caption": "Mazda CX-3 – diagnóstico de motor trabado a domicilio"
+          "caption": "Mazda CX-3 – diagnóstico de motor trabado a domicilio",
+          "difuminar": [
+            [
+              0.4,
+              0.69,
+              0.55,
+              0.735
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "mazda-cx-3-inspeccion-boroscopio-agua-en-cilindro-mecanico-a-domicilio-santiago",
-          "caption": "Inspección con boroscopio: agua dentro del cilindro"
+          "caption": "Inspección con boroscopio: agua dentro del cilindro",
+          "difuminar": []
         },
         {
           "file": "mazda-cx-3-motor-trabado-agua-en-cilindro-a-domicilio-santiago",
-          "caption": "Mazda CX-3 atendida a domicilio"
+          "caption": "Mazda CX-3 atendida a domicilio",
+          "difuminar": [
+            [
+              0.505,
+              0.645,
+              0.605,
+              0.69
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -245,19 +383,55 @@
       "fotos": [
         {
           "file": "chery-tiggo-2-electromecanico-a-domicilio-refrigerante-santiago",
-          "caption": "Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio"
+          "caption": "Chery Tiggo 2 – mantención del sistema de refrigeración a domicilio",
+          "difuminar": [
+            [
+              0.4,
+              0.71,
+              0.6,
+              0.77
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "chery-tiggo-2-mantencion-sistema-refrigeracion-a-domicilio-santiago",
-          "caption": "Chery Tiggo 2 – trabajo en el domicilio del cliente"
+          "caption": "Chery Tiggo 2 – trabajo en el domicilio del cliente",
+          "difuminar": [
+            [
+              0.7,
+              0.65,
+              0.85,
+              0.74
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "chery-tiggo-2-revision-manguera-refrigerante-mecanico-a-domicilio-santiago",
-          "caption": "Chery Tiggo 2 – revisión de manguera de refrigerante"
+          "caption": "Chery Tiggo 2 – revisión de manguera de refrigerante",
+          "difuminar": [
+            [
+              0.8,
+              0.2,
+              1.0,
+              0.38
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "chery-tiggo-2-cambio-manguera-sistema-enfriamiento-a-domicilio-santiago",
-          "caption": "Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento"
+          "caption": "Chery Tiggo 2 – manguera y abrazadera del sistema de enfriamiento",
+          "difuminar": [
+            [
+              0.82,
+              0.35,
+              1.0,
+              0.46
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -278,11 +452,35 @@
       "fotos": [
         {
           "file": "nissan-sentra-1997-no-enciende-distribucion-saltada-a-domicilio-santiago",
-          "caption": "Nissan Sentra 1997 – no encendía por distribución saltada"
+          "caption": "Nissan Sentra 1997 – no encendía por distribución saltada",
+          "difuminar": [
+            [
+              0.21,
+              0.615,
+              0.31,
+              0.675
+            ],
+            [
+              0.9,
+              0.43,
+              1.0,
+              0.48
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "nissan-sentra-1997-puesta-a-punto-distribucion-mecanico-a-domicilio-santiago",
-          "caption": "Nissan Sentra 1997 – motor con distribución puesta a punto"
+          "caption": "Nissan Sentra 1997 – motor con distribución puesta a punto",
+          "difuminar": [
+            [
+              0.69,
+              0.85,
+              1.0,
+              1.0
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -303,11 +501,21 @@
       "fotos": [
         {
           "file": "hyundai-grand-i10-electricidad-automotriz-cableado-tablero-a-domicilio-santiago",
-          "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero"
+          "caption": "Hyundai Grand i10 – revisión de cableado bajo el tablero",
+          "difuminar": []
         },
         {
           "file": "hyundai-grand-i10-electromecanico-a-domicilio-revision-electrica-bateria-santiago",
-          "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto"
+          "caption": "Hyundai Grand i10 – pruebas eléctricas con capó abierto",
+          "difuminar": [
+            [
+              0.27,
+              0.65,
+              0.46,
+              0.725
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -328,11 +536,29 @@
       "fotos": [
         {
           "file": "toyota-rav4-cambio-neblineros-led-electricidad-automotriz-a-domicilio-santiago",
-          "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar"
+          "caption": "Toyota RAV4 – neblineros LED nuevos listos para instalar",
+          "difuminar": [
+            [
+              0.45,
+              0.655,
+              0.715,
+              0.755
+            ]
+          ],
+          "difuminado": true
         },
         {
           "file": "toyota-rav4-neblineros-led-instalados-electromecanico-a-domicilio-santiago",
-          "caption": "Toyota RAV4 – neblineros LED instalados y funcionando"
+          "caption": "Toyota RAV4 – neblineros LED instalados y funcionando",
+          "difuminar": [
+            [
+              0.41,
+              0.535,
+              0.56,
+              0.575
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -353,7 +579,22 @@
       "fotos": [
         {
           "file": "audi-a3-cambio-refrigerante-anticongelante-mecanico-a-domicilio-santiago",
-          "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol"
+          "caption": "Audi A3 – cambio de refrigerante con anticongelante Ravenol",
+          "difuminar": [
+            [
+              0.28,
+              0.76,
+              0.325,
+              0.815
+            ],
+            [
+              0.49,
+              0.76,
+              0.55,
+              0.815
+            ]
+          ],
+          "difuminado": true
         }
       ]
     },
@@ -373,7 +614,16 @@
       "fotos": [
         {
           "file": "nissan-versa-mantencion-mecanico-a-domicilio-santiago",
-          "caption": "Nissan Versa – mantención a domicilio"
+          "caption": "Nissan Versa – mantención a domicilio",
+          "difuminar": [
+            [
+              0.0,
+              0.52,
+              0.145,
+              0.6
+            ]
+          ],
+          "difuminado": true
         }
       ]
     }
