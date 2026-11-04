@@ -1,17 +1,17 @@
 ---
 name: fichas-vehiculos
-description: Agrega un vehículo atendido a la galería del sitio Electromecánico en Santiago (index + /galeria) con su ficha modal y sus fotos renombradas con palabras clave y la comuna al final. Usar cuando el usuario envíe fotos de un vehículo y pida "agrega este vehículo", "súbelo a la galería", "crea la ficha", o indique el trabajo realizado y la comuna.
+description: Agrega un vehículo atendido a la galería del sitio Electromecánico en Santiago (index + /galeria + landing de su comuna) con su ficha modal y sus fotos renombradas con palabras clave y la comuna al final. Usar cuando el usuario envíe fotos de un vehículo y pida "agrega este vehículo", "súbelo a la galería", "crea la ficha", o indique el trabajo realizado y la comuna.
 ---
 
 # Fichas de vehículos (galería de trabajos realizados)
 
-Cada vehículo atendido se agrega como una **ficha**: tarjeta en "Trabajos Realizados" del index, ficha modal (vehículo, servicio, comuna, descripción, trabajos realizados, fotos), fotos en la grilla 3:4 del index y en `/galeria` con su filtro. Todo sale de `scripts/galeria_data.json`.
+Cada vehículo atendido se agrega como una **ficha**: tarjeta en "Trabajos Realizados" del index, ficha modal (vehículo, servicio, comuna, descripción, trabajos realizados, fotos), fotos en la grilla 3:4 del index, en `/galeria` con su filtro y en la sección **"Trabajos realizados en <comuna>"** de la landing `/comunas/<comuna>` (se crea sola si la comuna tiene trabajos). Todo sale de `scripts/galeria_data.json`.
 
 ## 1. Reunir los datos (no inventar)
 
 | Dato | De dónde | Si falta |
 |---|---|---|
-| Vehículo (marca, modelo, año) | Mensaje del usuario o identificarlo en la foto (logo, parrilla) | Identificarlo y **decir que lo identificaste por la foto** |
+| Vehículo (marca, modelo, año) | Mensaje del usuario o identificarlo en la foto (logo, parrilla, focos, carrocería) | Identificarlo, **explicar en qué te basaste** (p. ej. "parrilla hexagonal y logo Chery") y pedir confirmación. Si el usuario pide validar la marca, compararlo también con vehículos ya publicados en la galería |
 | Servicio / trabajo realizado | Mensaje del usuario | Deducirlo de la foto con prudencia y **pedir confirmación** |
 | Comuna | Mensaje del usuario | Usar **Santiago** y avisarlo |
 | ¿Fue a domicilio? | Mensaje / foto | Si la foto muestra taller (grúa, motor desmontado), **no escribir "a domicilio"** y avisarlo |
@@ -43,6 +43,7 @@ Crear un JSON temporal en el scratchpad (no en el repositorio):
 ```
 
 - **Nombre de cada foto**: `marca-modelo-palabras-clave-del-trabajo-a-domicilio` (o `electromecanico-a-domicilio`, `mecanico-a-domicilio`), sin tildes, separado con `-`. El script agrega la **comuna al final** (`...-la-cisterna`). Cada foto con un nombre distinto.
+- **Mismo modelo ya publicado** (p. ej. otro Chery Tiggo 2): usar `"slug": "<modelo>-<comuna>"` para que no choque con la ficha existente; el script se niega a duplicar slugs.
 - **Orden de fotos**: primero la que mejor muestra el vehículo completo (será la portada de la tarjeta).
 - **Ícono** (Font Awesome): `fa-bolt` eléctrico, `fa-car-battery` batería/arranque, `fa-temperature-high` / `fa-temperature-low` refrigeración, `fa-cogs` motor/distribución, `fa-lightbulb` luces, `fa-water` agua/fugas, `fa-tools` general.
 - Fotos de contexto (p. ej. la carretera camino a la comuna) se pueden incluir con un nombre como `electromecanico-a-domicilio-en-ruta-a-<comuna>`.
@@ -56,11 +57,12 @@ python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py /ruta/ficha.
 python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py /ruta/ficha.json --apply  # aplicar
 ```
 
-El script descarta fotos duplicadas (mismo contenido), redimensiona (1200 px + miniatura 480 px), inserta la ficha **al inicio** de `scripts/galeria_data.json` y ejecuta `build_galeria.py` y `seo_social_schema.py`.
+El script descarta fotos duplicadas (mismo contenido), redimensiona (1200 px + miniatura 480 px), inserta la ficha **al inicio** de `scripts/galeria_data.json` y ejecuta `build_galeria.py` (index, /galeria y landings de comuna) y `seo_social_schema.py`.
 
 ## 4. Verificar antes de subir
 
-- `git status`: solo deben cambiar `index.html`, `galeria.html`, `sitemap.xml`, `scripts/galeria_data.json` y las fotos nuevas.
+- `git status`: solo deben cambiar `index.html`, `galeria.html`, `sitemap.xml`, `scripts/galeria_data.json`, las fotos nuevas y las landings `comunas/*.html` que tienen trabajos (en esas, `git diff --numstat comunas/` debe mostrar **0 líneas eliminadas**).
+- La landing de la comuna (`/comunas/<comuna>`) muestra la sección "Trabajos realizados en <comuna>" con la tarjeta, la ficha modal y las fotos.
 - Probar con Playwright (servidor local `python3 -m http.server`; servir Bootstrap local porque el CDN está bloqueado): la ficha modal abre, la foto abre en el lightbox, el filtro de `/galeria` muestra las fotos del vehículo, sin scroll horizontal a 390 px y 1280 px.
 - `galeria.html` debe conservar el script `REDIRECT 301` y el crédito `https://makeseo.app`.
 

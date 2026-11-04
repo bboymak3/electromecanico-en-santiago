@@ -58,9 +58,9 @@ def gallery_block(group):
     )
 
 
-def trabajo_cards(cols="col-12 col-sm-6 col-lg-3"):
+def trabajo_cards(cols="col-12 col-sm-6 col-lg-3", items=None):
     out = []
-    for t in TRABAJOS:
+    for t in (TRABAJOS if items is None else items):
         f0 = t["fotos"][0]
         out.append(
             f'<div class="{cols}"><div class="trabajo-card" role="button" tabindex="0" '
@@ -82,9 +82,9 @@ def comuna_link(nombre):
     return e(nombre)
 
 
-def ficha_modals():
+def ficha_modals(items=None):
     out = []
-    for t in TRABAJOS:
+    for t in (TRABAJOS if items is None else items):
         wa = f"https://wa.me/56973622291?text=Hola%2C%20vi%20el%20trabajo%20en%20{t['vehiculo'].replace(' ', '%20')}%20y%20quiero%20cotizar"
         lis = "".join(f'<li><i class="fas fa-check-circle me-2" style="color:#14a098;"></i>{e(x)}</li>' for x in t["trabajos_realizados"])
         fotos = "".join(gal_item(t, f, "ficha-" + t["slug"]) for f in t["fotos"])
@@ -314,6 +314,54 @@ def add_nav_links():
     return changed
 
 
+def comuna_slug(nombre):
+    import unicodedata
+    return "".join(c for c in unicodedata.normalize("NFD", nombre.lower()) if unicodedata.category(c) != "Mn").replace(" ", "-")
+
+
+def build_comunas():
+    """Sección 'Trabajos realizados en <comuna>' en cada landing de comuna con trabajos."""
+    start, end = "<!-- COMUNA-TRABAJOS:START -->", "<!-- COMUNA-TRABAJOS:END -->"
+    por_comuna = {}
+    for t in TRABAJOS:
+        por_comuna.setdefault(comuna_slug(t["comuna"]), []).append(t)
+    n = 0
+    for fn in sorted(os.listdir(os.path.join(ROOT, "comunas"))):
+        if not fn.endswith(".html"):
+            continue
+        p = os.path.join("comunas", fn)
+        s = read(p)
+        items = por_comuna.get(fn[:-5])
+        if not items:
+            if start in s:  # ya no hay trabajos en esta comuna: se quita la sección generada
+                write(p, re.sub(re.escape(start) + r".*?" + re.escape(end) + r"\n?", "", s, flags=re.S))
+            continue
+        nombre = items[0]["comuna"]
+        fotos = "".join(gal_item(t, f, "comuna-" + fn[:-5]) for t in items for f in t["fotos"])
+        block = f'''<section class="py-5 bg-white" id="trabajos-realizados-comuna">
+  <div class="container">
+    <div class="text-center mb-4">
+      <h2 class="fw-bold" style="color:#0d7377;font-size:2rem;"><i class="fas fa-camera me-2"></i>Trabajos realizados en {e(nombre)}</h2>
+      <p style="color:#666;max-width:640px;margin:0 auto;">Vehículos atendidos a domicilio por nuestro electromecánico en {e(nombre)}. Haz clic en cada vehículo para ver su ficha.</p>
+    </div>
+    <div class="row g-4 justify-content-center">
+{trabajo_cards("col-12 col-sm-6 col-lg-4", items)}
+    </div>
+    <div class="ficha-fotos mt-4" style="max-width:900px;margin:0 auto;">{fotos}</div>
+    <div class="text-center mt-4"><a href="/galeria" class="btn fw-bold text-white" style="background:#0d7377;"><i class="fas fa-images me-2"></i>Ver galería completa</a></div>
+  </div>
+</section>
+{ficha_modals(items)}'''
+        s = replace_block(s, "COMUNA-TRABAJOS", block, '<section class="py-5" id="vehiculos-comuna"')
+        if "/css/galeria.css" not in s:
+            s = s.replace("</head>", '<link rel="stylesheet" href="/css/galeria.css"/>\n</head>', 1)
+        if "/js/galeria.js" not in s:
+            s = s.replace("</body>", '<script defer src="/js/galeria.js"></script>\n</body>', 1)
+        write(p, s)
+        n += 1
+    return n
+
+
 def add_sitemap():
     s = read("sitemap.xml")
     if SITE + "/galeria<" in s:
@@ -328,4 +376,6 @@ if __name__ == "__main__":
     build_landing()
     build_index()
     add_sitemap()
+    nc = build_comunas()
+    print(f"Landings de comuna con trabajos realizados: {nc}")
     print(f"Galería generada: {sum(len(t['fotos']) for t in TRABAJOS)} fotos, {len(TRABAJOS)} vehículos; menú actualizado en {n} páginas")

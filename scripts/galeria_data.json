@@ -2,6 +2,31 @@
   "_instrucciones": "Para agregar un vehiculo: copia la foto a /images/galeria/ con nombre palabras-clave-separadas-con-guion-COMUNA.jpg (+ version -thumb.jpg), agrega una entrada en 'trabajos' y ejecuta: python3 scripts/build_galeria.py",
   "trabajos": [
     {
+      "slug": "chery-tiggo-2-lo-barnechea",
+      "vehiculo": "Chery Tiggo 2",
+      "servicio": "Auto no encendía: bujías en mal estado y exceso de combustible",
+      "comuna": "Lo Barnechea",
+      "icono": "fa-bolt",
+      "resumen": "No encendía por bujías en mal estado y exceso de combustible. Reparado a domicilio en Lo Barnechea.",
+      "descripcion": "Este Chery Tiggo 2 no encendía. Nuestro electromecánico acudió a domicilio, al estacionamiento del cliente en la comuna de Lo Barnechea, y diagnosticó bujías en mal estado y exceso de combustible en los cilindros, que impedían el arranque. Se reemplazaron las bujías, se eliminó el exceso de combustible y se probó el encendido hasta dejar el motor funcionando correctamente.",
+      "trabajos_realizados": [
+        "Diagnóstico de vehículo que no enciende",
+        "Revisión y cambio de bujías",
+        "Eliminación del exceso de combustible en los cilindros",
+        "Prueba de encendido y funcionamiento del motor"
+      ],
+      "fotos": [
+        {
+          "file": "chery-tiggo-2-no-enciende-bujias-exceso-de-combustible-a-domicilio-lo-barnechea",
+          "caption": "Chery Tiggo 2 atendido a domicilio en Lo Barnechea"
+        },
+        {
+          "file": "chery-tiggo-2-cambio-de-bujias-electromecanico-a-domicilio-lo-barnechea",
+          "caption": "Chery Tiggo 2 – cambio de bujías a domicilio"
+        }
+      ]
+    },
+    {
       "slug": "chery-qq",
       "vehiculo": "Chery QQ",
       "servicio": "Problema eléctrico: electroventilador no encendía",

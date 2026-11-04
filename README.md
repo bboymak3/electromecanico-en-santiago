@@ -114,7 +114,7 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 
 | Script | Qué hace | Datos |
 |--------|----------|-------|
-| `python3 scripts/build_galeria.py` | Regenera `galeria.html`, la grilla de fotos, la sección "Trabajos Realizados" y las fichas modales del index | `scripts/galeria_data.json` |
+| `python3 scripts/build_galeria.py` | Regenera `galeria.html`, la grilla de fotos, la sección "Trabajos Realizados" y las fichas modales del index, y la sección "Trabajos realizados en <comuna>" de cada landing de comuna con trabajos | `scripts/galeria_data.json` |
 | `python3 scripts/build_landings_servicios.py` | Regenera las landings de valor estándar e instalaciones, el hub, sus secciones/modales en el index y el sitemap | `scripts/landings_data.json` |
 | `python3 scripts/fix_servicios_en_blanco.py` | Regenera el bloque de contexto (señales, FAQ, relacionados) de 24 páginas de servicios | `scripts/servicios_contexto.json` |
 | `python3 scripts/add_ios_skin.py` | Enlaza `css/ios-skin.css` en páginas nuevas | — |
@@ -126,7 +126,7 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 
 **Skill de Claude Code `makeseo-footer`** (`.claude/skills/makeseo-footer/`): cambia el crédito "En Santiago 360" / "Grupo 360 Soluciones" a "Página web desarrollada por makeseo.app" en cualquier sitio estático y lo agrega donde falte. Copia la carpeta a otro repositorio (o a `~/.claude/skills/`) y pide "cambia el footer a makeseo.app", o ejecuta `python3 .claude/skills/makeseo-footer/scripts/apply_makeseo_footer.py . --apply`.
 
-**Skill de Claude Code `fichas-vehiculos`** (`.claude/skills/fichas-vehiculos/`): agrega un vehículo atendido (ficha modal + fotos renombradas con la comuna al final) al index y a `/galeria` en un solo paso. Basta con enviar las fotos y decir "agrega este vehículo: <trabajo>, comuna <X>". Script: `python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py ficha.json --apply`.
+**Skill de Claude Code `fichas-vehiculos`** (`.claude/skills/fichas-vehiculos/`): agrega un vehículo atendido (ficha modal + fotos renombradas con la comuna al final) al index, a `/galeria` y a la sección "Trabajos realizados en <comuna>" de la landing de su comuna, en un solo paso. Basta con enviar las fotos y decir "agrega este vehículo: <trabajo>, comuna <X>". Script: `python3 .claude/skills/fichas-vehiculos/scripts/agregar_vehiculo.py ficha.json --apply`.
 
 **Agregar un vehículo a la galería (a mano):** copia la foto a `images/galeria/` con nombre `palabras-clave-separadas-con-guion-comuna.jpg` (+ versión `-thumb.jpg`), agrega la entrada en `scripts/galeria_data.json` y ejecuta `build_galeria.py`.
 
