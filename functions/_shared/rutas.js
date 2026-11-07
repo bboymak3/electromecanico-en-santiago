@@ -2,7 +2,7 @@
 import { CONFIG } from './config.js';
 import {
   URL_ES, URL_EN, API_FOTO, obtenerPosts, tarjetas, seccion, headExtra, ldScript, itemListLD, esHTML,
-  textos, esc, slug, vehiculo, postSlug, urlDetalle, urlComuna, urlFoto, numFotos, altFoto, fechaBonita, fechaISO,
+  textos, esc, slug, vehiculo, postSlug, urlDetalle, urlComuna, urlFoto, numFotos, altFoto, fechaBonita, fechaISO, absoluta,
 } from './trabajos.js';
 
 const quitarHtml = (request, sufijo = '.html') => {
@@ -125,7 +125,7 @@ export async function detalle(context, lang) {
   if (desc.length > 158) desc = desc.slice(0, 155).replace(/\s+\S*$/, '') + '…';
   const n = numFotos(p);
   const fotos = Array.from({ length: n }, (_, i) => urlFoto(p, i));
-  const fotosAbs = fotos.map(f => CONFIG.site + f);
+  const fotosAbs = fotos.filter(Boolean).map(absoluta);
   const comunaUrl = p.comuna ? urlComuna(p.comuna, lang) : '';
 
   // ---- contenido
@@ -241,7 +241,7 @@ export async function sitemap(context) {
     const urls = posts.map(p => {
       const lm = fechaISO(p.fecha_publicacion || p.fecha_trabajo);
       const imgs = Array.from({ length: numFotos(p) }, (_, i) =>
-        `<image:image><image:loc>${x(CONFIG.site + urlFoto(p, i))}</image:loc><image:title>${x(altFoto(p, 'es', i))}</image:title></image:image>`).join('');
+        `<image:image><image:loc>${x(absoluta(urlFoto(p, i)))}</image:loc><image:title>${x(altFoto(p, 'es', i))}</image:title></image:image>`).join('');
       return ['es', 'en'].map(l =>
         `  <url><loc>${x(CONFIG.site + urlDetalle(p, l))}</loc>${lm ? `<lastmod>${lm.slice(0, 10)}</lastmod>` : ''}<changefreq>monthly</changefreq><priority>0.6</priority>${l === 'es' ? imgs : ''}</url>\n`).join('');
     }).join('');

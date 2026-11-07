@@ -57,13 +57,23 @@ export const urlComuna = (c, lang) => {
 };
 
 // /trabajos-realizados/fotos/<id>-<n>-<nombre-seo>.jpg (proxy en este mismo dominio)
+// Con un panel anterior a fotos_meta se usan las URLs que entrega la API tal cual.
 export function urlFoto(p, n) {
+  if (!p.fotos_meta) {
+    const u = String(((p.fotos || [])[n] || {}).url || '');
+    return u.startsWith('/') ? API.replace('/api/admin/posts', '') + u : u;
+  }
   const meta = (p.fotos_meta || [])[n] || {};
   let nombre = slug(String(meta.nombre_archivo || '').replace(/\.[a-z0-9]+$/i, ''));
   if (!nombre) nombre = slug([vehiculo(p), p.comuna].filter(Boolean).join(' ')) || 'trabajo';
   return `${URL_ES}/fotos/${p.id}-${n}-${nombre.slice(0, 90)}.jpg`;
 }
-export const numFotos = p => (p.fotos_meta ? p.fotos_meta.length : (p.foto_count || 0));
+export const numFotos = p => (p.fotos_meta ? p.fotos_meta.length : (p.fotos || []).length);
+export const absoluta = u => (/^https?:\/\//.test(u) ? u : CONFIG.site + u);
+
+// ¿El post se publicó en este sitio? (por si el panel aún no filtra por ?sitio=)
+export const esDeEsteSitio = p =>
+  String(p.sitios || 'globalpro').split(',').map(x => x.trim()).includes(CONFIG.sitio);
 
 export function altFoto(p, lang, n) {
   const t = textos(lang);
@@ -89,7 +99,7 @@ export async function obtenerPosts() {
   if (!r.ok) throw new Error('API ' + r.status);
   const d = await r.json();
   if (!d || !d.success || !Array.isArray(d.posts)) throw new Error('API sin posts');
-  return d.posts;
+  return d.posts.filter(esDeEsteSitio);
 }
 
 export function tarjeta(p, lang, col, esNuevo) {

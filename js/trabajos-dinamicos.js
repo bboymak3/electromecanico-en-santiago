@@ -122,7 +122,8 @@
   }
   function urlDetalle(p) { return URL_LANDING + '/' + postSlug(p); }
   function portada(p) {
-    var n = p.fotos_meta ? p.fotos_meta.length : (p.foto_count || 0);
+    if (!p.fotos_meta) return ''; // panel anterior: se usa la foto que trae la API
+    var n = p.fotos_meta.length;
     return n > 0 ? API_ORIGIN + '/api/public/post-foto?id=' + encodeURIComponent(p.id) + '&n=0' : '';
   }
 
@@ -433,7 +434,12 @@
 
   fetchTimeout(API + '?estado=publicado&sitio=' + SITIO + '&limit=200', 10000)
     .then(function (d) {
-      if (d && d.success && Array.isArray(d.posts)) render(d.posts);
+      if (d && d.success && Array.isArray(d.posts)) {
+        // Solo los publicados en este sitio (por si el panel aun no filtra por ?sitio=)
+        render(d.posts.filter(function (p) {
+          return String(p.sitios || 'globalpro').split(',').map(function (x) { return x.trim(); }).indexOf(SITIO) !== -1;
+        }));
+      }
       else if (modo === 'landing') render([]);
     })
     .catch(function () {
