@@ -49,6 +49,7 @@ electromecanico-en-santiago/
 │   ├── galeria.css             # Galería, fichas y lightbox
 │   └── ios-skin.css            # Skin tipo iPhone
 ├── js/galeria.js               # Lightbox, filtros y botón "Ver más" de la galería
+├── js/trabajos-dinamicos.js    # Trabajos publicados desde el panel Global Pro (index, galería, comunas ES/EN)
 ├── scripts/                    # Generadores (ver Mantenimiento)
 ├── sitemap.xml                 # 339 URLs indexables (+ imágenes de la galería)
 ├── robots.txt
@@ -136,3 +137,16 @@ Todos los scripts son idempotentes (se pueden ejecutar varias veces sin duplicar
 ---
 
 © Electromecánico en Santiago — Sitio web desarrollado por [makeseo.app](https://makeseo.app)
+
+## 🔗 Trabajos publicados desde el panel Global Pro
+
+Desde el panel (globalprov2.pages.dev → *Publicar en Web*) se puede elegir publicar en
+**Globalpro.pages.dev**, en **electromecanico-en-santiago.pages.dev** o en ambas.
+Los trabajos publicados aquí se cargan con `js/trabajos-dinamicos.js` desde
+`https://globalprov2.pages.dev/api/admin/posts?estado=publicado&sitio=electromecanico` y aparecen:
+
+- en "Trabajos Realizados" de la página principal (`index.html`, `en/index.html`) y en `/galeria`;
+- en la landing de su comuna (`comunas/*.html`, `en/comunas/*.html`), según la comuna de la orden.
+
+El contenedor se inserta con `python3 scripts/add_trabajos_dinamicos.py` (idempotente;
+`build_galeria.py` lo ejecuta automáticamente al final).

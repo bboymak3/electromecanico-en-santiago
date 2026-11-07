@@ -378,4 +378,7 @@ if __name__ == "__main__":
     add_sitemap()
     nc = build_comunas()
     print(f"Landings de comuna con trabajos realizados: {nc}")
+    # galeria.html se regenera completo: volver a insertar los trabajos publicados desde el panel
+    import add_trabajos_dinamicos
+    add_trabajos_dinamicos.main()
     print(f"Galería generada: {sum(len(t['fotos']) for t in TRABAJOS)} fotos, {len(TRABAJOS)} vehículos; menú actualizado en {n} páginas")
