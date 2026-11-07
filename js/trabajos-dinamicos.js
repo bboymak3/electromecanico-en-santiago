@@ -62,6 +62,7 @@
       cerrar: 'Cerrar',
       cotizar: 'Cotizar por WhatsApp',
       verGaleria: 'Ver todos los trabajos realizados',
+      fichaCompleta: 'Ver ficha completa',
       nuevo: 'Reciente',
       todas: 'Todas las comunas',
       verMas: 'Ver m\u00e1s trabajos',
@@ -86,6 +87,7 @@
       cerrar: 'Close',
       cotizar: 'Get a quote on WhatsApp',
       verGaleria: 'See all completed jobs',
+      fichaCompleta: 'Full details',
       nuevo: 'Recent',
       todas: 'All areas',
       verMas: 'Load more jobs',
@@ -114,6 +116,16 @@
     };
     return alias[out] || out;
   }
+  function postSlug(p) {
+    var b = slug(p.titulo || vehiculo(p) || 'trabajo').slice(0, 70).replace(/-+$/, '') || 'trabajo';
+    return b + '-' + p.id;
+  }
+  function urlDetalle(p) { return URL_LANDING + '/' + postSlug(p); }
+  function portada(p) {
+    var n = p.fotos_meta ? p.fotos_meta.length : (p.foto_count || 0);
+    return n > 0 ? API_ORIGIN + '/api/public/post-foto?id=' + encodeURIComponent(p.id) + '&n=0' : '';
+  }
+
   function fotoUrl(f) {
     var u = f && typeof f === 'object' ? (f.url || '') : (f || '');
     if (u.charAt(0) === '/') u = API_ORIGIN + u;
@@ -132,38 +144,15 @@
   // ---------- estilos (autocontenidos: las p\u00e1ginas EN no cargan galeria.css) ----------
   function inyectarEstilos() {
     if (document.getElementById('td-estilos')) return;
-    var css = '' +
-      '.td-card{background:#fff;border-radius:14px;overflow:hidden;box-shadow:0 3px 12px rgba(0,0,0,.08);cursor:pointer;transition:transform .3s,box-shadow .3s;height:100%;border-top:4px solid var(--td-color);}' +
-      '.td-card:hover,.td-card:focus{transform:translateY(-5px);box-shadow:0 10px 28px rgba(0,0,0,.18);outline:none;}' +
-      '.td-card .td-img{width:100%;height:200px;background:#e9eef2;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden;}' +
-      '.td-card .td-img img{width:100%;height:200px;object-fit:cover;display:block;}' +
-      '.td-card .td-img i{font-size:2rem;color:#9fb3c0;}' +
-      '.td-card .td-count{position:absolute;top:8px;right:8px;background:rgba(0,0,0,.65);color:#fff;font-size:.7rem;font-weight:700;border-radius:999px;padding:3px 9px;}' +
-      '.td-card .td-new{position:absolute;top:8px;left:8px;background:var(--td-color);color:#fff;font-size:.68rem;font-weight:700;border-radius:999px;padding:3px 9px;}' +
-      '.td-card .td-body{padding:14px 16px 16px;}' +
-      '.td-card h3{font-size:1.05rem;font-weight:800;color:#1a1a1a;margin:0 0 4px;}' +
-      '.td-card p{font-size:.85rem;color:#666;margin:0;}' +
-      '.td-card .td-meta{margin-top:8px;font-weight:700;color:var(--td-color);font-size:.8rem;}' +
-      '.td-modal-fotos{display:flex;gap:8px;overflow-x:auto;padding:10px 0;}' +
-      '.td-modal-fotos img{width:64px;height:64px;object-fit:cover;border-radius:8px;cursor:pointer;border:2px solid transparent;flex-shrink:0;}' +
-      '.td-modal-fotos img.activa{border-color:var(--td-color);}' +
-      '.td-foto-principal{width:100%;max-height:440px;object-fit:contain;background:#000;border-radius:10px;display:block;}' +
-      '.td-chip{display:inline-block;padding:3px 10px;border-radius:999px;font-size:.72rem;font-weight:700;background:#e6f4f4;color:var(--td-color);margin:2px;}' +
-      '.td-fila{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-bottom:1px solid #eee;font-size:.88rem;}' +
-      '.td-fila span:first-child{color:#888;white-space:nowrap;}' +
-      '.td-fila span:last-child{color:#222;font-weight:600;text-align:right;}' +
-      '.td-filtros{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin-bottom:22px;}' +
-      '.td-filtro{border:1px solid var(--td-color);background:#fff;color:var(--td-color);border-radius:999px;padding:6px 14px;font-size:.82rem;font-weight:700;cursor:pointer;}' +
-      '.td-filtro.activo,.td-filtro:hover{background:var(--td-color);color:#fff;}' +
-      '.td-filtro small{opacity:.75;margin-left:4px;}' +
-      '.td-contador{text-align:center;color:#777;font-size:.85rem;margin:18px 0 8px;}' +
-      '.td-btn{display:inline-block;background:var(--td-color);color:#fff !important;border:none;border-radius:999px;padding:10px 26px;font-weight:700;text-decoration:none;cursor:pointer;}' +
-      '.td-btn:hover{filter:brightness(1.1);}' +
-      '.td-vacio{text-align:center;color:#666;padding:40px 16px;max-width:560px;margin:0 auto;}' +
-      '.td-vacio i{font-size:2.6rem;color:var(--td-color);margin-bottom:10px;display:block;}';
+    if (!document.querySelector('link[href="/css/trabajos-dinamicos.css"]')) {
+      var ln = document.createElement('link');
+      ln.rel = 'stylesheet';
+      ln.href = '/css/trabajos-dinamicos.css';
+      document.head.appendChild(ln);
+    }
     var st = document.createElement('style');
     st.id = 'td-estilos';
-    st.textContent = ':root{--td-color:' + COLOR + ';}' + css;
+    st.textContent = ':root{--td-color:' + COLOR + ';}';
     document.head.appendChild(st);
   }
 
@@ -172,7 +161,7 @@
     var fc = p.foto_count || (p.fotos || []).length || 0;
     var alt = (vehiculo(p) || p.titulo || '') + (p.comuna ? (lang === 'en' ? ' \u2013 mobile mechanic in ' : ' \u2013 electromec\u00e1nico a domicilio en ') + p.comuna : '');
     var h = '<div class="' + colClass + '">';
-    h += '<div class="td-card" role="button" tabindex="0" data-td-post="' + esc(p.id) + '" aria-label="' + esc(p.titulo || vehiculo(p)) + '">';
+    h += '<a class="td-card" href="' + urlDetalle(p) + '" data-td-post="' + esc(p.id) + '">';
     h += '<div class="td-img" id="td-img-' + esc(p.id) + '" data-alt="' + esc(alt) + '"><i class="fas fa-car"></i>';
     if (esNuevo) h += '<span class="td-new"><i class="fas fa-star me-1"></i>' + T.nuevo + '</span>';
     if (fc > 0) h += '<span class="td-count"><i class="fas fa-camera"></i> ' + fc + '</span>';
@@ -183,7 +172,7 @@
     h += '<p class="td-meta">';
     if (p.comuna) h += '<i class="fas fa-map-marker-alt me-1"></i>' + esc(p.comuna) + ' \u00b7 ';
     h += T.verFicha + ' <i class="fas fa-arrow-right ms-1"></i></p>';
-    h += '</div></div></div>';
+    h += '</div></a></div>';
     return h;
   }
 
@@ -201,6 +190,8 @@
 
   function cargarPortadas(posts) {
     posts.forEach(function (p) {
+      var pub = portada(p);
+      if (pub) { ponerImagen(p, pub); return; }
       var directa = (p.fotos || [])[0];
       if (directa) { ponerImagen(p, fotoUrl(directa)); return; }
       if ((p.foto_count || 0) > 0) {
@@ -224,7 +215,7 @@
       '<div class="modal-header" style="background:' + COLOR + ';color:#fff;"><h5 class="modal-title" id="td-modal-titulo"></h5>' +
       '<button type="button" class="btn-close btn-close-white" data-bs-dismiss="modal" aria-label="' + T.cerrar + '"></button></div>' +
       '<div class="modal-body" id="td-modal-body"></div>' +
-      '<div class="modal-footer"><a id="td-modal-comuna" class="btn fw-bold" style="display:none;border:1px solid ' + COLOR + ';color:' + COLOR + ';"></a>' +
+      '<div class="modal-footer"><a id="td-modal-ficha" class="btn fw-bold text-white" style="background:' + COLOR + ';" href="#"><i class="fas fa-file-alt me-1"></i>' + T.fichaCompleta + '</a><a id="td-modal-comuna" class="btn fw-bold" style="display:none;border:1px solid ' + COLOR + ';color:' + COLOR + ';"></a>' +
       '<a class="btn fw-bold text-white" style="background:#25d366;" target="_blank" rel="noopener" href="https://wa.me/' + WA + '"><i class="fab fa-whatsapp me-1"></i>' + T.cotizar + '</a>' +
       '<button type="button" class="btn btn-secondary" data-bs-dismiss="modal">' + T.cerrar + '</button></div>' +
       '</div></div>';
@@ -253,7 +244,7 @@
     }
   }
 
-  function abrirPost(id) {
+  function abrirPost(id, href) {
     var m = asegurarModal();
     document.getElementById('td-modal-titulo').textContent = '';
     var body = document.getElementById('td-modal-body');
@@ -268,6 +259,8 @@
       var fotos = (p.fotos || []).map(fotoUrl).filter(Boolean);
       document.getElementById('td-modal-titulo').textContent = p.titulo || vehiculo(p);
       var sc = slug(p.comuna);
+      var linkFicha = document.getElementById('td-modal-ficha');
+      if (linkFicha) { linkFicha.href = href || (URL_LANDING + '/' + postSlug(p)); }
       if (linkComuna && modo !== 'comuna' && COMUNAS_CON_PAGINA.indexOf(sc) !== -1) {
         linkComuna.href = BASE_COMUNAS + sc;
         linkComuna.innerHTML = '<i class="fas fa-map-marker-alt me-1"></i>' + T.verComuna + esc(p.comuna);
@@ -309,8 +302,9 @@
 
   function activarClicks(root) {
     root.addEventListener('click', function (ev) {
+      if (ev.ctrlKey || ev.metaKey || ev.shiftKey || ev.button === 1) return; // abrir la ficha en otra pesta\u00f1a
       var card = ev.target.closest ? ev.target.closest('[data-td-post]') : null;
-      if (card) abrirPost(card.getAttribute('data-td-post'));
+      if (card) { ev.preventDefault(); abrirPost(card.getAttribute('data-td-post'), card.getAttribute('href')); }
     });
     root.addEventListener('keydown', function (ev) {
       if (ev.key !== 'Enter' && ev.key !== ' ') return;
@@ -427,6 +421,14 @@
       activarClicks(box);
     }
     cargarPortadas(posts);
+  }
+
+  // Si la p\u00e1gina ya viene con las tarjetas desde el servidor (Pages Functions),
+  // solo se agregan el modal y, en la landing, filtros y "Ver m\u00e1s".
+  if (box.getAttribute('data-ssr') && modo !== 'landing') {
+    inyectarEstilos();
+    activarClicks(document.body);
+    return;
   }
 
   fetchTimeout(API + '?estado=publicado&sitio=' + SITIO + '&limit=200', 10000)

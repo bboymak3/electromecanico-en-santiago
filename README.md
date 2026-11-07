@@ -150,3 +150,19 @@ Los trabajos publicados aquí se cargan con `js/trabajos-dinamicos.js` desde
 
 El contenedor se inserta con `python3 scripts/add_trabajos_dinamicos.py` (idempotente;
 `build_galeria.py` lo ejecuta automáticamente al final).
+
+### SEO: trabajos renderizados en el servidor (Cloudflare Pages Functions)
+
+La carpeta `functions/` arma en el servidor el HTML de los trabajos publicados, para que
+Google lo lea sin ejecutar JavaScript (requiere publicar con `wrangler pages deploy` desde la
+raíz del repo, como hace `deploy.sh`, o conectar el repo a Cloudflare Pages por Git):
+
+- `/trabajos-realizados` y `/en/completed-jobs`: todas las tarjetas en el HTML + `ItemList`.
+- `/trabajos-realizados/<titulo>-<id>` y `/en/completed-jobs/<titulo>-<id>`: ficha propia de cada
+  trabajo (title, description, canonical, hreflang, Open Graph, JSON-LD `Article` + migas).
+- `/trabajos-realizados/fotos/<id>-<n>-<nombre-seo>.jpg`: fotos en el propio dominio.
+- Home, `/galeria` y `comunas/*` (ES/EN): tarjetas incluidas en el HTML.
+- `/sitemap.xml`: sitemap estático + fichas y sus fotos.
+
+Los datos se cachean 5 minutos; un trabajo publicado aparece en ese plazo.
+La configuración del sitio está en `functions/_shared/config.js`.
