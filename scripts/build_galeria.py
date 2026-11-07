@@ -161,6 +161,7 @@ def build_index():
     </div>
     <div class="text-center mt-4 d-flex justify-content-center gap-2 flex-wrap">
       <button type="button" class="btn btn-lg fw-bold" style="background:#0d7377;color:#fff;" data-bs-toggle="modal" data-bs-target="#modal-galeria"><i class="fas fa-images me-2"></i>Ver Galería de Fotos</button>
+      <a href="/trabajos-realizados" class="btn btn-lg fw-bold" style="background:#0d7377;color:#fff;"><i class="fas fa-tools me-2"></i>Ver todos los trabajos realizados</a>
       <a href="/galeria" class="btn btn-lg btn-outline-secondary fw-bold"><i class="fas fa-external-link-alt me-2"></i>Página de Galería</a>
     </div>
   </div>
@@ -256,6 +257,7 @@ def build_landing():
     <div class="row g-4">
 {trabajo_cards()}
     </div>
+    <div class="text-center mt-4"><a href="/trabajos-realizados" class="btn btn-lg fw-bold" style="background:#0d7377;color:#fff;"><i class="fas fa-tools me-2"></i>Ver todos los trabajos realizados</a></div>
   </div>
 </section>
 
@@ -348,7 +350,7 @@ def build_comunas():
 {trabajo_cards("col-12 col-sm-6 col-lg-4", items)}
     </div>
     <div class="ficha-fotos mt-4" style="max-width:900px;margin:0 auto;">{fotos}</div>
-    <div class="text-center mt-4"><a href="/galeria" class="btn fw-bold text-white" style="background:#0d7377;"><i class="fas fa-images me-2"></i>Ver galería completa</a></div>
+    <div class="text-center mt-4 d-flex justify-content-center gap-2 flex-wrap"><a href="/trabajos-realizados" class="btn fw-bold text-white" style="background:#0d7377;"><i class="fas fa-tools me-2"></i>Ver todos los trabajos realizados</a><a href="/galeria" class="btn btn-outline-secondary fw-bold"><i class="fas fa-images me-2"></i>Ver galería completa</a></div>
   </div>
 </section>
 {ficha_modals(items)}'''
@@ -381,4 +383,7 @@ if __name__ == "__main__":
     # galeria.html se regenera completo: volver a insertar los trabajos publicados desde el panel
     import add_trabajos_dinamicos
     add_trabajos_dinamicos.main()
+    # Menú "Trabajos Realizados" y landings /trabajos-realizados y /en/completed-jobs
+    import build_trabajos_realizados
+    build_trabajos_realizados.main()
     print(f"Galería generada: {sum(len(t['fotos']) for t in TRABAJOS)} fotos, {len(TRABAJOS)} vehículos; menú actualizado en {n} páginas")
