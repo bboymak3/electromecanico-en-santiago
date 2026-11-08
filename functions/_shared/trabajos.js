@@ -64,9 +64,10 @@ export function urlFoto(p, n) {
     return u.startsWith('/') ? API.replace('/api/admin/posts', '') + u : u;
   }
   const meta = (p.fotos_meta || [])[n] || {};
+  const ext = ((String(meta.nombre_archivo || '').match(/\.(webp|png|jpe?g)$/i) || [0, 'jpg'])[1]).toLowerCase().replace('jpeg', 'jpg');
   let nombre = slug(String(meta.nombre_archivo || '').replace(/\.[a-z0-9]+$/i, ''));
   if (!nombre) nombre = slug([vehiculo(p), p.comuna].filter(Boolean).join(' ')) || 'trabajo';
-  return `${URL_ES}/fotos/${p.id}-${n}-${nombre.slice(0, 90)}.jpg`;
+  return `${URL_ES}/fotos/${p.id}-${n}-${nombre.slice(0, 90)}.${ext}`;
 }
 export const numFotos = p => (p.fotos_meta ? p.fotos_meta.length : (p.fotos || []).length);
 export const absoluta = u => (/^https?:\/\//.test(u) ? u : CONFIG.site + u);

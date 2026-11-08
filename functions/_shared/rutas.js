@@ -219,7 +219,7 @@ export async function detalle(context, lang) {
 
 // ---------------------------------------------------------------- fotos con nombre SEO en el propio dominio
 export async function foto(context) {
-  const m = /^(\d+)-(\d+)(?:-[a-z0-9-]*)?\.jpe?g$/i.exec(String(context.params.foto || ''));
+  const m = /^(\d+)-(\d+)(?:-[a-z0-9-]*)?\.(?:jpe?g|webp|png)$/i.exec(String(context.params.foto || ''));
   if (!m) return new Response('No encontrado', { status: 404 });
   const r = await fetch(`${API_FOTO}?id=${m[1]}&n=${m[2]}`, { cf: { cacheTtl: 604800, cacheEverything: true } });
   if (!r.ok) return new Response('No encontrado', { status: 404 });
